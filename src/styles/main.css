@@ -69,3 +69,20 @@
 .text-overflow-ellipsis {
     text-overflow:ellipsis
 }
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: xx-large;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #70b862;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
+    font-weight: normal;
+    line-height: 2;
+    color: #444444;
+}
+
