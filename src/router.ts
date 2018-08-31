@@ -16,36 +16,37 @@ export default new Router({
             path: '/',
             name: 'home',
             component: Home,
-        },
-        {
-            path: '/home',
-            name: 'home',
-            component: Home,
+            alias: ['/home', '/start', '/startseite', '/willkommen'],
         },
         {
             path: '/surfing',
             name: 'surfing',
             component: Surfing,
+            alias: ['/surfen', '/surf', '/windsurfen'],
         },
         {
             path: '/sup',
             name: 'sup',
             component: StandUpPaddling,
+            alias: ['/sup', '/standuppaddling', '/stand-up-paddling'],
         },
         {
             path: '/sailing',
             name: 'sailing',
             component: Sailing,
+            alias: ['/segeln', '/sail'],
         },
         {
             path: '/weather',
             name: 'weather',
             component: Weather,
+            alias: ['/wetter'],
         },
         {
             path: '/contact',
             name: 'contact',
             component: Contact,
+            alias: ['/kontakt'],
         },
     ],
 });
