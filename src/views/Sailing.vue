@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <img class="" src="../assets/surfing/header.jpg"/>
+        <img class="" src="../assets/sailing/header.jpg"/>
 
         <div class="px-32 py-6">
             <h1 class="pt-8">Segeln</h1>
