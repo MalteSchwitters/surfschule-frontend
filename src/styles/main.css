@@ -86,3 +86,38 @@ p {
     color: #444444;
 }
 
+a {
+    color: #3490dc;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    font-family: 'Quicksand', sans-serif;
+    color: #8795a1;
+    padding-bottom: 0.5rem;
+    text-align: left;
+    font-size: .875rem;
+    font-weight: lighter;
+}
+
+td {
+    color: #444444;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    font-family: 'Quicksand', sans-serif;
+    text-align: left;
+    font-size: large;
+    font-weight: normal;
+}
+
+
+tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+tr:nth-child(odd) {
+    background: transparent
+}

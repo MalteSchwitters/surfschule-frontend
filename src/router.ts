@@ -18,6 +18,11 @@ export default new Router({
             component: Home,
         },
         {
+            path: '/home',
+            name: 'home',
+            component: Home,
+        },
+        {
             path: '/surfing',
             name: 'surfing',
             component: Surfing,

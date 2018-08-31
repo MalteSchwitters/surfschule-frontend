@@ -1,8 +1,15 @@
 <template>
-    <div>
+    <div class="">
+
         <img class="" src="../assets/surfing/header.jpg"/>
-        
-        <div class="px-32 py-6">
+
+        <div class="px-24 py-2 bg-grey flex justify-around">
+            <a href="#" class="no-underline">Test 1</a>
+            <a href="#" class="no-underline">Test 2</a>
+            <a href="#" class="no-underline">Test 3</a>
+        </div>
+
+        <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1 class="pt-8">Windsurfen</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -24,7 +31,7 @@
             <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
         </div>
 
-        <div class="px-32 py-6">
+        <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1 class="pt-8">Surfkurse</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -34,6 +41,44 @@
                 eigenes Material zu den Kursen mitbringen. Sprecht uns dazu einfach vor dem Kurs kurz an. Alles was ihr
                 zum Surfen mitbringen solltet ist Gute Laune ;-)
             </p>
+            <table class="w-full">
+                <tr>
+                    <th>KURS</th>
+                    <th>DAUER</th>
+                    <th>PREIS</th>
+                </tr>
+                <tr>
+                    <td>Schnuppersurfen (ab 8 Personen)</td>
+                    <td>1 Stunde</td>
+                    <td class="text-2xl">20,00€</td>
+                </tr>
+                <tr>
+                    <td>Schnupperkurs</td>
+                    <td>3 Stunden</td>
+                    <td class="text-2xl">55,00€</td>
+                </tr>
+                <tr>
+                    <td>Einsteigerkurs ohne VDWS-Grundschein</td>
+                    <td>12-14 Stunden</td>
+                    <td class="text-2xl">195,00€</td>
+                </tr>
+                <tr>
+                    <td>Einsteigerkurs mit VDWS-Grundschein</td>
+                    <td>12-14 Stunden</td>
+                    <td class="text-2xl">225,00€</td>
+                </tr>
+                <tr>
+                    <td>Aufbaukurs (2 - 4 Personen)</td>
+                    <td>3 Stunden</td>
+                    <td class="text-2xl">95,00€</td>
+                </tr>
+                <tr>
+                    <td>Privatstunde</td>
+                    <td>1 Stunden</td>
+                    <td class="text-2xl">75,00€</td>
+                </tr>
+            </table>
+
         </div>
 
         <div class="flex items-start">
@@ -42,7 +87,7 @@
             <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
         </div>
 
-        <div class="px-32 py-6">
+        <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1 class="pt-8">Verleih</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -58,7 +103,7 @@
             <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
         </div>
 
-        <div class="px-32 py-6">
+        <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1 class="pt-8">GPS Rangliste</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
