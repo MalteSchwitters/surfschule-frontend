@@ -7,15 +7,15 @@
         </div>
 
         <div class="invisible xl:visible w-1/3 flex justify-end  pt-4">
-            <router-link to="home" class="p-4 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+            <router-link to="home" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
                 :class="{ 'text-grey-darkest border-green-dark': activeTab === 'home' }">
                 Startseite
             </router-link>
-            <router-link to="surfing" class="p-4 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+            <router-link to="surfing" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
                  :class="{ 'text-grey-darkest border-green-dark': activeTab === 'surfing' }">
                 Windsurfen
             </router-link>
-            <router-link to="sup" class="p-4 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+            <router-link to="sup" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
                  :class="{ 'text-grey-darkest border-green-dark': activeTab === 'sup' }">
                 Stand Up Paddling
             </router-link>
@@ -24,15 +24,15 @@
             <img src="../assets/logo.png" class="h-16 px-6 my-auto">
         </router-link>
         <div class="invisible xl:visible w-1/3 flex justify-start pt-4">
-            <router-link to="sailing" class="p-4 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+            <router-link to="sailing" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
                  :class="{ 'text-grey-darkest border-green-dark': activeTab === 'sailing' }">
                 Segeln
             </router-link>
-            <router-link to="weather" class="p-4 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+            <router-link to="weather" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
                  :class="{ 'text-grey-darkest border-green-dark': activeTab === 'weather' }">
                 Wetter
             </router-link>
-            <router-link to="contact" class="p-4 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+            <router-link to="contact" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
                  :class="{ 'text-grey-darkest border-green-dark': activeTab === 'contact' }">
                 Kontakt & Anfahrt
             </router-link>

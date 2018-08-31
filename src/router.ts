@@ -28,7 +28,7 @@ export default new Router({
             path: '/sup',
             name: 'sup',
             component: StandUpPaddling,
-            alias: ['/sup', '/standuppaddling', '/stand-up-paddling'],
+            alias: ['/standuppaddling', '/stand-up-paddling'],
         },
         {
             path: '/sailing',

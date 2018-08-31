@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="px-32 py-6">
+        <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1>Willkommen!</h1>
             <p>
                 Herzlich Wilkommen auf der Website der Surf- und Segelschule Grosses Meer! Egal, ob ihr entspannt mit dem
@@ -10,7 +10,7 @@
                 auf dem Campingplatz gleich nebenan übernachten und gemeinsam zum Surfen gehen!
             </p>
         </div>
-        <div class="px-32 py-6">
+        <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1>Das Grosse Meer</h1>
             <p>
                 Das Große Meer ist ein natürlich entstandener Niedermoorsee und liegt zwischen Aurich und Emden bei

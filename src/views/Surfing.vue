@@ -3,13 +3,14 @@
 
         <img class="" src="../assets/surfing/header.jpg"/>
 
-        <div class="px-24 py-2 bg-grey flex justify-around">
-            <a href="#" class="no-underline">Test 1</a>
-            <a href="#" class="no-underline">Test 2</a>
-            <a href="#" class="no-underline">Test 3</a>
-        </div>
+        <nav class="px-24 py-6 -mt-2 bg-grey flex justify-around">
+            <a href="#kurse" class="no-underline">Surfkurse</a>
+            <a href="#verleih" class="no-underline">Verleih</a>
+            <a href="#ranking" class="no-underline">GPS Rangliste</a>
+        </nav>
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
+            <a id="windsurfen" class="anchor"></a>
             <h1 class="pt-8">Windsurfen</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -26,12 +27,13 @@
         </div>
 
         <div class="flex items-start">
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen01.jpg"/>
             <img class="w-1/3" src="../assets/surfing/thumbs/surfen02.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
+            <img class="w-1/3" src="../assets/surfing/thumbs/surfen15.jpg"/>
+            <img class="w-1/3" src="../assets/surfing/thumbs/surfen06.jpg"/>
         </div>
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
+            <a id="kurse" class="anchor"></a>
             <h1 class="pt-8">Surfkurse</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -43,9 +45,9 @@
             </p>
             <table class="w-full">
                 <tr>
-                    <th>KURS</th>
-                    <th>DAUER</th>
-                    <th>PREIS</th>
+                    <th class="w-3/5">Kurs</th>
+                    <th class="w-1/4">Dauer</th>
+                    <th class="w-1/5">Preis *</th>
                 </tr>
                 <tr>
                     <td>Schnuppersurfen (ab 8 Personen)</td>
@@ -78,16 +80,17 @@
                     <td class="text-2xl">75,00€</td>
                 </tr>
             </table>
-
+            <p align="right">* alle Kurspreise pro Person und inkl. Material</p>
         </div>
 
         <div class="flex items-start">
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen01.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen02.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
+            <img class="w-1/3" src="../assets/surfing/thumbs/surfen05.jpg"/>
+            <img class="w-1/3" src="../assets/surfing/thumbs/surfen04.jpg"/>
+            <img class="w-1/3" src="../assets/surfing/thumbs/surfen16.jpg"/>
         </div>
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
+            <a id="verleih" class="anchor"></a>
             <h1 class="pt-8">Verleih</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -95,15 +98,43 @@
                 Longboards über Aufsteigerboards bis hin zu schnellen Shortboards und Profilsegeln bieten wir alles zum
                 Verleih an, was das Surferherz begehrt!
             </p>
+            <table class="w-full">
+                <tr>
+                    <th class="w-3/5">Material</th>
+                    <th class="w-1/4">Dauer</th>
+                    <th class="w-1/5">Preis</th>
+                </tr>
+                <tr>
+                    <td>Einsteigerboard mit Rigg</td>
+                    <td>1 Stunde</td>
+                    <td class="text-2xl">15,00€</td>
+                </tr>
+                <tr>
+                    <td>Aufsteigerboard mit Rigg</td>
+                    <td>1 Stunde</td>
+                    <td class="text-2xl">20,00€</td>
+                </tr>
+                <tr>
+                    <td>Shortboard mit Rigg</td>
+                    <td>1 Stunde</td>
+                    <td class="text-2xl">22,50€</td>
+                </tr>
+                <tr>
+                    <td>Neoprenanzug</td>
+                    <td>1 Stunde</td>
+                    <td class="text-2xl">2,50€</td>
+                </tr>
+            </table>
         </div>
 
         <div class="flex items-start">
+            <img class="w-1/3" src="../assets/surfing/thumbs/surfen20.jpg"/>
             <img class="w-1/3" src="../assets/surfing/thumbs/surfen01.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen02.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
+            <img class="w-1/3" src="../assets/surfing/thumbs/surfen21.jpg"/>
         </div>
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
+            <a id="ranking" class="anchor"></a>
             <h1 class="pt-8">GPS Rangliste</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -114,9 +145,9 @@
         </div>
 
         <div class="flex items-start">
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen01.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen02.jpg"/>
+            <img class="w-1/3" src="../assets/surfing/thumbs/surfen08.jpg"/>
             <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
+            <img class="w-1/3" src="../assets/surfing/thumbs/surfen07.jpg"/>
         </div>
     </div>
 </template>

@@ -48,7 +48,7 @@ let colors = {
 
     'black': '#22292f',
     'grey-darkest': '#3d4852',
-    'grey-darker': '#606f7b',
+    'grey-darker': '#5e615d',
     'grey-dark': '#8795a1',
     'grey': '#e5e5e5',
     'grey-light': '#dae1e7',

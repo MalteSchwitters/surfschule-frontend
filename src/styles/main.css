@@ -87,6 +87,10 @@ p {
 }
 
 a {
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
+    font-weight: normal;
+    line-height: 2;
     color: #3490dc;
 }
 
@@ -120,4 +124,11 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
     background: transparent
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -120px;
+    visibility: hidden;
 }

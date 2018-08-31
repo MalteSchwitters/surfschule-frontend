@@ -2,7 +2,7 @@
     <div class="">
         <img class="" src="../assets/sup/header.jpg"/>
 
-        <div class="px-32 py-6">
+        <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1 class="pt-8">Stand Up Paddling</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -15,12 +15,12 @@
         </div>
 
         <div class="flex items-start">
-            <img class="w-1/3" src="../assets/sup/thumbs/sup01.jpg"/>
             <img class="w-1/3" src="../assets/sup/thumbs/sup02.jpg"/>
-            <img class="w-1/3" src="../assets/sup/thumbs/sup03.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup12.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup13.jpg"/>
         </div>
 
-        <div class="px-32 py-6">
+        <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1 class="pt-8">Touren Beispiele</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -34,12 +34,12 @@
         </div>
 
         <div class="flex items-start">
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen01.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen02.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup04.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup03.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup06.jpg"/>
         </div>
 
-        <div class="px-32 py-6">
+        <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1 class="pt-8">SUP Kurse</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -49,15 +49,37 @@
                 Absprache könnt ihr bei uns auch früh morgens oder spät Abends zum Sonnenuntergang ein ganz besonderes
                 Naturerlebnis erfahren. Bei allen Kursen ist das Material inklusive!
             </p>
+            <table class="w-full">
+                <tr>
+                    <th class="w-2/4">Kurs</th>
+                    <th class="w-1/4">Dauer</th>
+                    <th class="w-1/4">Preis *</th>
+                </tr>
+                <tr>
+                    <td>Kurze Einweisung</td>
+                    <td>5-10 Minuten</td>
+                    <td class="text-2xl">GRATIS</td>
+                </tr>
+                <tr>
+                    <td>Einsteigerkurs</td>
+                    <td>1 Stunde</td>
+                    <td class="text-2xl">20,00€</td>
+                </tr>
+                <tr>
+                    <td>Geführte Tour</td>
+                    <td>min. 1 Stunde</td>
+                    <td class="text-2xl">20,00€ / Std.</td>
+                </tr>
+            </table>
         </div>
 
         <div class="flex items-start">
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen01.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen02.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup04.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup03.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup06.jpg"/>
         </div>
 
-        <div class="px-32 py-6">
+        <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1 class="pt-8">Verleih</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6">
@@ -68,9 +90,9 @@
         </div>
 
         <div class="flex items-start">
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen01.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen02.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup05.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup11.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup09.jpg"/>
         </div>
     </div>
 </template>
