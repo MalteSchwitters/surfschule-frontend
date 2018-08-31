@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <img class="" src="../assets/surfing/header.jpg"/>
+        <img class="" src="../assets/sup/header.jpg"/>
 
         <div class="px-32 py-6">
             <h1 class="pt-8">Stand Up Paddling</h1>
@@ -15,9 +15,9 @@
         </div>
 
         <div class="flex items-start">
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen01.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen02.jpg"/>
-            <img class="w-1/3" src="../assets/surfing/thumbs/surfen03.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup01.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup02.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup03.jpg"/>
         </div>
 
         <div class="px-32 py-6">

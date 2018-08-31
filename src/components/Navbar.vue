@@ -48,7 +48,7 @@
     })
     export default class Navbar extends Vue {
 
-        private activeTab: string;
+        private activeTab: any;
 
         private async created() {
             this.activeTab = this.$router.currentRoute.name;
