@@ -78,6 +78,7 @@
                     <td class="text-2xl">20,00€ / Std.</td>
                 </tr>
             </table>
+            <p class="pt-8 pb-4" align="right">* alle Kurspreise pro Person und inkl. Material</p>
         </div>
 
         <div class="flex items-start">
@@ -94,6 +95,28 @@
                 könnt ihr euch natürlich auch einfach ein Board leihen. Wir haben sowohl mehrere klassische als auch
                 inflatable Air SUPs im Angebot. Eine kurze Einweisung gibt es auf Wunsch gratis dazu!
             </p>
+            <table class="w-full">
+                <tr>
+                    <th class="w-2/4">Material</th>
+                    <th class="w-1/4">Dauer</th>
+                    <th class="w-1/4">Preis</th>
+                </tr>
+                <tr>
+                    <td>SUP Board mit Paddel</td>
+                    <td>1 Stunde</td>
+                    <td class="text-2xl">12,50€</td>
+                </tr>
+                <tr>
+                    <td>SUP Board mit Carbon Paddel</td>
+                    <td>1 Stunde</td>
+                    <td class="text-2xl">15,00€</td>
+                </tr>
+                <tr>
+                    <td>Neoprenanzug</td>
+                    <td>1 Stunde</td>
+                    <td class="text-2xl">2,50€</td>
+                </tr>
+            </table>
         </div>
 
         <div class="flex items-start">

@@ -81,7 +81,7 @@
                     <td class="text-2xl">75,00€</td>
                 </tr>
             </table>
-            <p align="right">* alle Kurspreise pro Person und inkl. Material</p>
+            <p class="pt-8 pb-4" align="right">* alle Kurspreise pro Person und inkl. Material</p>
         </div>
 
         <div class="flex items-start">
