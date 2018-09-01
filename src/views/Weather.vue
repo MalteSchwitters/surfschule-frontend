@@ -1,6 +1,11 @@
 <template>
     <div class="">
-        <img class="" src="../assets/surfing/header.jpg"/>
+        <img class="" src="../assets/weather/header.jpg"/>
+
+        <nav class="px-24 py-6 -mt-2 flex justify-around bg-grey-lighter">
+            <a href="#willkommen" class="text-grey-darker hover:text-blue uppercase no-underline"># Wetter</a>
+            <a href="#grossesmeer" class="text-grey-darker hover:text-blue uppercase no-underline"># Webcam</a>
+        </nav>
 
         <div class="px-32 py-6">
             <h1 class="pt-8">Windsurfen</h1>

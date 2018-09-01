@@ -2,6 +2,13 @@
     <div class="">
         <img class="" src="../assets/sup/header.jpg"/>
 
+        <nav class="px-24 py-6 -mt-2 flex justify-around bg-grey-lighter">
+            <a href="#sup" class="text-grey-darker hover:text-blue uppercase no-underline"># Stand Up Paddling</a>
+            <a href="#touren" class="text-grey-darker hover:text-blue uppercase no-underline"># Touren</a>
+            <a href="#kurse" class="text-grey-darker hover:text-blue uppercase no-underline"># Kurse</a>
+            <a href="#verleih" class="text-grey-darker hover:text-blue uppercase no-underline"># Verleih</a>
+        </nav>
+
         <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1 class="pt-8">Stand Up Paddling</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
@@ -33,11 +40,11 @@
             </p>
         </div>
 
-        <div class="flex items-start">
-            <img class="w-1/3" src="../assets/sup/thumbs/sup04.jpg"/>
-            <img class="w-1/3" src="../assets/sup/thumbs/sup03.jpg"/>
-            <img class="w-1/3" src="../assets/sup/thumbs/sup06.jpg"/>
-        </div>
+        <!--<div class="flex items-start">-->
+            <!--<img class="w-1/3" src="../assets/sup/thumbs/sup04.jpg"/>-->
+            <!--<img class="w-1/3" src="../assets/sup/thumbs/sup03.jpg"/>-->
+            <!--<img class="w-1/3" src="../assets/sup/thumbs/sup06.jpg"/>-->
+        <!--</div>-->
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
             <h1 class="pt-8">SUP Kurse</h1>

@@ -3,10 +3,11 @@
 
         <img class="" src="../assets/surfing/header.jpg"/>
 
-        <nav class="px-24 py-6 -mt-2 bg-grey flex justify-around">
-            <a href="#kurse" class="no-underline">Surfkurse</a>
-            <a href="#verleih" class="no-underline">Verleih</a>
-            <a href="#ranking" class="no-underline">GPS Rangliste</a>
+        <nav class="px-24 py-6 -mt-2 flex justify-around bg-grey-lighter">
+            <a href="#windsurfen" class="text-grey-darker hover:text-blue uppercase no-underline"># Windsurfen</a>
+            <a href="#kurse" class="text-grey-darker hover:text-blue uppercase no-underline"># Kurse</a>
+            <a href="#verleih" class="text-grey-darker hover:text-blue uppercase no-underline"># Verleih</a>
+            <a href="#ranking" class="text-grey-darker hover:text-blue uppercase no-underline"># GPS Rangliste</a>
         </nav>
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
