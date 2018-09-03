@@ -2,24 +2,16 @@
     <div class="">
         <img class="" src="../assets/weather/header.jpg"/>
 
-        <nav class="px-24 py-6 -mt-2 flex justify-around bg-grey-lighter">
-            <a href="#willkommen" class="text-grey-darker hover:text-blue uppercase no-underline"># Wetter</a>
-            <a href="#grossesmeer" class="text-grey-darker hover:text-blue uppercase no-underline"># Webcam</a>
+        <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey-lighter">
+            <a href="#wetter" class="text-grey-darker hover:text-blue uppercase no-underline"># Wetter</a>
+            <a href="#webcam" class="text-grey-darker hover:text-blue uppercase no-underline"># Webcam</a>
         </nav>
 
         <div class="px-32 py-6">
-            <h1 class="pt-8">Windsurfen</h1>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Wetter</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
-                Das Grosse Meer ist auf seiner gesamten Fläche stehtief und bietet somit ideale Bedingungen für
-                Einsteiger und Fortgeschrittene. Egal, ob ihr schon häufiger gesurft habt oder gerade einen Anfängerkurs
-                machen wollt: Wir haben das richtige Angebot an Kursen und passende Material für euch im Verleih.
-            </p>
-            <p class="pb-6">
-                Natürlich könnt ihr auch mit eurem eigenen Material auf dem Grossen Meer surfen gehen. Aufbauen könnt
-                ihr am Strand oben beim Meerwarthaus, bei der Paddel und Pedal Station, bei uns an der Surfschule oder
-                auf der südlichen Landzunge. Am Grossen Meer kann man bei allen Bedingungen surfen gehen. Egal welche
-                Windrichtung. Egal ob Ebbe oder Flut. Wir haben 24h Hochwasser!
+            <p class="pb-6 text-sm xl:text-lg">
+                TODO
             </p>
         </div>
 

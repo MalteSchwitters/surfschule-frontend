@@ -4,12 +4,12 @@
             <div class="w-1/2 text-sm">
                 <p class="text-white text-2xl">Unser Angebot</p>
                 <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">Windsurf Kurse</router-link></div>
-                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">Surfmaterial Verleih</router-link></div>
-                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">SUP Kurse</router-link></div>
-                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">SUP Verleih</router-link></div>
-                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#touren">Geführte SUP Touren</router-link></div>
-                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">Segelkurse</router-link></div>
-                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">Segelboot Verleih</router-link></div>
+                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#verleih">Surfmaterial Verleih</router-link></div>
+                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="sup#kurse">SUP Kurse</router-link></div>
+                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="sup#verleih">SUP Verleih</router-link></div>
+                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="sup#touren">Geführte SUP Touren</router-link></div>
+                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="sailing#kurse">Segelkurse</router-link></div>
+                <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="sailing#verleih">Segelboot Verleih</router-link></div>
             </div>
             <div class="w-1/2 text-sm">
                 <p class="text-white text-2xl">Kontakt</p>
@@ -34,6 +34,6 @@
         name: "Footer"
     })
     export default class Footer extends Vue {
-        
+
     }
 </script>

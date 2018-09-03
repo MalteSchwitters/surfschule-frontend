@@ -2,7 +2,7 @@
     <div>
         <img class="" src="../assets/start/header.jpg"/>
 
-        <nav class="px-24 py-6 -mt-2 flex justify-around bg-grey-lighter">
+        <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey-lighter">
             <a href="#willkommen" class="text-grey-darker hover:text-blue uppercase no-underline"># Willkommen</a>
             <a href="#grossesmeer" class="text-grey-darker hover:text-blue uppercase no-underline"># Das Grosse Meer</a>
             <a href="#shop" class="text-grey-darker hover:text-blue uppercase no-underline"># Surfshop</a>
@@ -10,16 +10,16 @@
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
             <a id="willkommen" class="anchor"></a>
-            <h1 class="pt-8">Willkommen!</h1>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Willkommen!</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Herzlich Wilkommen auf der Website der Surf- und Segelschule Grosses Meer! Egal, ob ihr entspannt mit dem
                 SUP Board die Kanäle erkunden oder etwas Action beim Windsurfen sucht: Wir haben das richtige Angebot an
                 Kursen und topaktuellem Material im Verleih! Dazu haben wir passende Surfermode und Accesoirs für euch in
                 unserem kleinen Surfschulshop. Kommt vorbei! Unser Tipp: Als Gruppe (Schulklasse, Jugendgruppe, Studenten)
                 auf dem Campingplatz gleich nebenan übernachten und gemeinsam zum Surfen gehen!
             </p>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Bei uns könnt ihr:
             </p>
             <router-link class="block no-underline hover:underline" to="surfing">>> Windsurfen</router-link>
@@ -35,9 +35,9 @@
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
             <a id="grossesmeer" class="anchor"></a>
-            <h1 class="pt-8">Das Grosse Meer</h1>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Das Grosse Meer</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Das Große Meer ist ein natürlich entstandener Niedermoorsee und liegt zwischen Aurich und Emden bei
                 Bedekaspel im Südbrookmerland, am Rande der ostfriesischen Geest im Übergang zur Emsmarsch. Der See ist mit
                 einer freien Wasserfläche von etwa 289 Hektar (mit Röhrichtverlandungszonen ca. 400 ha) der viertgrößte See
@@ -46,7 +46,7 @@
                 mittlere Wasserstand durch künstliche Entwässerung 1,4 Meter unter dem Meeresspiegel (NN) liegt.
                 Weitere Informationen (Wikipedia)
             </p>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Das stehtiefe Gewässer liefert ideale Bedingungen um sich voll auf das Erlernen und Verbessern der
                 Fahrtechnik zu konzentrieren. Surfen und Segeln stehen hier an erster Stelle, die fächerförmig ausrückenden
                 Wasserwanderwege bieten zudem abwechslungsreiche Möglichkeiten das Südbrookmerland mit dem SUP zu erkunden.
@@ -62,9 +62,9 @@
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
             <a id="shop" class="anchor"></a>
-            <h1 class="pt-8">Unser Shop</h1>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Unser Shop</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 In unserem Shop findet ihr alles was das Surfer-Herz begehrt: Boards, Segel, Masten, Gabeln und sonstiges
                 Zubehör, sowohl neu als auch gebraucht. Zudem findet ihr auch eine umfangreiche Auswahl an Surfer-Fashion
                 vor. Unser Sortiment umfasst Neoprenanzüge, Surfschuhe, Lycras und aktuelle Surfer Streetwear, Flip-Flops,

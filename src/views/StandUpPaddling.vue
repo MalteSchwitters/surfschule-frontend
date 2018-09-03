@@ -2,7 +2,7 @@
     <div class="">
         <img class="" src="../assets/sup/header.jpg"/>
 
-        <nav class="px-24 py-6 -mt-2 flex justify-around bg-grey-lighter">
+        <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey-lighter">
             <a href="#sup" class="text-grey-darker hover:text-blue uppercase no-underline"># Stand Up Paddling</a>
             <a href="#touren" class="text-grey-darker hover:text-blue uppercase no-underline"># Touren</a>
             <a href="#kurse" class="text-grey-darker hover:text-blue uppercase no-underline"># Kurse</a>
@@ -10,9 +10,10 @@
         </nav>
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
-            <h1 class="pt-8">Stand Up Paddling</h1>
+            <a id="sup" class="anchor"></a>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Stand Up Paddling</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Beim Stand Up Paddling, oder kurz SUP, bewegt man sich auf einem Surfbrett stehend mit Hilfe eines
                 Paddels fort. Der bei uns noch relativ neue Trendsport trainiert den Gleichgewichtssinn und viele
                 Muskeln. SUP lässt sich außerdem hervorragend mit Yoga-Übungen kombinieren. Bei uns könnt ihr sowohl
@@ -28,9 +29,10 @@
         </div>
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
-            <h1 class="pt-8">Touren Beispiele</h1>
+            <a id="touren" class="anchor"></a>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Touren Beispiele</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Rund um die Surfschule gibt es neben dem Grossen Meer selbst auch ein großes Kanalsystem zu erkunden,
                 welches die Städte Aurich, Emden und Leer verbindet. Für Neulinge bietet es sich an frei über das
                 stehtiefe Grosse Meer zu paddeln. Wer sich dagegen schon ganz wohl auf dem SUP Board fühlt, der kann mit
@@ -47,9 +49,10 @@
         <!--</div>-->
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
-            <h1 class="pt-8">SUP Kurse</h1>
+            <a id="kurse" class="anchor"></a>
+            <h1 class="pt-8 text-2xl xl:text-3xl">SUP Kurse</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Ihr habt noch nie zuvor auf einem Surfbrett gestanden, oder fühlt euch noch unsicher? Mit einem SUP
                 Einsteigerkurs oder einer geführten Tour über das Grosse Meer und die angrenzenden Kanäle werdet ihr
                 euch schnell an das Board unter euren Füßen gewöhnen und die Faszination dieses Sports erleben. Nach
@@ -88,9 +91,10 @@
         </div>
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
-            <h1 class="pt-8">Verleih</h1>
+            <a id="verleih" class="anchor"></a>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Verleih</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Wenn ihr schon öfter mit dem Surfboard unterwegs ward, oder einfach auf eigene Faust losziehen wollt,
                 könnt ihr euch natürlich auch einfach ein Board leihen. Wir haben sowohl mehrere klassische als auch
                 inflatable Air SUPs im Angebot. Eine kurze Einweisung gibt es auf Wunsch gratis dazu!

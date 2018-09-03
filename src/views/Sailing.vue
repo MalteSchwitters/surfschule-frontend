@@ -2,18 +2,17 @@
     <div class="">
         <img class="" src="../assets/sailing/header.jpg"/>
 
-        <nav class="px-24 py-6 -mt-2 flex justify-around bg-grey-lighter">
+        <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey-lighter">
             <a href="#segeln" class="text-grey-darker hover:text-blue uppercase no-underline"># Segeln</a>
             <a href="#kurse" class="text-grey-darker hover:text-blue uppercase no-underline"># Kurse</a>
             <a href="#verleih" class="text-grey-darker hover:text-blue uppercase no-underline"># Verleih</a>
         </nav>
 
-
         <div class="px-8 md:px-16 lg:px-24 py-6">
             <a id="segeln" class="anchor"></a>
-            <h1 class="pt-8">Segeln</h1>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Segeln</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Bock auf Segeln? Ganz einfach bei uns am Grossen Meer! Wir bieten euch die Möglichkeit ganz entspannt
                 das Gefühl des Segelns bei unseren Kursen zu erlernen. Auch wenn es mal Schwierigkeiten gibt, kein
                 Problem: Die maximale Tiefe des Grossen Meeres von ca. 1m geben euch immer die nötige Sicherheit alles
@@ -29,9 +28,9 @@
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
             <a id="kurse" class="anchor"></a>
-            <h1 class="pt-8">Segelkurse</h1>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Segelkurse</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Praktisch und theoretisch alles klar? Wir geben euch die nötige Sicherheit auf dem Wasser und machen
                 Theorie verständlich. Mit dem Segelschein des VDWS wird die Berechtigung zum Führen eines Segelbootes
                 erlangt. Auf Wunsch bieten wir auch den DSV-Sportbootführerschein "Binnen" an.
@@ -74,9 +73,9 @@
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
             <a id="verleih" class="anchor"></a>
-            <h1 class="pt-8">Verleih</h1>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Verleih</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6">
+            <p class="pb-6 text-sm xl:text-lg">
                 Jederzeit könnt ihr bei uns eine Jolle mieten. Vorrausgesetzt ihr habt die Qualifikation zum Führen
                 einer Segeljolle. Am besten meldet ihr euch vorher kurz telefonisch an.
             </p>

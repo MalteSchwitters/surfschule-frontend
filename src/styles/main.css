@@ -1,3 +1,7 @@
+@import 'tailwindcss/preflight';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 /**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
@@ -9,8 +13,8 @@
  *
  * @import "tailwindcss/preflight";
  */
-
- @import 'tailwindcss/preflight';
+/*@tailwind preflight;*/
+ /*@import 'tailwindcss/preflight.css';*/
 
  /**
   * This injects any component classes registered by plugins.
@@ -19,7 +23,8 @@
   *
   * @import "tailwindcss/components";
   */
- @import 'tailwindcss/components';
+/*@tailwind components;*/
+ /*@import 'tailwindcss/components.css';*/
 
  /**
   * Here you would add any of your custom component classes; stuff that you'd
@@ -45,7 +50,7 @@
   *
   * @import "tailwindcss/utilities";
   */
- @import 'tailwindcss/utilities';
+ /*@import 'tailwindcss/utilities.css';*/
 
  /**
   * Here you would add any custom utilities you need that don't come out of the
@@ -139,4 +144,9 @@ a.anchor {
     position: relative;
     top: -120px;
     visibility: hidden;
+}
+
+.w-main {
+    //width: 80rem;
+    width: 1200px;
 }

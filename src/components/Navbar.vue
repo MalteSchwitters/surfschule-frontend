@@ -1,12 +1,12 @@
 <template>
-    <nav ref="nav" class="h-24 flex justify-center items-center bg-white whitespace-no-wrap z-20 text-grey-dark text-lg uppercase font-sans font-thin ">
+    <nav ref="nav" class="h-12 xl:h-24 flex justify-center items-center bg-white whitespace-no-wrap z-20 text-grey-dark text-lg uppercase font-sans font-thin">
         <div class="xl:hidden fixed pin-l pl-4">
             <button>
-                <img src="https://png.icons8.com/windows/50/000000/menu.png">
+                <img src="https://png.icons8.com/windows/32/000000/menu.png">
             </button>
         </div>
 
-        <div class="invisible xl:visible w-1/3 flex justify-end  pt-4">
+        <div class="invisible xl:visible w-1/3 flex justify-end pt-4">
             <router-link to="home" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
                 :class="{ 'text-grey-darkest border-green-dark': activeTab === 'home' }">
                 Startseite
@@ -21,7 +21,7 @@
             </router-link>
         </div>
         <router-link to="/" class="flex-no-shrink">
-            <img src="../assets/logo.png" class="h-16 px-6 my-auto">
+            <img src="../assets/logos/logo.png" class="h-10 xl:h-16 px-6 my-auto">
         </router-link>
         <div class="invisible xl:visible w-1/3 flex justify-start pt-4">
             <router-link to="sailing" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"

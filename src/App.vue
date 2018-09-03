@@ -6,14 +6,12 @@
                 <div class="h-24"></div>
                 <img class="h-screen w-screen fixed z-0" src="./assets/backgrounds/sup.jpg"/>
                 <div class="z-10 flex-1 w-full flex items-stretch">
-                    <div class="xl:w-1/5"></div>
-
-                    <div class="flex-grow flex-1 ">
+                    <div class="flex-grow"></div>
+                    <div class="w-main">
                         <router-view class="bg-white shadow-md"/>
                         <Footer></Footer>
                     </div>
-
-                    <div class="xl:w-1/5"></div>
+                    <div class="flex-grow"></div>
                 </div>
             </div>
         </div>
