@@ -15,12 +15,13 @@
                             <div class="flex pb-20">
                                 <div class="w-1/2 text-sm">
                                     <p class="text-white text-2xl">Unser Angebot</p>
-                                    <router-link class="text-white no-underline hover:underline block" to="surfing#kurse">🗸 Windsurf Kurse</router-link>
-                                    <router-link class="text-white no-underline hover:underline block" to="surfing#kurse">🗸 Surfmaterial Verleih</router-link>
-                                    <router-link class="text-white no-underline hover:underline block" to="surfing#kurse">🗸 SUP Kurse</router-link>
-                                    <router-link class="text-white no-underline hover:underline block" to="surfing#kurse">🗸 SUP Verleih</router-link>
-                                    <router-link class="text-white no-underline hover:underline block" to="surfing#kurse">🗸 Segelkurse</router-link>
-                                    <router-link class="text-white no-underline hover:underline block" to="surfing#kurse">🗸 Segelboot Verleih</router-link>
+                                    <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">Windsurf Kurse</router-link></div>
+                                    <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">Surfmaterial Verleih</router-link></div>
+                                    <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">SUP Kurse</router-link></div>
+                                    <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">SUP Verleih</router-link></div>
+                                    <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#touren">Geführte SUP Touren</router-link></div>
+                                    <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">Segelkurse</router-link></div>
+                                    <div class="text-white">🗸 <router-link class="text-white no-underline hover:underline" to="surfing#kurse">Segelboot Verleih</router-link></div>
                                 </div>
                                 <div class="w-1/2 text-sm">
                                     <p class="text-white text-2xl">Kontakt</p>
@@ -30,7 +31,7 @@
                                     <a class="text-white no-underline hover:underline block" href="tel:049425096">04942 5096</a>
                                     <a class="text-white no-underline hover:underline block" href="tel:01778879184">0177 887 91 84</a>
                                     <a class="text-white no-underline hover:underline block" href="mailto:info@grosses-meer.surf">info@grosses-meer.surf</a>
-                                    <router-link class="text-white no-underline hover:underline block" to="surfing#kurse">Impressum</router-link>
+                                    <router-link class="text-white no-underline hover:underline block" to="impressum">Impressum</router-link>
                                 </div>
                             </div>
                             <p class="text-white text-center">Preise Stand 2018</p>
@@ -59,7 +60,10 @@
     export default class App extends Vue {
 
         private created() {
-
+            this.$router.beforeResolve((to, from, next) => {
+                window.scrollTo(0, 0);
+                next();
+            });
         }
 
         private isMobileDevice() {

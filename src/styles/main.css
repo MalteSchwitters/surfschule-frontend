@@ -78,6 +78,14 @@ h1 {
     color: #70b862;
 }
 
+h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: larger;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #444444;
+}
+
 p {
     font-family: 'Quicksand', sans-serif;
     font-size: large;

@@ -6,6 +6,7 @@ import StandUpPaddling from './views/StandUpPaddling.vue';
 import Sailing from './views/Sailing.vue';
 import Weather from './views/Weather.vue';
 import Contact from './views/Contact.vue';
+import Impressum from './views/Impressum.vue';
 
 Vue.use(Router);
 
@@ -17,6 +18,11 @@ export default new Router({
             name: 'home',
             component: Home,
             alias: ['/home', '/start', '/startseite', '/willkommen'],
+        },
+        {
+            path: '/impressum',
+            name: 'impressum',
+            component: Impressum,
         },
         {
             path: '/surfing',
