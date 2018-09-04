@@ -150,3 +150,7 @@ a.anchor {
     //width: 80rem;
     width: 1200px;
 }
+
+.object-fit-cover {
+    object-fit: cover
+}

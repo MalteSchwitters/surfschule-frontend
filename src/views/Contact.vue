@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <img class="" src="../assets/contact/header.jpg"/>
+        <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/contact/header.jpg"/>
 
         <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey-lighter">
             <a href="#kontakt" class="text-grey-darker hover:text-blue uppercase no-underline"># Kontakt</a>
@@ -8,7 +8,7 @@
             <a href="#parken" class="text-grey-darker hover:text-blue uppercase no-underline"># Parkmöglichkeiten</a>
         </nav>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="kontakt" class="anchor"></a>
             <h1 class="pt-8">Kontakt</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>

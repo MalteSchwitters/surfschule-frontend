@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="" src="../assets/start/header.jpg"/>
+        <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/start/header.jpg"/>
 
         <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey-lighter">
             <a href="#willkommen" class="text-grey-darker hover:text-blue uppercase no-underline"># Willkommen</a>
@@ -8,7 +8,7 @@
             <a href="#shop" class="text-grey-darker hover:text-blue uppercase no-underline"># Surfshop</a>
         </nav>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="willkommen" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Willkommen!</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
@@ -33,7 +33,7 @@
             <img class="w-1/3" src="../assets/start/thumbs/meer04.jpg"/>
         </div>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="grossesmeer" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Das Grosse Meer</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
@@ -60,7 +60,7 @@
             <img class="w-1/3" src="../assets/start/thumbs/meer03.jpg"/>
         </div>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="shop" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Unser Shop</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>

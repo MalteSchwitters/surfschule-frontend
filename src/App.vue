@@ -3,15 +3,15 @@
         <div>
             <navbar class="fixed w-full z-10 shadow-md"></navbar>
             <div class="min-h-screen flex flex-col bg-transparent">
-                <div class="h-24"></div>
+                <div class="h-12 xl:h-24"></div>
                 <img class="h-screen w-screen fixed z-0" src="./assets/backgrounds/sup.jpg"/>
                 <div class="z-10 flex-1 w-full flex items-stretch">
-                    <div class="flex-grow"></div>
+                    <div class="xl:flex-grow"></div>
                     <div class="w-main">
                         <router-view class="bg-white shadow-md"/>
                         <Footer></Footer>
                     </div>
-                    <div class="flex-grow"></div>
+                    <div class="xl:flex-grow"></div>
                 </div>
             </div>
         </div>

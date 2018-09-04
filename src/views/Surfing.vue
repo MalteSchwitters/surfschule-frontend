@@ -1,7 +1,7 @@
 <template>
     <div class="">
 
-        <img class="" src="../assets/surfing/header.jpg"/>
+        <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/surfing/header.jpg"/>
 
         <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey-lighter">
             <a href="#windsurfen" class="text-grey-darker hover:text-blue uppercase no-underline"># Windsurfen</a>
@@ -10,7 +10,7 @@
             <a href="#ranking" class="text-grey-darker hover:text-blue uppercase no-underline"># GPS Rangliste</a>
         </nav>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="windsurfen" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Windsurfen</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
@@ -33,7 +33,7 @@
             <img class="w-1/3" src="../assets/surfing/thumbs/surfen06.jpg"/>
         </div>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="kurse" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Surfkurse</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
@@ -66,7 +66,7 @@
             <img class="w-1/3" src="../assets/surfing/thumbs/surfen16.jpg"/>
         </div>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="verleih" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Verleih</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
@@ -83,8 +83,8 @@
                 </tr>
                 <tr v-for="r in renting" :key="r.material">
                     <td class="text-sm xl:text-lg">{{ r.material }}</td>
-                    <td class="text-sm xl:text-lg whitespace-no-wrap pr-2">{{ r.duration }} Std.</td>
-                    <td class="text-base xl:text-2xl whitespace-no-wrap">{{ r.price }}€</td>
+                    <td class="text-sm xl:text-lg whitespace-no-wrap pr-2">{{ r.duration }}</td>
+                    <td class="text-base xl:text-2xl whitespace-no-wrap">{{ r.price }}</td>
                 </tr>
             </table>
         </div>
@@ -95,7 +95,7 @@
             <img class="w-1/3" src="../assets/surfing/thumbs/surfen21.jpg"/>
         </div>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="ranking" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">GPS Rangliste</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
@@ -111,10 +111,10 @@
                     <th class="w-2/5 whitespace-no-wrap uppercase">Top Speed</th>
                     <th class="w-1/5 whitespace-no-wrap uppercase">Datum</th>
                 </tr>
-                <tr v-for="r, index in ranking" :key="r.driver">
+                <tr v-for="(r, index) in ranking" :key="r.driver">
                     <td class="text-sm xl:text-lg">{{ index + 1 }}</td>
                     <td class="text-sm xl:text-lg">{{ r.driver }}</td>
-                    <td class="text-sm xl:text-lg">{{ r.speed }} km/h</td>
+                    <td class="text-sm xl:text-lg">{{ r.speed }}</td>
                     <td class="text-sm xl:text-lg">{{ r.date }}</td>
                 </tr>
             </table>
@@ -137,83 +137,83 @@
         private courses = [
             {
                 name: 'Schnuppersurfen (ab 8 Personen)',
-                duration: '1',
-                price: '20,00',
+                duration: '1 Std.',
+                price: '20,00€',
             },
             {
                 name: 'Schnupperkurs',
-                duration: '3' ,
-                price: '55,00',
+                duration: '3 Std.',
+                price: '55,00€',
             },
             {
                 name: 'Einsteigerkurs ohne VDWS-Grundschein',
-                duration: '12-14',
-                price: '195,00',
+                duration: '12-14 Std.',
+                price: '195,00€',
             },
             {
                 name: 'Einsteigerkurs mit VDWS-Grundschein',
-                duration: '12-14',
-                price: '225,00',
+                duration: '12-14 Std.',
+                price: '225,00€',
             },
             {
                 name: 'Aufbaukurs (2-4 Personen)',
-                duration: '3',
-                price: '95,00',
+                duration: '3 Std.',
+                price: '95,00€',
             },
             {
                 name: 'Privatstunde',
-                duration: '1',
-                price: '75,00',
+                duration: '1 Std.',
+                price: '75,00€',
             },
         ];
 
         private renting = [
             {
                 material: 'Einsteigerboard mit Segel',
-                duration: '1',
-                price: '15,00',
+                duration: '1 Std.',
+                price: '15,00€',
             },
             {
                 material: 'Aufsteigerboard mit Segel',
-                duration: '1',
-                price: '20,00',
+                duration: '1 Std.',
+                price: '20,00€',
             },
             {
                 material: 'Shortboard mit Profilsegel',
-                duration: '1',
-                price: '22,50',
+                duration: '1 Std.',
+                price: '22,50 €',
             },
             {
                 material: 'Neoprenanzug',
-                duration: '1',
-                price: '2,50',
+                duration: '1 Std.',
+                price: '2,50€',
             },
         ];
 
         private ranking = [
             {
                 driver: 'Timo Thiele',
-                speed: '62,2',
+                speed: '62,2 km/h',
                 date: '04.08.2017',
             },
             {
                 driver: 'Jan-Malte Becker',
-                speed: '45,3',
+                speed: '45,3 km/h',
                 date: '10.09.2017',
             },
             {
                 driver: 'Malte Schwitters',
-                speed: '45,2',
+                speed: '45,2 km/h',
                 date: '10.09.2017',
             },
             {
                 driver: 'Lasse Eckmann',
-                speed: '42,1',
+                speed: '42,1 km/h',
                 date: '07.02.2017',
             },
             {
                 driver: 'Nika Eckmann',
-                speed: '40,6',
+                speed: '40,6 km/h',
                 date: '07.02.2017',
             },
 

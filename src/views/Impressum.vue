@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="" src="../assets/start/header.jpg"/>
+        <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/start/header.jpg"/>
 
         <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey-lighter">
             <a href="#impressum" class="text-grey-darker hover:text-blue uppercase no-underline"># Impressum</a>
@@ -8,7 +8,7 @@
             <a href="#datenschutz" class="text-grey-darker hover:text-blue uppercase no-underline"># Datenschutzerklärung</a>
         </nav>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="impressum" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Impressum</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="disclaimer" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">DISCLAIMER – RECHTLICHE HINWEISE
             </h1>
@@ -97,7 +97,7 @@
 
         </div>
 
-        <div class="px-8 md:px-16 lg:px-24 py-6">
+        <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="datenschutz" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">DATENSCHUTZERKLÄRUNG</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
