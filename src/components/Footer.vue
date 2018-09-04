@@ -59,6 +59,9 @@
         </div>
         <p class="text-base xl:text-lg text-white text-center">Preise Stand {{ (new Date()).getFullYear() }}</p>
         <p class="text-base xl:text-lg text-white text-center">Copyright © {{ (new Date()).getFullYear() }} Surfschule Grosses Meer</p>
+        <div class="text-center">
+            <a class="text-base xl:text-lg text-white no-underline hover:underline" href="https://icons8.com">Icon pack by Icons8.com</a>
+        </div>
     </div>
 </template>
 

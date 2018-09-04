@@ -1,7 +1,65 @@
 <template>
-    <nav ref="nav" class="h-12 xl:h-24 flex justify-center items-center bg-white whitespace-no-wrap z-20 text-grey-dark text-lg uppercase font-sans font-thin">
+    <div ref="nav" class="h-12 xl:h-24 flex justify-center items-center bg-white whitespace-no-wrap z-20 text-grey-dark uppercase font-sans font-thin">
+
+        <div v-if="showdrawer" class="w-screen h-screen fixed pin z-30 bg-black-transparent" @click="showdrawer = false">
+            <div ref="drawer" class="w-2/3 h-screen bg-grey-darkest shadow-md">
+                <div class=" h-24 mb-4">
+                    <img class="p-2" align="right" src="https://png.icons8.com/ios/16/ffffff/delete-sign.png" @click="showdrawer = false">
+                    <img src="../assets/logos/logo_white.png" class="h-12 m-4">
+                </div>
+
+                <div class="flex items-center">
+                    <router-link to="home" class="flex-grow pl-4 py-2 text-white no-underline">
+                        Startseite
+                    </router-link>
+                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
+                </div>
+                <div class="mx-4 border-b border-grey-dark"></div>
+                <div class="flex items-center">
+                    <router-link to="surfing" class="flex-grow pl-4 py-2 text-white no-underline">
+                        Windsurfen
+                    </router-link>
+                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
+                </div>
+                <div class="mx-4 border-b border-grey-dark"></div>
+                <div class="flex items-center">
+                    <router-link to="sup" class="flex-grow pl-4 py-2 text-white no-underline">
+                        Stand Up Paddling
+                    </router-link>
+                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
+                </div>
+                <div class="mx-4 border-b border-grey-dark"></div>
+                <div class="flex items-center">
+                    <router-link to="sailing" class="flex-grow pl-4 py-2 text-white no-underline">
+                        Segeln
+                    </router-link>
+                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
+                </div>
+                <div class="mx-4 border-b border-grey-dark"></div>
+                <div class="flex items-center">
+                    <router-link to="wheater" class="flex-grow pl-4 py-2 text-white no-underline">
+                        Wetter
+                    </router-link>
+                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
+                </div>
+                <div class="mx-4 border-b border-grey-dark"></div>
+                <div class="flex items-center">
+                    <router-link to="contact" class="flex-grow pl-4 py-2 text-white no-underline">
+                        Kontakt & Anfahrt
+                    </router-link>
+                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
+                </div>
+                <div class="mx-4 border-b border-grey-dark"></div>
+                <div class="flex items-center">
+                    <router-link to="impressum" class="flex-grow px-4 py-2 text-white no-underline">
+                        Impressum
+                    </router-link>
+                </div>
+            </div>
+        </div>
+
         <div class="xl:hidden fixed pin-l pl-4">
-            <button>
+            <button @click="showdrawer = true">
                 <img src="https://png.icons8.com/windows/32/000000/menu.png">
             </button>
         </div>
@@ -37,7 +95,7 @@
                 Kontakt & Anfahrt
             </router-link>
         </div>
-    </nav>
+    </div>
 </template>
 
 <script lang="ts">
@@ -48,6 +106,7 @@
     })
     export default class Navbar extends Vue {
 
+        private showdrawer = false;
         private activeTab: any;
 
         private async created() {

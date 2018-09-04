@@ -154,3 +154,7 @@ a.anchor {
 .object-fit-cover {
     object-fit: cover
 }
+
+.bg-black-transparent {
+    background: rgba(5, 5, 5, 0.4)
+}
