@@ -9,42 +9,48 @@
                 </div>
 
                 <div class="flex items-center">
-                    <router-link to="home" class="flex-grow pl-4 py-2 text-white no-underline">
+                    <router-link to="home" class="flex-grow pl-4 py-2 text-white no-underline"
+                                 :class="{ 'font-bold': activeTab === 'home' }">
                         Startseite
                     </router-link>
                     <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
                 <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="surfing" class="flex-grow pl-4 py-2 text-white no-underline">
+                    <router-link to="surfing" class="flex-grow pl-4 py-2 text-white no-underline"
+                                 :class="{ 'font-bold': activeTab === 'surfing' }">
                         Windsurfen
                     </router-link>
                     <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
                 <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="sup" class="flex-grow pl-4 py-2 text-white no-underline">
+                    <router-link to="sup" class="flex-grow pl-4 py-2 text-white no-underline"
+                                 :class="{ 'font-bold': activeTab === 'sup' }">
                         Stand Up Paddling
                     </router-link>
                     <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
                 <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="sailing" class="flex-grow pl-4 py-2 text-white no-underline">
+                    <router-link to="sailing" class="flex-grow pl-4 py-2 text-white no-underline"
+                                 :class="{ 'font-bold': activeTab === 'sailing' }">
                         Segeln
                     </router-link>
                     <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
                 <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="wheater" class="flex-grow pl-4 py-2 text-white no-underline">
+                    <router-link to="weather" class="flex-grow pl-4 py-2 text-white no-underline"
+                                 :class="{ 'font-bold': activeTab === 'weather' }">
                         Wetter
                     </router-link>
                     <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
                 <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="contact" class="flex-grow pl-4 py-2 text-white no-underline">
+                    <router-link to="contact" class="flex-grow pl-4 py-2 text-white no-underline"
+                                 :class="{ 'font-bold': activeTab === 'contact' }">
                         Kontakt & Anfahrt
                     </router-link>
                     <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
