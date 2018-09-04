@@ -44,44 +44,20 @@
                 eigenes Material zu den Kursen mitbringen. Sprecht uns dazu einfach vor dem Kurs kurz an. Alles was ihr
                 zum Surfen mitbringen solltet ist Gute Laune ;-)
             </p>
+
             <table class="w-full">
                 <tr>
-                    <th class="w-3/5">Kurs</th>
-                    <th class="w-1/4">Dauer</th>
-                    <th class="w-1/5">Preis *</th>
+                    <th class="w-3/5 whitespace-no-wrap uppercase">Kurs</th>
+                    <th class="w-1/4 whitespace-no-wrap uppercase">Dauer</th>
+                    <th class="w-1/5 whitespace-no-wrap uppercase">Preis *</th>
                 </tr>
-                <tr>
-                    <td>Schnuppersurfen (ab 8 Personen)</td>
-                    <td>1 Stunde</td>
-                    <td class="text-2xl">20,00€</td>
-                </tr>
-                <tr>
-                    <td>Schnupperkurs</td>
-                    <td>3 Stunden</td>
-                    <td class="text-2xl">55,00€</td>
-                </tr>
-                <tr>
-                    <td>Einsteigerkurs ohne VDWS-Grundschein</td>
-                    <td>12-14 Stunden</td>
-                    <td class="text-2xl">195,00€</td>
-                </tr>
-                <tr>
-                    <td>Einsteigerkurs mit VDWS-Grundschein</td>
-                    <td>12-14 Stunden</td>
-                    <td class="text-2xl">225,00€</td>
-                </tr>
-                <tr>
-                    <td>Aufbaukurs (2 - 4 Personen)</td>
-                    <td>3 Stunden</td>
-                    <td class="text-2xl">95,00€</td>
-                </tr>
-                <tr>
-                    <td>Privatstunde</td>
-                    <td>1 Stunden</td>
-                    <td class="text-2xl">75,00€</td>
+                <tr v-for="c in courses" :key="c.name">
+                    <td class="text-sm xl:text-lg">{{ c.name }}</td>
+                    <td class="text-sm xl:text-lg whitespace-no-wrap pr-2">{{ c.duration }} Std.</td>
+                    <td class="text-base xl:text-2xl whitespace-no-wrap">{{ c.price }} €</td>
                 </tr>
             </table>
-            <p class="pt-8 pb-4" align="right">* alle Kurspreise pro Person und inkl. Material</p>
+            <p class="pt-8 pb-4 text-sm xl:text-lg" align="right">* alle Kurspreise pro Person und inkl. Material</p>
         </div>
 
         <div class="flex items-start">
@@ -101,29 +77,14 @@
             </p>
             <table class="w-full">
                 <tr>
-                    <th class="w-3/5">Material</th>
-                    <th class="w-1/4">Dauer</th>
-                    <th class="w-1/5">Preis</th>
+                    <th class="w-3/5 whitespace-no-wrap uppercase">Material</th>
+                    <th class="w-1/4 whitespace-no-wrap uppercase">Dauer</th>
+                    <th class="w-1/5 whitespace-no-wrap uppercase">Preis</th>
                 </tr>
-                <tr>
-                    <td>Einsteigerboard mit Rigg</td>
-                    <td>1 Stunde</td>
-                    <td class="text-2xl">15,00€</td>
-                </tr>
-                <tr>
-                    <td>Aufsteigerboard mit Rigg</td>
-                    <td>1 Stunde</td>
-                    <td class="text-2xl">20,00€</td>
-                </tr>
-                <tr>
-                    <td>Shortboard mit Rigg</td>
-                    <td>1 Stunde</td>
-                    <td class="text-2xl">22,50€</td>
-                </tr>
-                <tr>
-                    <td>Neoprenanzug</td>
-                    <td>1 Stunde</td>
-                    <td class="text-2xl">2,50€</td>
+                <tr v-for="r in renting" :key="r.material">
+                    <td class="text-sm xl:text-lg">{{ r.material }}</td>
+                    <td class="text-sm xl:text-lg whitespace-no-wrap pr-2">{{ r.duration }} Std.</td>
+                    <td class="text-base xl:text-2xl whitespace-no-wrap">{{ r.price }}€</td>
                 </tr>
             </table>
         </div>
@@ -143,6 +104,20 @@
                 der Surfschule könnt ihr euren Topspeed messen! Holt alles aus euren Boards raus, schon für 5€ / Std.
                 geht der Speed-Spass los! Hier die Rangliste der aktuell Schnellsten auf dem Grossen Meer:
             </p>
+            <table class="w-full">
+                <tr>
+                    <th class="pr-2">#</th>
+                    <th class="w-3/5 whitespace-no-wrap uppercase">Fahrer</th>
+                    <th class="w-2/5 whitespace-no-wrap uppercase">Top Speed</th>
+                    <th class="w-1/5 whitespace-no-wrap uppercase">Datum</th>
+                </tr>
+                <tr v-for="r, index in ranking" :key="r.driver">
+                    <td class="text-sm xl:text-lg">{{ index + 1 }}</td>
+                    <td class="text-sm xl:text-lg">{{ r.driver }}</td>
+                    <td class="text-sm xl:text-lg">{{ r.speed }} km/h</td>
+                    <td class="text-sm xl:text-lg">{{ r.date }}</td>
+                </tr>
+            </table>
         </div>
 
         <div class="flex items-start">
@@ -159,5 +134,89 @@
     @Component({ components: {} })
     export default class Surfing extends Vue {
 
+        private courses = [
+            {
+                name: 'Schnuppersurfen (ab 8 Personen)',
+                duration: '1',
+                price: '20,00',
+            },
+            {
+                name: 'Schnupperkurs',
+                duration: '3' ,
+                price: '55,00',
+            },
+            {
+                name: 'Einsteigerkurs ohne VDWS-Grundschein',
+                duration: '12-14',
+                price: '195,00',
+            },
+            {
+                name: 'Einsteigerkurs mit VDWS-Grundschein',
+                duration: '12-14',
+                price: '225,00',
+            },
+            {
+                name: 'Aufbaukurs (2-4 Personen)',
+                duration: '3',
+                price: '95,00',
+            },
+            {
+                name: 'Privatstunde',
+                duration: '1',
+                price: '75,00',
+            },
+        ];
+
+        private renting = [
+            {
+                material: 'Einsteigerboard mit Segel',
+                duration: '1',
+                price: '15,00',
+            },
+            {
+                material: 'Aufsteigerboard mit Segel',
+                duration: '1',
+                price: '20,00',
+            },
+            {
+                material: 'Shortboard mit Profilsegel',
+                duration: '1',
+                price: '22,50',
+            },
+            {
+                material: 'Neoprenanzug',
+                duration: '1',
+                price: '2,50',
+            },
+        ];
+
+        private ranking = [
+            {
+                driver: 'Timo Thiele',
+                speed: '62,2',
+                date: '04.08.2017',
+            },
+            {
+                driver: 'Jan-Malte Becker',
+                speed: '45,3',
+                date: '10.09.2017',
+            },
+            {
+                driver: 'Malte Schwitters',
+                speed: '45,2',
+                date: '10.09.2017',
+            },
+            {
+                driver: 'Lasse Eckmann',
+                speed: '42,1',
+                date: '07.02.2017',
+            },
+            {
+                driver: 'Nika Eckmann',
+                speed: '40,6',
+                date: '07.02.2017',
+            },
+
+        ];
     }
 </script>
