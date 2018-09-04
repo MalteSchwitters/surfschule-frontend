@@ -10,32 +10,37 @@
 
         <div class="px-8 md:px-16 lg:px-24 py-6">
             <a id="impressum" class="anchor"></a>
-            <h1 class="pt-8 text-2xl xl:text-3xl">Impressum!</h1>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Impressum</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <div class="pb-6">
-                <div class="flex">
-                    <p class="text-sm xl:text-lg w-1/3 xl:w-64 flex-no-shrink">Jens Radde</p>
-                    <div class="flex-grow">
+
+            <div class="table w-full">
+                <div class="table-row">
+                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-sm xl:text-lg">Inhaber</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap text-sm xl:text-lg">Jens Radde</p>
+                </div>
+                <div class="table-row">
+                    <p class="table-cell whitespace-no-wrap pr-6 text-sm xl:text-lg">Adresse</p>
+                    <div class="table-cell pb-2">
                         <p class="text-sm xl:text-lg">Surfschule Grosses Meer</p>
                         <p class="text-sm xl:text-lg">Forlitzer Str. 213</p>
                         <p class="text-sm xl:text-lg">26624 Forlitz-Blaukirchen / Südbrookmerland</p>
                     </div>
                 </div>
-                <div class="flex">
-                    <p class="text-sm xl:text-lg w-1/3 xl:w-64 flex-no-shrink">Telefon</p>
-                    <p class="text-sm xl:text-lg flex-grow">04942 5096</p>
+                <div class="table-row">
+                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-sm xl:text-lg">Telefon</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap text-sm xl:text-lg">04942 5096</p>
                 </div>
-                <div class="flex">
-                    <p class="text-sm xl:text-lg w-1/3 xl:w-64 flex-no-shrink">Mobil</p>
-                    <p class="text-sm xl:text-lg flex-grow">0177 8879184</p>
+                <div class="table-row">
+                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-sm xl:text-lg">Mobil</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap text-sm xl:text-lg">0177 8879184</p>
                 </div>
-                <div class="flex">
-                    <p class="text-sm xl:text-lg w-1/3 xl:w-64 flex-no-shrink">E-Mail</p>
-                    <p class="text-sm xl:text-lg flex-grow">info@grosses-meer.surf</p>
+                <div class="table-row">
+                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-sm xl:text-lg">E-Mail</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap text-sm xl:text-lg">info@grosses-meer.surf</p>
                 </div>
-                <div class="flex">
-                    <p class="text-sm xl:text-lg w-1/3 xl:w-64 flex-no-shrink">Umsatzsteuer-ID</p>
-                    <p class="text-sm xl:text-lg flex-grow">54/135/01788</p>
+                <div class="table-row">
+                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-sm xl:text-lg">Umsatzsteuer-ID</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap text-sm xl:text-lg">54 / 135 / 01788</p>
                 </div>
             </div>
         </div>
@@ -86,7 +91,7 @@
                 abweichen, wird an entsprechender Stelle ausdrücklich darauf hingewiesen. In diesem Falle gelten im
                 jeweiligen Einzelfall die besonderen Nutzungsbedingungen.
             </p>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="text-sm xl:text-lg">
                 Quelle: Impressumsgenerator von <a class="no-underline hover:underline" href="www.juraforum.de">www.juraforum.de</a>
             </p>
 
