@@ -19,12 +19,12 @@
                 unserem kleinen Surfschulshop. Kommt vorbei! Unser Tipp: Als Gruppe (Schulklasse, Jugendgruppe, Studenten)
                 auf dem Campingplatz gleich nebenan übernachten und gemeinsam zum Surfen gehen!
             </p>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="text-sm xl:text-lg">
                 Bei uns könnt ihr:
             </p>
-            <router-link class="block no-underline hover:underline" to="surfing">>> Windsurfen</router-link>
-            <router-link class="block no-underline hover:underline" to="sup">>> Stand up Paddling</router-link>
-            <router-link class="block no-underline hover:underline" to="sailing">>> Segeln</router-link>
+            <p class="text-lg">- <router-link class="no-underline hover:underline" to="surfing">Windsurfkurse belegen und Surfmaterial ausleihen</router-link></p>
+            <p class="text-lg">- <router-link class="no-underline hover:underline" to="sup">Stand Up Paddling Boards leihen und an SUP Touren teilnehmen</router-link></p>
+            <p class="text-lg">- <router-link class="no-underline hover:underline" to="sailing">Segeln lernen und Jollen leihen</router-link></p>
         </div>
 
         <div class="flex items-start">
