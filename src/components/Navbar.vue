@@ -71,16 +71,16 @@
         </div>
 
         <div class="invisible xl:visible w-1/3 flex justify-end pt-4">
-            <router-link to="home" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
-                :class="{ 'text-grey-darkest border-green-dark': activeTab === 'home' }">
+            <router-link to="home" class="px-3 py-2 no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+                :class="{ 'text-black border-green-dark': activeTab === 'home', 'text-grey-dark': activeTab !== 'home' }">
                 Startseite
             </router-link>
-            <router-link to="surfing" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
-                 :class="{ 'text-grey-darkest border-green-dark': activeTab === 'surfing' }">
+            <router-link to="surfing" class="px-3 py-2 no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+                 :class="{ 'text-black border-green-dark': activeTab === 'surfing', 'text-grey-dark': activeTab !== 'surfing' }">
                 Windsurfen
             </router-link>
-            <router-link to="sup" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
-                 :class="{ 'text-grey-darkest border-green-dark': activeTab === 'sup' }">
+            <router-link to="sup" class="px-3 py-2 no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+                 :class="{ 'text-black border-green-dark': activeTab === 'sup', 'text-grey-dark': activeTab !== 'sup' }">
                 Stand Up Paddling
             </router-link>
         </div>
@@ -88,16 +88,16 @@
             <img src="../assets/logos/logo.png" class="h-10 xl:h-16 px-6 my-auto">
         </router-link>
         <div class="invisible xl:visible w-1/3 flex justify-start pt-4">
-            <router-link to="sailing" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
-                 :class="{ 'text-grey-darkest border-green-dark': activeTab === 'sailing' }">
+            <router-link to="sailing" class="px-3 py-2 no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+                 :class="{ 'text-black border-green-dark': activeTab === 'sailing', 'text-grey-dark': activeTab !== 'sailing' }">
                 Segeln
             </router-link>
-            <router-link to="weather" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
-                 :class="{ 'text-grey-darkest border-green-dark': activeTab === 'weather' }">
+            <router-link to="weather" class="px-3 py-2 no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+                 :class="{ 'text-black border-green-dark': activeTab === 'weather', 'text-grey-dark': activeTab !== 'weather' }">
                 Wetter
             </router-link>
-            <router-link to="contact" class="px-3 py-2 text-grey-dark no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
-                 :class="{ 'text-grey-darkest border-green-dark': activeTab === 'contact' }">
+            <router-link to="contact" class="px-3 py-2 no-underline border-b-2 hover:border-green-dark hover:text-grey-darker"
+                 :class="{ 'text-black border-green-dark': activeTab === 'contact', 'text-grey-dark': activeTab !== 'contact' }">
                 Kontakt & Anfahrt
             </router-link>
         </div>
