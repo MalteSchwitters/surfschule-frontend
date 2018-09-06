@@ -15,32 +15,32 @@
 
             <div class="table w-full">
                 <div class="table-row">
-                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-sm xl:text-lg">Inhaber</p>
-                    <p class="table-cell pb-2 whitespace-no-wrap text-sm xl:text-lg">Jens Radde</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-base xl:text-lg">Inhaber</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap text-base xl:text-lg">Jens Radde</p>
                 </div>
                 <div class="table-row">
-                    <p class="table-cell whitespace-no-wrap pr-6 text-sm xl:text-lg">Adresse</p>
+                    <p class="table-cell whitespace-no-wrap pr-6 text-base xl:text-lg">Adresse</p>
                     <div class="table-cell pb-2">
-                        <p class="text-sm xl:text-lg">Surfschule Grosses Meer</p>
-                        <p class="text-sm xl:text-lg">Forlitzer Str. 213</p>
-                        <p class="text-sm xl:text-lg">26624 Forlitz-Blaukirchen / Südbrookmerland</p>
+                        <p class="text-base xl:text-lg">Surfschule Grosses Meer</p>
+                        <p class="text-base xl:text-lg">Forlitzer Str. 213</p>
+                        <p class="text-base xl:text-lg">26624 Forlitz-Blaukirchen / Südbrookmerland</p>
                     </div>
                 </div>
                 <div class="table-row">
-                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-sm xl:text-lg">Telefon</p>
-                    <p class="table-cell pb-2 whitespace-no-wrap text-sm xl:text-lg">04942 5096</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-base xl:text-lg">Telefon</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap text-base xl:text-lg">04942 5096</p>
                 </div>
                 <div class="table-row">
-                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-sm xl:text-lg">Mobil</p>
-                    <p class="table-cell pb-2 whitespace-no-wrap text-sm xl:text-lg">0177 8879184</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-base xl:text-lg">Mobil</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap text-base xl:text-lg">0177 8879184</p>
                 </div>
                 <div class="table-row">
-                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-sm xl:text-lg">E-Mail</p>
-                    <p class="table-cell pb-2 whitespace-no-wrap text-sm xl:text-lg">info@grosses-meer.surf</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-base xl:text-lg">E-Mail</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap text-base xl:text-lg">info@grosses-meer.surf</p>
                 </div>
                 <div class="table-row">
-                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-sm xl:text-lg">Umsatzsteuer-ID</p>
-                    <p class="table-cell pb-2 whitespace-no-wrap text-sm xl:text-lg">54 / 135 / 01788</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap pr-6 text-base xl:text-lg">Umsatzsteuer-ID</p>
+                    <p class="table-cell pb-2 whitespace-no-wrap text-base xl:text-lg">54 / 135 / 01788</p>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
             </h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <h2 class="py-4">§ 1 WARNHINWEIS ZU INHALTEN</h2>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Die kostenlosen und frei zugänglichen Inhalte dieser Webseite wurden mit größtmöglicher Sorgfalt erstellt.
                 Der Anbieter dieser Webseite übernimmt jedoch keine Gewähr für die Richtigkeit und Aktualität der
                 bereitgestellten kostenlosen und frei zugänglichen journalistischen Ratgeber und Nachrichten. Namentlich
@@ -61,7 +61,7 @@
                 des Anbieters.
             </p>
             <h2 class="py-4">§ 2 EXTERNE LINKS</h2>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Diese Website enthält Verknüpfungen zu Websites Dritter ("externe Links"). Diese Websites unterliegen der
                 Haftung der jeweiligen Betreiber. Der Anbieter hat bei der erstmaligen Verknüpfung der externen Links die
                 fremden Inhalte daraufhin überprüft, ob etwaige Rechtsverstöße bestehen. Zu dem Zeitpunkt waren keine
@@ -72,7 +72,7 @@
                 von Rechtsverstößen werden jedoch derartige externe Links unverzüglich gelöscht.
             </p>
             <h2 class="py-4">§ 3 URHEBER- UND LEISTUNGSSCHUTZRECHTE</h2>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Die auf dieser Website veröffentlichten Inhalte unterliegen dem deutschen Urheber- und Leistungsschutzrecht.
                 Jede vom deutschen Urheber- und Leistungsschutzrecht nicht zugelassene Verwertung bedarf der vorherigen
                 schriftlichen Zustimmung des Anbieters oder jeweiligen Rechteinhabers. Dies gilt insbesondere für
@@ -82,16 +82,16 @@
                 Seiten ist nicht gestattet und strafbar. Lediglich die Herstellung von Kopien und Downloads für den
                 persönlichen, privaten und nicht kommerziellen Gebrauch ist erlaubt.
             </p>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Die Darstellung dieser Website in fremden Frames ist nur mit schriftlicher Erlaubnis zulässig.
             </p>
             <h2 class="py-4">§ 4 BESONDERE NUTZUNGSBEDINGUNGEN</h2>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Soweit besondere Bedingungen für einzelne Nutzungen dieser Website von den vorgenannten Paragraphen
                 abweichen, wird an entsprechender Stelle ausdrücklich darauf hingewiesen. In diesem Falle gelten im
                 jeweiligen Einzelfall die besonderen Nutzungsbedingungen.
             </p>
-            <p class="text-sm xl:text-lg">
+            <p class="text-base xl:text-lg">
                 Quelle: Impressumsgenerator von <a class="no-underline hover:underline" href="www.juraforum.de">www.juraforum.de</a>
             </p>
 
@@ -102,29 +102,29 @@
             <h1 class="pt-8 text-2xl xl:text-3xl">DATENSCHUTZERKLÄRUNG</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <h2 class="py-4">DATENSCHUTZERKLÄRUNG FÜR DAS FACEBOOK-PLUGIN („GEFÄLLT MIR“)</h2>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Diese Webseite nutzt Plugins des Anbieters Facebook.com, welche durch das Unternehmen Facebook Inc.,
                 1601 S. California Avenue, Palo Alto, CA 94304 in den USA bereitgestellt werden. Nutzer unserer Webseite,
                 auf der das Facebook-Plugin („Gefällt mir“-Button) installiert ist, werden hiermit darauf hingewiesen,
                 dass durch das Plugin eine Verbindung zu Facebook aufgebaut wird, wodurch eine Übermittlung an Ihren
                 Browser durchgeführt wird, damit das Plugin auf der Webseite erscheint.
             </p>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Des Weiteren werden durch die Nutzung Daten an die Facebook-Server weitergeleitet, welche Informationen
                 über Ihre Webseitenbesuche auf unserer Homepage enthalten. Dies hat für eingeloggte Facebook-Nutzer zur
                 Folge, dass die Nutzungsdaten Ihrem persönlichen Facebook-Account zugeordnet werden.
             </p>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Sobald Sie als eingeloggter Facebook-Nutzer aktiv das Facebook-Plugin nutzen (z.B. durch das Klicken
                 auf den „Gefällt mir“ Knopf oder die Nutzung der Kommentarfunktion), werden diese Daten zu Ihrem
                 Facebook-Account übertragen und veröffentlicht. Dies können Sie nur durch vorheriges Ausloggen aus
                 Ihrem Facebook-Account umgehen.
             </p>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Weitere Information bezüglich der Datennutzung durch Facebook entnehmen Sie bitte den
                 datenschutzrechtlichen Bestimmungen auf Facebook unter http://de-de.facebook.com/policy.php.
             </p>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Quelle: <a class="no-underline hover:underline" href="www.juraforum.de">www.juraforum.de</a>
             </p>
         </div>

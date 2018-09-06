@@ -14,12 +14,12 @@
             <a id="windsurfen" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Windsurfen</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Das Grosse Meer ist auf seiner gesamten Fläche stehtief und bietet somit ideale Bedingungen für
                 Einsteiger und Fortgeschrittene. Egal, ob ihr schon häufiger gesurft habt oder gerade einen Anfängerkurs
                 machen wollt: Wir haben das richtige Angebot an Kursen und passende Material für euch im Verleih.
             </p>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Natürlich könnt ihr auch mit eurem eigenen Material auf dem Grossen Meer surfen gehen. Aufbauen könnt
                 ihr am Strand oben beim Meerwarthaus, bei der Paddel und Pedal Station, bei uns an der Surfschule oder
                 auf der südlichen Landzunge. Am Grossen Meer kann man bei allen Bedingungen surfen gehen. Egal welche
@@ -37,7 +37,7 @@
             <a id="kurse" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Surfkurse</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Wir bieten Surfkurse für alle Könnensstufen: Vom Einsteigerkurs mit abschließendem VDWS Grundschein bis
                 zur Privatstunde mit gezieltem Intensiv-Training. Bei allen Surfkursen wird das Unterrichts- und
                 Surfmaterial, d.h. auch der Surfanzug, natürlich zur Verfügung gestellt. Natürlich könnt ihr auch euer
@@ -52,12 +52,12 @@
                     <th class="w-1/5 whitespace-no-wrap uppercase">Preis *</th>
                 </tr>
                 <tr v-for="c in courses" :key="c.name">
-                    <td class="text-sm xl:text-lg">{{ c.name }}</td>
-                    <td class="text-sm xl:text-lg whitespace-no-wrap pr-2">{{ c.duration }} Std.</td>
+                    <td class="text-base xl:text-lg">{{ c.name }}</td>
+                    <td class="text-base xl:text-lg whitespace-no-wrap pr-2">{{ c.duration }} Std.</td>
                     <td class="text-base xl:text-2xl whitespace-no-wrap">{{ c.price }} €</td>
                 </tr>
             </table>
-            <p class="pt-8 pb-4 text-sm xl:text-lg" align="right">* alle Kurspreise pro Person und inkl. Material</p>
+            <p class="pt-8 pb-4 text-base xl:text-lg" align="right">* alle Kurspreise pro Person und inkl. Material</p>
         </div>
 
         <div class="flex items-start">
@@ -70,7 +70,7 @@
             <a id="verleih" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Verleih</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Natürlich haben wir auch eine große Auswahl an Surfmaterial im Verleih. Von einsteigerfreundlichen
                 Longboards über Aufsteigerboards bis hin zu schnellen Shortboards und Profilsegeln bieten wir alles zum
                 Verleih an, was das Surferherz begehrt!
@@ -82,8 +82,8 @@
                     <th class="w-1/5 whitespace-no-wrap uppercase">Preis</th>
                 </tr>
                 <tr v-for="r in renting" :key="r.material">
-                    <td class="text-sm xl:text-lg">{{ r.material }}</td>
-                    <td class="text-sm xl:text-lg whitespace-no-wrap pr-2">{{ r.duration }}</td>
+                    <td class="text-base xl:text-lg">{{ r.material }}</td>
+                    <td class="text-base xl:text-lg whitespace-no-wrap pr-2">{{ r.duration }}</td>
                     <td class="text-base xl:text-2xl whitespace-no-wrap">{{ r.price }}</td>
                 </tr>
             </table>
@@ -99,7 +99,7 @@
             <a id="ranking" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">GPS Rangliste</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Ihr wolltet schon immer mal wissen, wie schnell ihr auf dem Wasser unterwegs seid? Mit dem GPS - Gerät
                 der Surfschule könnt ihr euren Topspeed messen! Holt alles aus euren Boards raus, schon für 5€ / Std.
                 geht der Speed-Spass los! Hier die Rangliste der aktuell Schnellsten auf dem Grossen Meer:
@@ -112,10 +112,10 @@
                     <th class="w-1/5 whitespace-no-wrap uppercase">Datum</th>
                 </tr>
                 <tr v-for="(r, index) in ranking" :key="r.driver">
-                    <td class="text-sm xl:text-lg">{{ index + 1 }}</td>
-                    <td class="text-sm xl:text-lg">{{ r.driver }}</td>
-                    <td class="text-sm xl:text-lg">{{ r.speed }}</td>
-                    <td class="text-sm xl:text-lg">{{ r.date }}</td>
+                    <td class="text-base xl:text-lg">{{ index + 1 }}</td>
+                    <td class="text-base xl:text-lg">{{ r.driver }}</td>
+                    <td class="text-base xl:text-lg">{{ r.speed }}</td>
+                    <td class="text-base xl:text-lg">{{ r.date }}</td>
                 </tr>
             </table>
         </div>

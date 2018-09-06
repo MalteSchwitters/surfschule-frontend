@@ -13,7 +13,7 @@
             <a id="sup" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Stand Up Paddling</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Beim Stand Up Paddling, oder kurz SUP, bewegt man sich auf einem Surfbrett stehend mit Hilfe eines
                 Paddels fort. Der bei uns noch relativ neue Trendsport trainiert den Gleichgewichtssinn und viele
                 Muskeln. SUP lässt sich außerdem hervorragend mit Yoga-Übungen kombinieren. Bei uns könnt ihr sowohl
@@ -32,7 +32,7 @@
             <a id="touren" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Touren Beispiele</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Rund um die Surfschule gibt es neben dem Grossen Meer selbst auch ein großes Kanalsystem zu erkunden,
                 welches die Städte Aurich, Emden und Leer verbindet. Für Neulinge bietet es sich an frei über das
                 stehtiefe Grosse Meer zu paddeln. Wer sich dagegen schon ganz wohl auf dem SUP Board fühlt, der kann mit
@@ -52,7 +52,7 @@
             <a id="kurse" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">SUP Kurse</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Ihr habt noch nie zuvor auf einem Surfbrett gestanden, oder fühlt euch noch unsicher? Mit einem SUP
                 Einsteigerkurs oder einer geführten Tour über das Grosse Meer und die angrenzenden Kanäle werdet ihr
                 euch schnell an das Board unter euren Füßen gewöhnen und die Faszination dieses Sports erleben. Nach
@@ -66,12 +66,12 @@
                     <th class="w-1/5 whitespace-no-wrap uppercase">Preis *</th>
                 </tr>
                 <tr v-for="c in courses" :key="c.name">
-                    <td class="text-sm xl:text-lg">{{ c.name }}</td>
-                    <td class="text-sm xl:text-lg whitespace-no-wrap pr-2">{{ c.duration }}</td>
+                    <td class="text-base xl:text-lg">{{ c.name }}</td>
+                    <td class="text-base xl:text-lg whitespace-no-wrap pr-2">{{ c.duration }}</td>
                     <td class="text-base xl:text-2xl whitespace-no-wrap">{{ c.price }}</td>
                 </tr>
             </table>
-            <p class="pt-8 pb-4 text-sm xl:text-lg" align="right">* alle Kurspreise pro Person und inkl. Material</p>
+            <p class="pt-8 pb-4 text-base xl:text-lg" align="right">* alle Kurspreise pro Person und inkl. Material</p>
         </div>
 
         <div class="flex items-start">
@@ -84,7 +84,7 @@
             <a id="verleih" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Verleih</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Wenn ihr schon öfter mit dem Surfboard unterwegs ward, oder einfach auf eigene Faust losziehen wollt,
                 könnt ihr euch natürlich auch einfach ein Board leihen. Wir haben sowohl mehrere klassische als auch
                 inflatable Air SUPs im Angebot. Eine kurze Einweisung gibt es auf Wunsch gratis dazu!
@@ -97,8 +97,8 @@
                     <th class="w-1/5 whitespace-no-wrap uppercase">Preis</th>
                 </tr>
                 <tr v-for="r in renting" :key="r.material">
-                    <td class="text-sm xl:text-lg">{{ r.material }}</td>
-                    <td class="text-sm xl:text-lg whitespace-no-wrap pr-2">{{ r.duration }}</td>
+                    <td class="text-base xl:text-lg">{{ r.material }}</td>
+                    <td class="text-base xl:text-lg whitespace-no-wrap pr-2">{{ r.duration }}</td>
                     <td class="text-base xl:text-2xl whitespace-no-wrap">{{ r.price }}</td>
                 </tr>
             </table>

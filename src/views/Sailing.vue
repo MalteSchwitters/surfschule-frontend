@@ -12,7 +12,7 @@
             <a id="segeln" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Segeln</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Bock auf Segeln? Ganz einfach bei uns am Grossen Meer! Wir bieten euch die Möglichkeit ganz entspannt
                 das Gefühl des Segelns bei unseren Kursen zu erlernen. Auch wenn es mal Schwierigkeiten gibt, kein
                 Problem: Die maximale Tiefe des Grossen Meeres von ca. 1m geben euch immer die nötige Sicherheit alles
@@ -30,7 +30,7 @@
             <a id="kurse" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Segelkurse</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Praktisch und theoretisch alles klar? Wir geben euch die nötige Sicherheit auf dem Wasser und machen
                 Theorie verständlich. Mit dem Segelschein des VDWS wird die Berechtigung zum Führen eines Segelbootes
                 erlangt. Auf Wunsch bieten wir auch den DSV-Sportbootführerschein "Binnen" an.
@@ -42,12 +42,12 @@
                     <th class="w-1/5 whitespace-no-wrap uppercase">Preis *</th>
                 </tr>
                 <tr v-for="c in courses" :key="c.name">
-                    <td class="text-sm xl:text-lg">{{ c.name }}</td>
-                    <td class="text-sm xl:text-lg whitespace-no-wrap pr-2">{{ c.duration }}</td>
+                    <td class="text-base xl:text-lg">{{ c.name }}</td>
+                    <td class="text-base xl:text-lg whitespace-no-wrap pr-2">{{ c.duration }}</td>
                     <td class="text-base xl:text-2xl whitespace-no-wrap">{{ c.price }}</td>
                 </tr>
             </table>
-            <p class="pt-8 pb-4 text-sm xl:text-lg" align="right">* alle Kurspreise pro Person und inkl. Material</p>
+            <p class="pt-8 pb-4 text-base xl:text-lg" align="right">* alle Kurspreise pro Person und inkl. Material</p>
         </div>
 
         <div class="flex items-start">
@@ -60,7 +60,7 @@
             <a id="verleih" class="anchor"></a>
             <h1 class="pt-8 text-2xl xl:text-3xl">Verleih</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
+            <p class="pb-6 text-base xl:text-lg">
                 Jederzeit könnt ihr bei uns eine Jolle mieten. Vorrausgesetzt ihr habt die Qualifikation zum Führen
                 einer Segeljolle. Am besten meldet ihr euch vorher kurz telefonisch an.
             </p>
@@ -71,8 +71,8 @@
                     <th class="w-1/5 whitespace-no-wrap uppercase">Preis</th>
                 </tr>
                 <tr v-for="r in renting" :key="r.material">
-                    <td class="text-sm xl:text-lg">{{ r.material }}</td>
-                    <td class="text-sm xl:text-lg whitespace-no-wrap pr-2">{{ r.duration }}</td>
+                    <td class="text-base xl:text-lg">{{ r.material }}</td>
+                    <td class="text-base xl:text-lg whitespace-no-wrap pr-2">{{ r.duration }}</td>
                     <td class="text-base xl:text-2xl whitespace-no-wrap">{{ r.price }}</td>
                 </tr>
             </table>
