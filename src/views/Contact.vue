@@ -13,10 +13,10 @@
             <h1 class="pt-8">Kontakt</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <div class="flex pb-4">
-                <img class="rounded-full w-24 h-24 mr-4" src="../assets/contact/jens.jpg"/>
-                <div class="pr-8 pt-4">
+                <img class="rounded-full w-24 h-24 mr-6" src="../assets/contact/jens.jpg"/>
+                <div class="pr-8 xl:pt-4">
                     <h2>Jens Radde</h2>
-                    <p>Inhaber, Surf- und Segellehrer</p>
+                    <p class="text-base xl:text-lg">Inhaber, Surf- und Segellehrer</p>
                 </div>
                 <!--<img class="rounded-full w-24 h-24 mr-4" src="../assets/contact/malte.jpg"/>-->
                 <!--<img class="rounded-full w-24 h-24 mr-4" src="../assets/contact/lasse.jpg"/>-->
