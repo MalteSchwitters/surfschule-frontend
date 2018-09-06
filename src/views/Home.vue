@@ -44,7 +44,9 @@
                 in Niedersachsen. Das Große Meer ist – bis auf wenige tiefere Stellen – nur 0,5 bis 1,0 Meter tief. Es
                 gliedert sich in zwei nahezu getrennte Wasserflächen (Nord- und Südteil). Eine Besonderheit ist, dass der
                 mittlere Wasserstand durch künstliche Entwässerung 1,4 Meter unter dem Meeresspiegel (NN) liegt.
-                Weitere Informationen (Wikipedia)
+                <a class="text-base xl:text-lg no-underline hover:underline" href="https://de.wikipedia.org/wiki/Gro%C3%9Fes_Meer_(S%C3%BCdbrookmerland)" target="_blank">
+                    Weitere Informationen (Wikipedia)
+                </a>
             </p>
             <p class="pb-6 text-base xl:text-lg">
                 Das stehtiefe Gewässer liefert ideale Bedingungen um sich voll auf das Erlernen und Verbessern der
