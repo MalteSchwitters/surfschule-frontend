@@ -11,12 +11,12 @@
 
         <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="wetter" class="anchor"></a>
-            <h1 class="pt-8 text-2xl xl:text-3xl">Wetter</h1>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Live Wetter - Coming Soon</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6 text-sm xl:text-lg">
-                TODO
+                Schon bald könnt ihr hier Live die aktuelle Windgeschwindigkeit bei uns an der Surfschule sehen.
             </p>
-            <img src="http://wetterstationen.meteomedia.de/messnetz/vorhersagegrafik/102000.png?ver=1536073805"/>
+            <!--<img src="http://wetterstationen.meteomedia.de/messnetz/vorhersagegrafik/102000.png?ver=1536073805"/>-->
         </div>
 
         <div class="px-6 md:px-16 lg:px-24 py-6">
@@ -27,27 +27,27 @@
                 So siehts aktuell am Grossen Meer aus. Das Webcam Bild aktualisiert alle 5 Minuten.
             </p>
             <div class="w-full xl:flex">
-                <div class="xl:w-1/2 xl:pr-2 pb-6 ">
-                    <img src="http://cam1.omg.de/cam-grossesmeer/pic.jpg"/>
+                <div class="xl:w-1/2 xl:mr-2 mb-6">
+                    <img class="shadow-md rounded" src="http://cam1.omg.de/cam-grossesmeer/pic.jpg"/>
                 </div>
-                <div class="xl:w-1/2 xl:pl-2 pb-6 ">
-                    <img src="http://webcam.suedbrookmerland.de/httpdocs/image.jpg"/>
+                <div class="xl:w-1/2 xl:ml-2 mb-6 ">
+                    <img class="shadow-md rounded" src="http://webcam.suedbrookmerland.de/httpdocs/image.jpg"/>
                 </div>
             </div>
         </div>
 
-        <div class="px-6 md:px-16 lg:px-24 py-6">
-            <a id="stats" class="anchor"></a>
-            <h1 class="pt-8 text-2xl xl:text-3xl">Wind Statistiken</h1>
-            <div class="w-24 my-4 border-grey-light border-b"></div>
-            <p class="pb-6 text-sm xl:text-lg">
-                TODO
-            </p>
-        </div>
+        <!--<div class="px-6 md:px-16 lg:px-24 py-6">-->
+            <!--<a id="stats" class="anchor"></a>-->
+            <!--<h1 class="pt-8 text-2xl xl:text-3xl">Wind Statistiken</h1>-->
+            <!--<div class="w-24 my-4 border-grey-light border-b"></div>-->
+            <!--<p class="pb-6 text-sm xl:text-lg">-->
+                <!--Coming Soon-->
+            <!--</p>-->
+        <!--</div>-->
 
         <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="links" class="anchor"></a>
-            <h1 class="pt-8 text-2xl xl:text-3xl">Weitere Wetterberichte</h1>
+            <h1 class="pt-8 text-2xl xl:text-3xl">Wetterberichte</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6 text-sm xl:text-lg">
                 Keine Information ist wichtiger für einen Windsurfer, als die aktuelle Windvorhersage. Da jeder Wetterbericht
