@@ -25,9 +25,10 @@
             <h1 class="pt-8 text-2xl xl:text-3xl">Termine</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6 text-base xl:text-lg">
-                Hier findest du eine Auflistung aller angebotenen Termine. Für alle Kurse gibt es eine
-                Mindestteilnehmerzahl von 3 Personen. Bitte achte dazu in den Tagen vor dem Kurs auf deine eMails, da
-                wir dich so über eventuelle Ausfälle oder wetterbedingte Terminverschiebungen informieren.
+                Die Termine für das Wintersemester 18/19 werden in Kürzebekannt gegeben.
+                <!--Hier findest du eine Auflistung aller angebotenen Termine. Für alle Kurse gibt es eine-->
+                <!--Mindestteilnehmerzahl von 3 Personen. Bitte achte dazu in den Tagen vor dem Kurs auf deine eMails, da-->
+                <!--wir dich so über eventuelle Ausfälle oder wetterbedingte Terminverschiebungen informieren.-->
             </p>
         </div>
 
@@ -36,9 +37,10 @@
             <h1 class="pt-8 text-2xl xl:text-3xl">Anmeldung</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6 text-base xl:text-lg">
-                Solltest du zum ausgewählten Termin doch keine Zeit haben, oder aus anderen Gründen nicht teilnehmen
-                können oder wollen, sag uns bitte kurz Bescheid, damit wir den Kurs entsprechend planen können. Eine
-                kurze email an info@grosses-meer.surf ohne Angabe von Gründen genügt.
+                Die Anmeldung wird freigeschaltet, sobald die Kurse verfübar sind.
+                <!--Solltest du zum ausgewählten Termin doch keine Zeit haben, oder aus anderen Gründen nicht teilnehmen-->
+                <!--können oder wollen, sag uns bitte kurz Bescheid, damit wir den Kurs entsprechend planen können. Eine-->
+                <!--kurze email an info@grosses-meer.surf ohne Angabe von Gründen genügt.-->
             </p>
         </div>
     </div>

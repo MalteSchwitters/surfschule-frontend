@@ -31,7 +31,7 @@
             </p>
             <div class="flex flex-col xl:flex-row xl:text-center">
                 <div class="flex items-center xl:w-1/4 xl:flex-col">
-                    <img class="p-4" src="https://png.icons8.com/ios/40/444444/marker.png"/>
+                    <img class="p-4 w-16 h-16" src="https://png.icons8.com/ios/40/444444/marker.png"/>
                     <div>
                         <p class="text-base xl:text-lg">Surfschule Großes Meer</p>
                         <p class="text-base xl:text-lg">Am Meer 2</p>
@@ -39,15 +39,15 @@
                     </div>
                 </div>
                 <div class="flex items-center xl:w-1/4 xl:flex-col">
-                    <img class="p-4" src="https://png.icons8.com/ios/40/444444/phone.png"/>
+                    <img class="p-4 w-16 h-16" src="https://png.icons8.com/ios/40/444444/phone.png"/>
                     <a class="text-base xl:text-lg no-underline hover:underline block" href="tel:049425096">04942 5096</a>
                 </div>
                 <div class="flex items-center xl:w-1/4 xl:flex-col">
-                    <img class="p-4" src="https://png.icons8.com/ios/40/444444/iphone.png"/>
+                    <img class="p-4 w-16 h-16" src="https://png.icons8.com/ios/40/444444/iphone.png"/>
                     <a class="text-base xl:text-lg no-underline hover:underline block" href="tel:01778879184">0177 887 91 84</a>
                 </div>
                 <div class="flex items-center xl:w-1/4 xl:flex-col">
-                    <img class="p-4" src="https://png.icons8.com/ios/40/444444/new-post.png"/>
+                    <img class="p-4 w-16 h-16" src="https://png.icons8.com/ios/40/444444/new-post.png"/>
                     <a class="text-base xl:text-lg no-underline hover:underline block" href="mailto:info@grosses-meer.surf">info@grosses-meer.surf</a>
                 </div>
             </div>
