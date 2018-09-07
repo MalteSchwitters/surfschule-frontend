@@ -37,16 +37,25 @@
                 welches die Städte Aurich, Emden und Leer verbindet. Für Neulinge bietet es sich an frei über das
                 stehtiefe Grosse Meer zu paddeln. Wer sich dagegen schon ganz wohl auf dem SUP Board fühlt, der kann mit
                 einer Rundtour zum Beispiel alle drei Meere der Region (Grosses Meer, Loppersumer Meer, Kleines Meer)
-                besuchen. Unten haben wir eine Auswahl unserer Lieblingstouren mit ungefährer Distanz und Fahrzeit
-                aufgeführt.
+                besuchen. Hier haben wir einige unserer Lieblingstouren aufgeführt.
             </p>
+            <div class="flex items-start justify-between pb-4 xl:pb-12 -mx-2">
+                <div class="w-1/3 px-2"><img class="w-full rounded shadow-md" src="../assets/sup/route01.jpg"/></div>
+                <div class="w-1/3 px-2"><img class="w-full rounded shadow-md" src="../assets/sup/route02.jpg"/></div>
+                <div class="w-1/3 px-2"><img class="w-full rounded shadow-md" src="../assets/sup/route03.jpg"/></div>
+            </div>
+            <div class="flex items-start  justify-between pb-12 -mx-2">
+                <div class="w-1/3 px-2"><img class="w-full rounded shadow-md" src="../assets/sup/route04.jpg"/></div>
+                <div class="w-1/3 px-2"><img class="w-full rounded shadow-md" src="../assets/sup/route05.jpg"/></div>
+                <div class="w-1/3 px-2"><img class="w-full rounded shadow-md" src="../assets/sup/route06.jpg"/></div>
+            </div>
         </div>
 
-        <!--<div class="flex items-start">-->
-            <!--<img class="w-1/3" src="../assets/sup/thumbs/sup04.jpg"/>-->
-            <!--<img class="w-1/3" src="../assets/sup/thumbs/sup03.jpg"/>-->
-            <!--<img class="w-1/3" src="../assets/sup/thumbs/sup06.jpg"/>-->
-        <!--</div>-->
+        <div class="flex items-start">
+            <img class="w-1/3" src="../assets/sup/thumbs/sup02.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup03.jpg"/>
+            <img class="w-1/3" src="../assets/sup/thumbs/sup11.jpg"/>
+        </div>
 
         <div class="px-6 md:px-16 lg:px-24 py-6">
             <a id="kurse" class="anchor"></a>
@@ -117,7 +126,6 @@
 
     @Component({ components: {} })
     export default class StandUpPaddling extends Vue {
-
         private courses = [
             {
                 name: 'Kurze Einweisung',
@@ -131,8 +139,8 @@
             },
             {
                 name: 'Geführte Tour',
-                duration: 'min 1 Std.',
-                price: '20€ / Std.',
+                duration: 'je Std.',
+                price: '20,00€',
             },
         ];
 

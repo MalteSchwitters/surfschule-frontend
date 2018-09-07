@@ -53,8 +53,8 @@
                 </tr>
                 <tr v-for="c in courses" :key="c.name">
                     <td class="text-base xl:text-lg">{{ c.name }}</td>
-                    <td class="text-base xl:text-lg whitespace-no-wrap pr-2">{{ c.duration }} Std.</td>
-                    <td class="text-base xl:text-2xl whitespace-no-wrap">{{ c.price }} €</td>
+                    <td class="text-base xl:text-lg whitespace-no-wrap pr-2">{{ c.duration }}</td>
+                    <td class="text-base xl:text-2xl whitespace-no-wrap">{{ c.price }}</td>
                 </tr>
             </table>
             <p class="pt-8 pb-4 text-base xl:text-lg" align="right">* alle Kurspreise pro Person und inkl. Material</p>
