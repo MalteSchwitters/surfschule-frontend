@@ -7,6 +7,7 @@ import Sailing from './views/Sailing.vue';
 import Weather from './views/Weather.vue';
 import Contact from './views/Contact.vue';
 import Impressum from './views/Impressum.vue';
+import University from './views/University.vue';
 Vue.use(Router);
 export default new Router({
     mode: 'history',
@@ -21,6 +22,11 @@ export default new Router({
             path: '/impressum',
             name: 'impressum',
             component: Impressum,
+        },
+        {
+            path: '/hochschulsport',
+            name: 'hochschulsport',
+            component: University,
         },
         {
             path: '/surfing',
