@@ -10,7 +10,6 @@ import Impressum from './views/Impressum.vue';
 import University from './views/University.vue';
 Vue.use(Router);
 export default new Router({
-    mode: 'history',
     routes: [
         {
             path: '/',
