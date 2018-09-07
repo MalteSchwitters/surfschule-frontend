@@ -107,15 +107,15 @@
             <table class="w-full">
                 <tr>
                     <th class="pr-2">#</th>
-                    <th class="w-3/5 whitespace-no-wrap uppercase">Fahrer</th>
-                    <th class="w-2/5 whitespace-no-wrap uppercase">Top Speed</th>
-                    <th class="w-1/5 whitespace-no-wrap uppercase">Datum</th>
+                    <th class="whitespace-no-wrap uppercase">Fahrer</th>
+                    <th class="whitespace-no-wrap uppercase">Top Speed</th>
+                    <th class="whitespace-no-wrap uppercase">Datum</th>
                 </tr>
                 <tr v-for="(r, index) in ranking" :key="r.driver">
                     <td class="text-base xl:text-lg">{{ index + 1 }}</td>
-                    <td class="text-base xl:text-lg">{{ r.driver }}</td>
+                    <td class="text-base xl:text-lg">{{ r.name }}</td>
                     <td class="text-base xl:text-lg">{{ r.speed }}</td>
-                    <td class="text-base xl:text-lg">{{ r.date }}</td>
+                    <td class="text-base xl:text-lg">{{ formatDate(r.date) }}</td>
                 </tr>
             </table>
         </div>
@@ -130,6 +130,8 @@
 
 <script lang="ts">
     import { Component, Vue } from 'vue-property-decorator';
+    import Axios, {AxiosRequestConfig, AxiosResponse} from 'axios';
+    import Moment from 'moment';
 
     @Component({ components: {} })
     export default class Surfing extends Vue {
@@ -191,30 +193,40 @@
 
         private ranking = [
             {
-                driver: 'Timo Thiele',
+                name: 'Timo Thiele',
                 speed: '62,2 km/h',
                 date: '04.08.2017',
             },
             {
-                driver: 'Jan-Malte Becker',
+                name: 'Jan-Malte Becker',
                 speed: '45,3 km/h',
                 date: '10.09.2017',
             },
             {
-                driver: 'Malte Schwitters',
+                name: 'Malte Schwitters',
                 speed: '45,2 km/h',
                 date: '10.09.2017',
             },
             {
-                driver: 'Lasse Eckmann',
+                name: 'Lasse Eckmann',
                 speed: '42,1 km/h',
                 date: '07.02.2017',
             },
             {
-                driver: 'Nika Eckmann',
+                name: 'Nika Eckmann',
                 speed: '40,6 km/h',
                 date: '07.02.2017',
             },
         ];
+
+        private formatDate(date: any): string {
+            return Moment(date).format('DD.MM.YYYY');
+        }
+
+        private created() {
+            Axios.get('https://api.grosses-meer.surf/api/speedranking').then((response) => {
+                this.ranking = response.data;
+            });
+        }
     }
 </script>
