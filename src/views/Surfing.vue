@@ -133,7 +133,6 @@
 
     @Component({ components: {} })
     export default class Surfing extends Vue {
-
         private courses = [
             {
                 name: 'Schnuppersurfen (ab 8 Personen)',
@@ -216,7 +215,6 @@
                 speed: '40,6 km/h',
                 date: '07.02.2017',
             },
-
         ];
     }
 </script>
