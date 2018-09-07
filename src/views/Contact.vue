@@ -53,6 +53,11 @@
             </div>
         </div>
 
+        <div class="flex items-start">
+            <img class="w-1/3" src="../assets/contact/thumbs/team01.jpg"/>
+            <img class="w-1/3" src="../assets/contact/thumbs/team02.jpg"/>
+            <img class="w-1/3" src="../assets/contact/thumbs/joy01.jpg"/>
+        </div>
 
         <div class="px-6 md:px-16 lg:px-24 pt-6">
             <a id="anfhart" class="anchor"></a>
