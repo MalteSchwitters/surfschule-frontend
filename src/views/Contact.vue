@@ -60,7 +60,7 @@
         </div>
 
         <div class="px-6 md:px-16 lg:px-24 pt-6">
-            <a id="anfhart" class="anchor"></a>
+            <a id="anfahrt" class="anchor"></a>
             <h1 class="pt-8">Anfahrt</h1>
             <div class="w-24 my-4 border-grey-light border-b"></div>
             <p class="pb-6 text-base xl:text-lg">
