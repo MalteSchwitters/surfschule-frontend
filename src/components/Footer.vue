@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="w-full flex-grow pb-6">
-                <p class="text-white text-lg xl:text-2xl">Kontakt</p>
+                <router-link class="text-white text-lg xl:text-2xl no-underline hover:underline" to="contact">Kontakt</router-link>
                 <div class="text-white">
                     <p class="text-grey-light text-base xl:text-lg">Surfschule Grosses Meer</p>
                     <p class="text-grey-light text-base xl:text-lg">Forlitzer Str. 213</p>
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="pb-4 md:flex justify-center">
+        <div class="pt-4 pb-12 md:flex justify-center">
             <a class="pb-4 flex items-center md:px-4 no-underline" href="https://www.instagram.com/surfschule_grosses_meer/" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 50 50" style="fill:#f8fafc;">
                     <path style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal" d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z" font-weight="400" font-family="sans-serif" white-space="normal" overflow="visible"></path>
@@ -74,7 +74,7 @@
         <p class="text-base xl:text-lg text-white text-center">Preise Stand {{ (new Date()).getFullYear() }}</p>
         <p class="text-base xl:text-lg text-white text-center">Copyright © {{ (new Date()).getFullYear() }} Surfschule Grosses Meer</p>
         <div class="text-center">
-            <a class="text-base xl:text-lg text-white no-underline hover:underline" href="https://icons8.com">Icon pack by Icons8.com</a>
+            <a class="text-base xl:text-lg text-white no-underline hover:underline" href="https://icons8.com" target="_blank">Icon pack by Icons8.com</a>
         </div>
     </div>
 </template>

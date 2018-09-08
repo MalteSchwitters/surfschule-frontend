@@ -8,7 +8,7 @@
                 <div class="z-10 flex-1 w-full flex items-stretch">
                     <div class="xl:w-1 xl:flex-grow"></div>
                     <div class="w-main">
-                        <router-view class="bg-white shadow-md"/>
+                        <router-view class="bg-grey xl:bg-white shadow-md"/>
                         <Footer></Footer>
                     </div>
                     <div class="xl:w-1 xl:flex-grow">
