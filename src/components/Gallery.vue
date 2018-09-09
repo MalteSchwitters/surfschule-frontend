@@ -28,7 +28,6 @@
     })
     export default class Gallery extends Vue {
 
-        // { 'background': 'url(' + require('./../assets/backgrounds/wood.jpeg') + ')' },
         @Prop({ default: null })
         private image1!: string;
 
@@ -40,58 +39,61 @@
 
         private scrollover = 0;
 
-        private scrollcounter = 0;
-
-        private created() {
-
-        }
+        private autoScrolling = false;
+        private scrollDirection = 0;
+        private lastScrollPosition = 0;
 
         private onScroll(event: any, position: any) {
-
             const container = (<HTMLDivElement>this.$refs.scrollcontainer);
-            const scrollPosition = position.scrollLeft;
-            const scrollWidth = container.scrollWidth;
-            const itemWidth = scrollWidth / 6;
+            const newScrollDirection = position.scrollLeft - this.lastScrollPosition;
+            this.lastScrollPosition = position.scrollLeft;
 
-            if (scrollPosition < itemWidth) {
-                this.scrollover = 0;
-            } else if (scrollPosition < 3 * itemWidth) {
-                this.scrollover = 1;
+            if (newScrollDirection < -5 || newScrollDirection > 5) {
+                this.scrollDirection = newScrollDirection;
             } else {
-                this.scrollover = 2;
-            }
-            const goal = this.scrollover * itemWidth * 2;
-
-            // used to determine when scrolling ends
-            this.scrollcounter += 1;
-            const currentscrollcounter = this.scrollcounter;
-            const that = this;
-
-            setTimeout(function() {
-                if (that.scrollcounter === currentscrollcounter) {
-                    console.log('Snap to ' + that.scrollover);
-                    let animateScroll = function () {
-                        const change = goal - container.scrollLeft
-                        if (change < 20 && change > -20) {
-                            container.scrollLeft = goal;
-                        } else if (change > 0) {
-                            container.scrollLeft += 20;
-                            setTimeout(animateScroll, 20);
-                        } else {
-                            container.scrollLeft -= 20;
-                            setTimeout(animateScroll, 20);
-                        }
-                    };
-                    animateScroll();
+                if (!this.autoScrolling) {
+                    this.autoScrolling = true;
+                    this.scrollToSnap(container, this.scrollDirection, this.lastScrollPosition);
                 }
-            }, 250);
+            }
+        }
+
+        private scrollToSnap(container: any, scrollDirectionn: number, scrollPosition: number) {
+            let target = 0;
+            const snapWidth = container.scrollWidth / 6;
+            if (scrollDirectionn > 0) {
+                if (scrollPosition < 2 * snapWidth) {
+                    target = 2 * snapWidth;
+                    this.scrollover = 1;
+                } else {
+                    target = 4 * snapWidth;
+                    this.scrollover = 2;
+                }
+            } else {
+                if (scrollPosition > 2 * snapWidth) {
+                    target = 2 * snapWidth;
+                    this.scrollover = 1;
+                } else {
+                    target = 0;
+                    this.scrollover = 0;
+                }
+            }
+
+            const that = this;
+            let animateScroll = function () {
+                const remaining = target - container.scrollLeft
+                if (remaining < 20 && remaining > -20) {
+                    container.scrollLeft = target;
+                    that.autoScrolling = false;
+                } else if (remaining > 0) {
+                    container.scrollLeft += 20;
+                    setTimeout(animateScroll, 20);
+                } else {
+                    container.scrollLeft -= 20;
+                    setTimeout(animateScroll, 20);
+                }
+            };
+            animateScroll();
         }
     }
 </script>
-
-<style>
-    @keyframes anim-scroll-snap {
-        from { opacity: 0; }
-        to { opacity: 0.4; }
-    }
-</style>
