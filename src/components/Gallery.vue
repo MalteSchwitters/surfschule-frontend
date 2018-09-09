@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full bg-grey mb-2">
+    <div class="relative w-full bg-grey pb-2">
         <div class="w-full px-2 py-2 xl:px-0 xl:py-0 flex items-center overflow-x-scroll xl:overflow-hidden"
              ref="scrollcontainer" v-scroll="onScroll">
             <img class="w-full rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none" :src="image1"/>
@@ -9,7 +9,7 @@
             <img class="w-full rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none" :src="image3"/>
             <img class="px-1 xl:hidden" src="../assets/transparent-1x1.png"/>
         </div>
-        <div class="absolute pin-b w-full flex justify-center mb-4 md:hidden">
+        <div class="absolute pin-b w-full flex justify-center mb-6 md:hidden opacity-75">
             <div class="w-4 h-4 mx-2 border-2 border-grey-lighter rounded-full" :class="{'bg-grey-lighter': scrollover === 0}"></div>
             <div class="w-4 h-4 mx-2 border-2 border-grey-lighter rounded-full" :class="{'bg-grey-lighter': scrollover === 1}"></div>
             <div class="w-4 h-4 mx-2 border-2 border-grey-lighter rounded-full" :class="{'bg-grey-lighter': scrollover === 2}"></div>
@@ -88,3 +88,10 @@
         }
     }
 </script>
+
+<style>
+    @keyframes anim-scroll-snap {
+        from { opacity: 0; }
+        to { opacity: 0.4; }
+    }
+</style>
