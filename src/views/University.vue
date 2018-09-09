@@ -2,12 +2,12 @@
     <div class="">
         <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/start/header.jpg"/>
 
-        <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">
-            <a href="#hochschulsport" class="text-grey-darker hover:text-blue uppercase no-underline"># Hochschulsport</a>
-            <a href="#faq" class="text-grey-darker hover:text-blue uppercase no-underline"># FAQ</a>
-            <a href="#termine" class="text-grey-darker hover:text-blue uppercase no-underline"># Termine</a>
-            <a href="#anmeldung" class="text-grey-darker hover:text-blue uppercase no-underline"># Anmeldung</a>
-        </nav>
+        <!--<nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">-->
+            <!--<a href="#hochschulsport" class="text-grey-darker hover:text-blue uppercase no-underline"># Hochschulsport</a>-->
+            <!--<a href="#faq" class="text-grey-darker hover:text-blue uppercase no-underline"># FAQ</a>-->
+            <!--<a href="#termine" class="text-grey-darker hover:text-blue uppercase no-underline"># Termine</a>-->
+            <!--<a href="#anmeldung" class="text-grey-darker hover:text-blue uppercase no-underline"># Anmeldung</a>-->
+        <!--</nav>-->
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">

@@ -2,11 +2,11 @@
     <div class="">
         <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/start/header.jpg"/>
 
-        <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">
-            <a href="#impressum" class="text-grey-darker hover:text-blue uppercase no-underline"># Impressum</a>
-            <a href="#disclaimer" class="text-grey-darker hover:text-blue uppercase no-underline"># Disclaimer - Rechtliche Hinweise</a>
-            <a href="#datenschutz" class="text-grey-darker hover:text-blue uppercase no-underline"># Datenschutzerklärung</a>
-        </nav>
+        <!--<nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">-->
+            <!--<a href="#impressum" class="text-grey-darker hover:text-blue uppercase no-underline"># Impressum</a>-->
+            <!--<a href="#disclaimer" class="text-grey-darker hover:text-blue uppercase no-underline"># Disclaimer - Rechtliche Hinweise</a>-->
+            <!--<a href="#datenschutz" class="text-grey-darker hover:text-blue uppercase no-underline"># Datenschutzerklärung</a>-->
+        <!--</nav>-->
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">

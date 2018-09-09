@@ -84,7 +84,7 @@
                     };
                     animateScroll();
                 }
-            }, 500);
+            }, 250);
         }
     }
 </script>

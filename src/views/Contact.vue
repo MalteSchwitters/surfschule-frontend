@@ -2,11 +2,11 @@
     <div>
         <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/contact/header.jpg"/>
 
-        <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">
-            <a href="#kontakt" class="text-grey-darker hover:text-blue uppercase no-underline"># Kontakt</a>
-            <a href="#anfahrt" class="text-grey-darker hover:text-blue uppercase no-underline"># Anfahrt</a>
-            <a href="#parken" class="text-grey-darker hover:text-blue uppercase no-underline"># Parkmöglichkeiten</a>
-        </nav>
+        <!--<nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">-->
+            <!--<a href="#kontakt" class="text-grey-darker hover:text-blue uppercase no-underline"># Kontakt</a>-->
+            <!--<a href="#anfahrt" class="text-grey-darker hover:text-blue uppercase no-underline"># Anfahrt</a>-->
+            <!--<a href="#parken" class="text-grey-darker hover:text-blue uppercase no-underline"># Parkmöglichkeiten</a>-->
+        <!--</nav>-->
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -97,7 +97,7 @@
                             Achtung: Das Parken mit einem Wohnmobil auf P2 ist nicht gestattet!
                         </p>
                     </div>
-                    <img src="../assets/contact/thumbs/parking.jpg"/>
+                    <img class="rounded shadow" src="../assets/contact/thumbs/parking.jpg"/>
                 </div>
             </div>
         </div>

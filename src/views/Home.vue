@@ -2,11 +2,11 @@
     <div>
         <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/start/header.jpg"/>
 
-        <nav class="xl:px-6 py-4 -mt-2 flex flex-wrap hidden justify-around bg-grey">
-            <a href="#willkommen" class="text-base text-grey-darker hover:text-blue uppercase no-underline"># Willkommen</a>
-            <a href="#grossesmeer" class="text-base text-grey-darker hover:text-blue uppercase no-underline"># Das Grosse Meer</a>
-            <a href="#shop" class="text-base text-grey-darker hover:text-blue uppercase no-underline"># Surfshop</a>
-        </nav>
+        <!--<nav class="xl:px-6 py-4 -mt-2 flex flex-wrap hidden justify-around bg-grey">-->
+            <!--<a href="#willkommen" class="text-base text-grey-darker hover:text-blue uppercase no-underline"># Willkommen</a>-->
+            <!--<a href="#grossesmeer" class="text-base text-grey-darker hover:text-blue uppercase no-underline"># Das Grosse Meer</a>-->
+            <!--<a href="#shop" class="text-base text-grey-darker hover:text-blue uppercase no-underline"># Surfshop</a>-->
+        <!--</nav>-->
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">

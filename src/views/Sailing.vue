@@ -2,11 +2,11 @@
     <div class="">
         <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/sailing/header.jpg"/>
 
-        <nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">
-            <a href="#segeln" class="text-grey-darker hover:text-blue uppercase no-underline"># Segeln</a>
-            <a href="#kurse" class="text-grey-darker hover:text-blue uppercase no-underline"># Kurse</a>
-            <a href="#verleih" class="text-grey-darker hover:text-blue uppercase no-underline"># Verleih</a>
-        </nav>
+        <!--<nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">-->
+            <!--<a href="#segeln" class="text-grey-darker hover:text-blue uppercase no-underline"># Segeln</a>-->
+            <!--<a href="#kurse" class="text-grey-darker hover:text-blue uppercase no-underline"># Kurse</a>-->
+            <!--<a href="#verleih" class="text-grey-darker hover:text-blue uppercase no-underline"># Verleih</a>-->
+        <!--</nav>-->
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
