@@ -1,8 +1,8 @@
 <template>
     <div ref="nav" class="h-12 xl:h-24 flex justify-center items-center bg-white whitespace-no-wrap z-20 text-grey-dark uppercase font-sans font-thin">
 
-        <div v-if="showdrawer" class="w-screen h-screen fixed pin z-30 bg-black-transparent" @click="showdrawer = false">
-            <div ref="drawer" class="w-2/3 h-screen bg-grey-darkest shadow-md">
+        <div v-if="showdrawer" class="w-screen h-screen fixed pin z-30 flex" @click="showdrawer = false">
+            <div ref="drawer" class="h-screen bg-grey-darkest shadow-md w-menu-anim">
                 <div class=" h-24 mb-4">
                     <img class="p-2" align="right" src="https://png.icons8.com/ios/16/ffffff/delete-sign.png" @click="showdrawer = false">
                     <img src="../assets/logos/logo_white.png" class="h-12 m-4">
@@ -62,6 +62,7 @@
                     </router-link>
                 </div>
             </div>
+            <div class="bg-black bg-fadeout-anim flex-grow"></div>
         </div>
 
         <div class="xl:hidden fixed pin-l pl-4">
@@ -127,3 +128,28 @@
         }
      }
 </script>
+
+<style>
+    @keyframes anim-menu {
+        from { margin-left: -70%; }
+        to { margin-left: 0; }
+    }
+
+    @keyframes anim-fadeout {
+        from { opacity: 0; }
+        to { opacity: 0.4; }
+    }
+
+    .bg-fadeout-anim {
+        opacity: 0.4;
+        animation-name: anim-fadeout;
+        animation-duration: 0.2s;
+    }
+
+    .w-menu-anim {
+        margin-left: 0;
+        width: 70%;
+        animation-name: anim-menu;
+        animation-duration: 0.2s;
+    }
+</style>
