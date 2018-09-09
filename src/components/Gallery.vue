@@ -47,7 +47,7 @@
             const container = (<HTMLDivElement>this.$refs.scrollcontainer);
             const newScrollDirection = position.scrollLeft - this.lastScrollPosition;
             this.lastScrollPosition = position.scrollLeft;
-
+            
             if (newScrollDirection < -5 || newScrollDirection > 5) {
                 this.scrollDirection = newScrollDirection;
             } else {
