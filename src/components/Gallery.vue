@@ -9,10 +9,22 @@
             <img class="w-full rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none" :src="image3"/>
             <img class="px-1 xl:hidden" src="../assets/transparent-1x1.png"/>
         </div>
-        <div class="absolute pin-b w-full flex justify-center mb-6 md:hidden opacity-75">
-            <div class="w-4 h-4 mx-2 border-2 border-grey-lighter rounded-full" :class="{'bg-grey-lighter': scrollover === 0}"></div>
-            <div class="w-4 h-4 mx-2 border-2 border-grey-lighter rounded-full" :class="{'bg-grey-lighter': scrollover === 1}"></div>
-            <div class="w-4 h-4 mx-2 border-2 border-grey-lighter rounded-full" :class="{'bg-grey-lighter': scrollover === 2}"></div>
+        <div class="md:hidden absolute pin-y pin-l my-16 flex flex-col justify-center opacity-75"
+             @click="scrollToImage($refs.scrollcontainer, scrollover - 1)">
+            <img  class="pl-2 pr-8" src="https://png.icons8.com/ios/40/ffffff/less-than.png">
+        </div>
+
+        <div class="md:hidden absolute pin-y pin-r my-16 flex flex-col justify-center opacity-75"
+             @click="scrollToImage($refs.scrollcontainer, scrollover + 1)">
+            <img  class="pr-2 pl-8" src="https://png.icons8.com/ios/40/ffffff/more-than.png">
+        </div>
+
+        <div class="md:hidden absolute pin-b w-full mb-6 flex flex-col opacity-75 pointer-events-none">
+            <div class="flex justify-center ">
+                <div class="w-4 h-4 mx-2 border-2 border-white rounded-full" :class="{'bg-grey-lighter': scrollover === 0}"></div>
+                <div class="w-4 h-4 mx-2 border-2 border-white rounded-full" :class="{'bg-grey-lighter': scrollover === 1}"></div>
+                <div class="w-4 h-4 mx-2 border-2 border-white rounded-full" :class="{'bg-grey-lighter': scrollover === 2}"></div>
+            </div>
         </div>
     </div>
 </template>
@@ -37,7 +49,9 @@
         @Prop({ default: null })
         private image3!: string;
 
+        private imageCount = 3;
         private scrollover = 0;
+        private scrollAnimation = 0;
 
         private autoScrolling = false;
         private scrollDirection = 0;
@@ -45,17 +59,73 @@
 
         private onScroll(event: any, position: any) {
             const container = (<HTMLDivElement>this.$refs.scrollcontainer);
-            const newScrollDirection = position.scrollLeft - this.lastScrollPosition;
-            this.lastScrollPosition = position.scrollLeft;
-            
-            if (newScrollDirection < -5 || newScrollDirection > 5) {
-                this.scrollDirection = newScrollDirection;
+            const snapWidth = container.scrollWidth / (this.imageCount * 2);
+            if (position.scrollLeft < snapWidth) {
+                this.scrollover = 0;
+            } else if (position.scrollLeft < 3 * snapWidth) {
+                this.scrollover = 1;
             } else {
-                if (!this.autoScrolling) {
-                    this.autoScrolling = true;
-                    this.scrollToSnap(container, this.scrollDirection, this.lastScrollPosition);
-                }
+                this.scrollover = 2;
             }
+
+            // const newScrollDirection = position.scrollLeft - this.lastScrollPosition;
+            // this.lastScrollPosition = position.scrollLeft;
+
+            // if (Math.abs(newScrollDirection) < Math.abs(this.scrollDirection)) {
+            //     if (!this.autoScrolling) {
+            //         this.autoScrolling = true;
+            //         this.scrollToSnap(container, this.scrollDirection, this.lastScrollPosition);
+            //     }
+            // } else {
+            //     this.scrollDirection = newScrollDirection;
+            // }
+
+            // if (newScrollDirection < -5 || newScrollDirection > 5) {
+            //     this.scrollDirection = newScrollDirection;
+            // } else {
+            //     if (!this.autoScrolling) {
+            //         this.autoScrolling = true;
+            //         this.scrollToSnap(container, this.scrollDirection, this.lastScrollPosition);
+            //     }
+            // }
+        }
+
+        private scrollToImage(container: HTMLDivElement, imageNumber: number) {
+            const scrollWidth = container.scrollWidth;
+            const viewWidth = container.offsetWidth;
+            const scrollLeft = container.scrollLeft;
+            const imageWidth = scrollWidth / this.imageCount;
+
+            if (imageNumber < 0) {
+                imageNumber = 0;
+            }
+            if (imageNumber >= this.imageCount) {
+                imageNumber = this.imageCount - 1;
+            }
+            // if (scrollLeft < imageNumber * imageWidth) {
+            //     imageNumber -= 1;
+            // }
+            const imageCenterOffset = imageNumber > 0 ? (viewWidth - imageWidth) / 2 : 0;
+            const targetScrollLeft = imageNumber * imageWidth - imageCenterOffset ;
+
+            this.scrollAnimation = imageNumber >= this.scrollover ? 40 : -40;
+
+            console.log(targetScrollLeft);
+
+            const outerThis = this;
+            let animateScroll = function () {
+                const remaining = targetScrollLeft - container.scrollLeft
+                if (Math.abs(remaining) < Math.abs(outerThis.scrollAnimation)) {
+                    container.scrollLeft = targetScrollLeft;
+                    outerThis.scrollAnimation = 0;
+                    // outerThis.scrollover = imageNumber;
+                } else {
+                    container.scrollLeft += outerThis.scrollAnimation;
+                    setTimeout(animateScroll, 20);
+                }
+            };
+            animateScroll();
+
         }
 
         private scrollToSnap(container: any, scrollDirectionn: number, scrollPosition: number) {
