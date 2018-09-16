@@ -8,6 +8,7 @@ import Weather from './views/Weather.vue';
 import Contact from './views/Contact.vue';
 import Impressum from './views/Impressum.vue';
 import University from './views/University.vue';
+import AdminSpeedRanking from './views/AdminSpeedRanking.vue';
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
             path: '/hochschulsport',
             name: 'hochschulsport',
             component: University,
+        },
+        {
+            path: '/admin',
+            name: 'admin',
+            component: AdminSpeedRanking,
         },
         {
             path: '/surfing',
