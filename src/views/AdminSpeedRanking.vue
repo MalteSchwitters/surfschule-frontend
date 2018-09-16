@@ -69,7 +69,7 @@
         private created() {
             Axios.get(`https://api.grosses-meer.surf/api/auth?token=${this.$route.query.auth}`)
                 .catch((response) => {
-                    // this.$router.push('/home');
+                    this.$router.push('/home');
                 });
         }
     }
