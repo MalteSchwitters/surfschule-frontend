@@ -8,7 +8,7 @@
                 <h1 class="pt-8">Neuen Topspeed eintragen</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
                 <div class="xl:flex justify-between">
-                    <form class="w-full xl:w-1/2">
+                    <form class="pt-8 w-full xl:w-1/2">
                         <div class="table w-full">
                             <div class="table-row">
                                 <p class="pr-8 table-cell">Name</p>
@@ -35,7 +35,7 @@
                             </button>
                         </div>
                     </form>
-                    <div class="w-1/3">
+                    <div class="w-1/3 invisible xl:visible">
                         <img src="../assets/surfing/thumbs/surfen03.jpg"/>
                     </div>
                 </div>
@@ -58,7 +58,6 @@
         private date = '';
 
         private send() {
-            // Axios.post(`http://localhost:8081/api/speedranking?name=${this.driver}&speed=${this.speed}&date=${this.date}`);
             Axios.post(`https://api.grosses-meer.surf/api/speedranking?name=${this.driver}&speed=${this.speed}&date=${this.date}`)
                 .then((response) => {
                     this.driver = '';
@@ -68,9 +67,10 @@
         }
 
         private created() {
-            if (this.$route.params.auth !== 'iGnhjEGpo34IrbWNfJWAXCtzCYemR7lwRnLTJseSeBaFyfvzGYs4XHTG3xli8CZnngu7tUqOYLApHS3dBmV1LTS79vBMwxhRXX3825DNIdPgAPdNbsLZXxxcfQmDF0oK') {
-                this.$router.push('/home');
-            }
+            Axios.get(`https://api.grosses-meer.surf/api/auth?token=${this.$route.query.auth}`)
+                .catch((response) => {
+                    // this.$router.push('/home');
+                });
         }
     }
 </script>
