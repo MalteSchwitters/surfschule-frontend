@@ -3,30 +3,106 @@
         <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/start/header.jpg"/>
 
         <!--<nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">-->
-            <!--<a href="#hochschulsport" class="text-grey-darker hover:text-blue uppercase no-underline"># Hochschulsport</a>-->
-            <!--<a href="#faq" class="text-grey-darker hover:text-blue uppercase no-underline"># FAQ</a>-->
-            <!--<a href="#termine" class="text-grey-darker hover:text-blue uppercase no-underline"># Termine</a>-->
-            <!--<a href="#anmeldung" class="text-grey-darker hover:text-blue uppercase no-underline"># Anmeldung</a>-->
+        <!--<a href="#hochschulsport" class="text-grey-darker hover:text-blue uppercase no-underline"># Hochschulsport</a>-->
+        <!--<a href="#faq" class="text-grey-darker hover:text-blue uppercase no-underline"># FAQ</a>-->
+        <!--<a href="#termine" class="text-grey-darker hover:text-blue uppercase no-underline"># Termine</a>-->
+        <!--<a href="#anmeldung" class="text-grey-darker hover:text-blue uppercase no-underline"># Anmeldung</a>-->
         <!--</nav>-->
+
+        <div v-if="registering"
+             class="pin fixed min-h-screen h-full w-full z-50 bg-black-transparent flex justify-center items-center">
+            <div class="bg-white rounded shadow-lg p-8 md:px-16 m-8">
+                <h1 class="py-4 text-2xl xl:text-3xl">Anmeldung</h1>
+                <!--<div class="w-24 my-4 border-grey-light border-b"></div>-->
+                <div v-if="registerSuccess">
+                    <p class="max-w-xs sm:max-w-sm text-base xl:text-lg">
+                        Alles klar, {{ forename }}!
+                    </p>
+                    <p class="pb-6 max-w-xs sm:max-w-sm text-base xl:text-lg">
+                        Wir haben deine Anmeldung für den Kurs am <b>{{ formatDate(course.start) }}</b> bei uns
+                        registriert.
+                        Wir freuen uns, dich schon bald bei uns an der Surfschule zu sehen! Wenn du noch Fragen zu den
+                        Kursen
+                        hast schreib uns gerne eine email an
+                        <a class="text-blue no-underline hover:underline" href="mailto:info@grosses-meer.surf">info@grosses-meer.surf</a>!
+                    </p>
+                    <div class="flex sm:justify-end">
+                        <button class="w-full sm:w-auto bg-blue hover:bg-blue-dark text-white font-bold py-3 px-12 rounded"
+                                @click="registering = false; registerSuccess = false;">
+                            Schließen
+                        </button>
+                    </div>
+                </div>
+                <div v-else>
+                    <div class="sm:max-w-sm mt-4 sm:pl-4 sm:border-l-2 sm:border-grey-light">
+                        <div class="flex mb-3 flex-col sm:flex-row">
+                            <p class="w-32 flex-no-shrink">Vorname</p>
+                            <input class="w-full p-2 border-2 rounded outline-none shadow-inner"
+                                   v-model="forename"/>
+                        </div>
+                        <div class="flex mb-3 flex-col sm:flex-row">
+                            <p class="w-32 flex-no-shrink">Nachname</p>
+                            <input class="w-full p-2 border-2 rounded outline-none shadow-inner"
+                                   v-model="surname"/>
+                        </div>
+                        <div class="flex mb-3 flex-col sm:flex-row">
+                            <p class="w-32 flex-no-shrink">E-Mail</p>
+                            <input class="w-full p-2 border-2 rounded outline-none shadow-inner"
+                                   v-model="email"/>
+                        </div>
+                        <div class="flex flex-col sm:flex-row">
+                            <p class="w-32 flex-no-shrink">Kurs</p>
+                            <select class="w-full p-2 border-2 rounded outline-none bg-white shadow-inner"
+                                    v-model="course"
+                                    v-bind:class="{ 'text-grey-dark': course === '' }">
+                                <option value="" disabled selected>- Bitte wähle einen Kurs -</option>
+                                <option class="text-black" v-for="c in courses" v-bind:key="c.start" :value="c">
+                                    {{ c.name }} am {{ formatDate(c.start) }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="sm:max-w-sm py-8 text-sm leading-normal">
+                        Keine Sorge, wir werden dir keinen Spam schicken und deine Daten auch nicht an andere
+                        weitergeben.
+                        Deine Daten werden nur für die Planung der Surfkurse gespeichert und anschließend wieder
+                        gelöscht.
+                    </p>
+                    <div class="flex justify-between sm:justify-end">
+                        <button class="bg-grey-dark hover:bg-grey-darker text-white font-bold py-3 px-6 rounded"
+                                @click="registering = false; registerSuccess = false;">
+                            Abbrechen
+                        </button>
+                        <div class="w-4 flex-no-shrink"></div>
+                        <button class="bg-blue hover:bg-blue-dark text-white font-bold py-3 px-6 rounded"
+                                @click="register()">
+                            Anmelden
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
                 <a id="hochschulsport" class="anchor"></a>
-                <h1 class="pt-8 text-2xl xl:text-3xl">Hochschulsport</h1>
+                <h1 class="pt-8 text-xl sm:text-3xl">Hochschulsport</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
-                <p class="pb-6 text-base xl:text-lg">
-                    Du bist grade mitten in deinem Studium und brauchst mal eine Auszeit vom Lernen? Du wolltest schon immer
-                    mal eine der schönsten Trendsportarten der Welt ausprobieren? Oder in einer kleinen Gruppe die Kanäle
-                    rund ums Große Meer mit dem SUP erkunden? Dann bist du hier genau richtig! Denn in Kooperation mit dem
-                    Hochschulsport der HS Emden/Leer bieten wir einige ermäßigte Angebote exklusiv für Studierende an.
+                <p class="pb-6 text-sm sm:text-base xl:text-lg">
+                    Du bist grade mitten in deinem Studium und brauchst mal eine Auszeit vom Lernen? Du wolltest schon
+                    immer mal eine der schönsten Trendsportarten der Welt ausprobieren? Oder in einer kleinen Gruppe die
+                    Kanäle rund ums Große Meer mit dem SUP erkunden? Dann bist du hier genau richtig! Denn in
+                    Kooperation mit dem Hochschulsport der HS Emden/Leer bieten wir einige ermäßigte Angebote exklusiv
+                    für Studierende an.
                 </p>
-                <p class="pb-6 text-base xl:text-lg">
-                    Gegen Vorlage deines Studierendenausweises kannst du dir bei uns vergünstigt Material zum Windsurfen und
+                <p class="pb-6 text-sm sm:text-base xl:text-lg">
+                    Gegen Vorlage deines Studierendenausweises kannst du dir bei uns vergünstigt Material zum Windsurfen
+                    und
                     Stand Up Paddlen leihen. Außerdem gibt es zu festgelegten Terminen spezielle Schnupperkurse über den
                     Hochschulsport. Hier eine Liste aller Vergünstigungen:
                 </p>
 
-                <table class="pb-6 w-full">
+                <table class="w-64 pb-6 w-full">
                     <tr>
                         <th class="w-1/2 whitespace-no-wrap uppercase text-xs xl:text-sm">Kurs/Material</th>
                         <th class="w-1/6 whitespace-no-wrap uppercase text-xs xl:text-sm">Dauer</th>
@@ -46,22 +122,24 @@
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
                 <a id="faq" class="anchor"></a>
-                <h1 class="pt-8 text-2xl xl:text-3xl">FAQ</h1>
+                <h1 class="pt-8 text-xl sm:text-3xl">FAQ</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
 
                 <h2 class="py-2">Welche Sportarten werden angeboten?</h2>
                 <p class="pb-6 text-base xl:text-lg">
                     Wir bieten sowohl Windsurfkurse, als auch SUP Touren zu ermäßigten Preisen an. Bei den Surfkursen
                     handelt es sich um 3 stündige Schnupperkurse für <b>20€</b>, die optional zum ebenfalls ermäßigten
-                    Einsteigerkurs ausgebaut werden können. Dieser dauert 14 Stunden und kostet <b>140€</b>. Die SUP Touren
+                    Einsteigerkurs ausgebaut werden können. Dieser dauert 14 Stunden und kostet <b>140€</b>. Die SUP
+                    Touren
                     dauern etwa 2 Stunden und kosten <b>10€</b>.
                 </p>
 
                 <h2 class="py-2">Wo finden die Kurse statt?</h2>
                 <p class="pb-6 text-base xl:text-lg">
-                    Die Surfkurse und die SUP Touren finden am <b>Grossen Meer</b> statt. Treffen ist dabei jeweils an der
-                    Surfschule vor Ort. <router-link class="no-underline hover:underline" to="/Contact#anfahrt">Hier</router-link> findest du Informationen zur
-                    Anfahrt.
+                    Die Surfkurse und die SUP Touren finden am <b>Grossen Meer</b> statt. Treffen ist dabei jeweils an
+                    der Surfschule vor Ort.
+                    <router-link class="no-underline hover:underline" to="/Contact#anfahrt">Hier</router-link>
+                    findest du Informationen zur Anfahrt.
                 </p>
 
                 <h2 class="py-2">Was muss ich zum Surfen/SUP mitnehmen?</h2>
@@ -73,8 +151,8 @@
                 <h2 class="py-2">Kann ich auch außerhalb der Kurse vergünstigt Material leihen?</h2>
                 <p class="pb-6 text-base xl:text-lg">
                     Natürlich kannst du dir auch ohne einen Kurs Material bei uns leihen. Gegen Vorlage deines
-                    Studierendenausweises kannst du dir Windsurfmaterial für <b>7,50€</b> pro Stunde und ein SUP Board für
-                    <b>5,00€</b> pro Stunde leihen.
+                    Studierendenausweises kannst du dir Windsurfmaterial für <b>7,50€</b> pro Stunde und ein SUP Board
+                    für <b>5,00€</b> pro Stunde leihen.
                 </p>
             </div>
         </div>
@@ -82,14 +160,35 @@
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
                 <a id="termine" class="anchor"></a>
-                <h1 class="pt-8 text-2xl xl:text-3xl">Termine</h1>
+                <h1 class="pt-8 text-xl sm:text-3xl">Termine</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
-                <p class="pb-6 text-base xl:text-lg">
+                <p v-if="courses.length === 0" class="pb-6 text-base xl:text-lg">
                     Die Termine für die Surf und SUP Kurse im Wintersemester 18/19 werden in Kürze bekannt gegeben.
-                    <!--Hier findest du eine Auflistung aller angebotenen Termine. Für alle Kurse gibt es eine-->
-                    <!--Mindestteilnehmerzahl von 3 Personen. Bitte achte dazu in den Tagen vor dem Kurs auf deine eMails, da-->
-                    <!--wir dich so über eventuelle Ausfälle oder wetterbedingte Terminverschiebungen informieren.-->
                 </p>
+                <div v-else>
+                    <p class="pb-6 text-base xl:text-lg">
+                        Hier findest du eine Auflistung aller angebotenen Termine. Für alle Kurse gibt es eine
+                        Mindestteilnehmerzahl von 3 Personen. Bitte achte dazu in den Tagen vor dem Kurs auf deine
+                        eMails, da wir dich so über eventuelle Ausfälle oder wetterbedingte Terminverschiebungen
+                        informieren.
+                    </p>
+                    <table class="pb-6 w-full">
+                        <tr>
+                            <th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Kursname</th>
+                            <th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Datum</th>
+                            <th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Von</th>
+                            <th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Bis</th>
+                            <th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Preis</th>
+                        </tr>
+                        <tr v-for="c in courses" :key="c.id">
+                            <td class="text-base xl:text-lg">{{ c.name}}</td>
+                            <td class="text-base xl:text-lg whitespace-no-wrap pr-2">{{ formatDate(c.start) }}</td>
+                            <td class="text-base xl:text-lg whitespace-no-wrap pr-2">{{ formatTime(c.start) }}</td>
+                            <td class="text-base xl:text-lg whitespace-no-wrap">{{ formatTime(c.end) }}</td>
+                            <td class="text-base xl:text-lg whitespace-no-wrap">{{ c.price }}</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -98,44 +197,43 @@
                 <a id="anmeldung" class="anchor"></a>
                 <h1 class="pt-8 text-2xl xl:text-3xl">Anmeldung</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
-                <p class="pb-6 text-base xl:text-lg">
+                <p v-if="courses.length === 0" class="pb-6 text-base xl:text-lg">
                     Die Anmeldung wird freigeschaltet, sobald die Kurse verfübar sind.
-                    <!--Solltest du zum ausgewählten Termin doch keine Zeit haben, oder aus anderen Gründen nicht teilnehmen-->
-                    <!--können oder wollen, sag uns bitte kurz Bescheid, damit wir den Kurs entsprechend planen können. Eine-->
-                    <!--kurze email an info@grosses-meer.surf ohne Angabe von Gründen genügt.-->
                 </p>
-                <!--<form>-->
-                    <!--<div class="table">-->
-                        <!--<div class="table-row">-->
-                            <!--<p class="pr-8 table-cell">Name</p>-->
-                            <!--<input class="mb-6 table-cell p-2 border-2 rounded outline-none shadow-inner" v-model="name"/>-->
-                        <!--</div>-->
-                        <!--<div class="table-row">-->
-                            <!--<p class="pr-8 table-cell">E-Mail</p>-->
-                            <!--<input class="mb-6 table-cell p-2 border-2 rounded outline-none shadow-inner" v-model="name"/>-->
-                        <!--</div>-->
-                        <!--<div class="table-row">-->
-                            <!--<p class="pr-8 table-cell">Kurs</p>-->
-                            <!--<input class="mb-6 table-cell p-2 border-2 rounded outline-none shadow-inner" v-model="name"/>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">-->
-                        <!--Anmelden-->
-                    <!--</button>-->
-                <!--</form>-->
+                <div v-else class="flex flex-col">
+                    <p class="pb-6 text-base xl:text-lg">
+                        Solltest du zum ausgewählten Termin doch keine Zeit haben, oder aus anderen Gründen nicht
+                        teilnehmen können oder wollen, sag uns bitte kurz Bescheid, damit wir den Kurs entsprechend
+                        planen können. Eine kurze email an info@grosses-meer.surf ohne Angabe von Gründen genügt.
+                    </p>
+                    <div class="flex justify-center py-4">
+                        <button class="w-full sm:w-auto bg-blue hover:bg-blue-dark text-white font-bold py-4 px-32 rounded"
+                                @click="registering = true">
+                            Anmelden
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-    import { Component, Vue } from 'vue-property-decorator';
+    import {Component, Vue} from 'vue-property-decorator';
+    import Axios from 'axios';
+    import Moment from 'moment';
 
-    @Component({ components: {} })
+    @Component({components: {}})
     export default class University extends Vue {
-        private name = '';
+        private registering = false;
+        private registerSuccess = false;
+
+        private forename = '';
+        private surname = '';
         private email = '';
-        private course = '';
+        private course: any = '';
+
+        private courses: any[] = [];
 
         private studentoffers = [
             {
@@ -169,5 +267,28 @@
                 price: '5,00€',
             },
         ];
+
+        private register() {
+            this.registerSuccess = true;
+            // Axios.post(`https://api.grosses-meer.surf/api/university/register?forename=${this.forename}&surname=${this.surname}&email=${this.email}&courseid=${this.course.id}`)
+            //     .then(() => {
+            //         this.registerSuccess = true;
+            //     });
+        }
+
+        private formatDate(date: any): string {
+            return Moment(date).format('DD.MM.YYYY');
+        }
+
+        private formatTime(date: any): string {
+            return Moment(date).format('hh:mm');
+        }
+
+        private created() {
+            Axios.get('https://api.grosses-meer.surf/api/university')
+                .then((response) => {
+                    this.courses = response.data;
+                });
+        }
     }
 </script>
