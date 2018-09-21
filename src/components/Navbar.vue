@@ -1,8 +1,8 @@
 <template>
     <div ref="nav" class="h-12 xl:h-24 flex justify-center items-center bg-white whitespace-no-wrap z-20 text-grey-dark uppercase font-sans font-thin">
 
-        <div v-if="showdrawer" class="w-screen h-screen fixed pin z-30 flex" @click="showdrawer = false">
-            <div ref="drawer" class="h-screen bg-grey-darkest shadow-md w-menu-anim">
+        <div v-if="showdrawer" class="min-w-screen min-h-screen fixed pin z-30 flex" @click="showdrawer = false">
+            <div ref="drawer" class="min-h-screen bg-grey-darkest shadow-md w-menu-anim">
                 <div class=" h-24 mb-4">
                     <img class="p-2" align="right" src="https://png.icons8.com/ios/16/ffffff/delete-sign.png" @click="showdrawer = false">
                     <img src="../assets/logos/logo_white.png" class="h-12 m-4">
