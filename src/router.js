@@ -63,6 +63,10 @@ export default new Router({
             component: Contact,
             alias: ['/kontakt'],
         },
+        {
+            path: "*",
+            component: Home,
+        },
     ],
 });
 //# sourceMappingURL=router.js.map
