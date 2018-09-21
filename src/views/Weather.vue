@@ -7,7 +7,7 @@
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
                 <a id="wetter" class="anchor"></a>
-                <h1 class="pt-8 text-2xl xl:text-3xl">Live Wetter - Coming Soon</h1>
+                <h1 class="pt-8 text-xl sm:text-3xl">Live Wetter - Coming Soon</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
                 <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
                     Schon bald könnt ihr hier Live die aktuelle Windgeschwindigkeit bei uns an der Surfschule sehen.
@@ -19,7 +19,7 @@
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
                 <a id="webcam" class="anchor"></a>
-                <h1 class="pt-8 text-2xl xl:text-3xl">Webcam</h1>
+                <h1 class="pt-8 text-xl sm:text-3xl">Webcam</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
                 <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
                     So siehts aktuell am Grossen Meer aus. Das Webcam Bild aktualisiert alle 5 Minuten.
@@ -47,7 +47,7 @@
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
                 <a id="links" class="anchor"></a>
-                <h1 class="pt-8 text-2xl xl:text-3xl">Wetterberichte</h1>
+                <h1 class="pt-8 text-xl sm:text-3xl">Wetterberichte</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
                 <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
                     Keine Information ist wichtiger für einen Windsurfer, als die aktuelle Windvorhersage. Da jeder
