@@ -20,7 +20,7 @@
     </div>
 </template>
 <script lang="ts">
-    import { Component, Prop, Vue } from 'vue-property-decorator';
+    import {Component, Vue} from 'vue-property-decorator';
     import Navbar from './components/Navbar.vue';
     import Footer from './components/Footer.vue';
 
@@ -38,10 +38,6 @@
                 window.scrollTo(0, 0);
                 next();
             });
-        }
-
-        private isMobileDevice() {
-            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
         }
     }
 </script>
