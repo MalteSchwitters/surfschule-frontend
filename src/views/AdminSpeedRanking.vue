@@ -8,21 +8,30 @@
                 <h1 class="pt-8">Neuen Topspeed eintragen</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
                 <div class="xl:flex justify-between">
-                    <form class="pt-8 w-full xl:w-1/2">
-                        <div class="table w-full">
-                            <div class="table-row">
+                    <div v-if="success">
+                        <p class="pb-6 text-base xl:text-lg">
+                            Neuer Topspeed für {{ driver }} wurde erfolgreich eingetragen.
+                        </p>
+                        <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded"
+                                @click="reset()">
+                            Weitere Messung eintragen
+                        </button>
+                    </div>
+                    <form v-else class="pt-8 w-full xl:w-1/2">
+                        <div class="sm:table w-full">
+                            <div class="sm:table-row">
                                 <p class="pr-8 table-cell">Name</p>
                                 <input class="w-full mb-6 table-cell p-2 border-2 rounded outline-none shadow-inner"
                                        placeholder="Max Mustermann"
                                        v-model="driver"/>
                             </div>
-                            <div class="table-row">
+                            <div class="sm:table-row">
                                 <p class="pr-8 table-cell">Top Speed</p>
                                 <input placeholder="66.7"
                                        class="w-full mb-6 table-cell p-2 border-2 rounded outline-none shadow-inner"
                                        v-model="speed"/>
                             </div>
-                            <div class="table-row">
+                            <div class="sm:table-row">
                                 <p class="pr-8 table-cell">Datum</p>
                                 <input class="w-full mb-6 table-cell p-2 border-2 rounded outline-none shadow-inner"
                                        placeholder="2018-09-11" v-model="date"/>
@@ -53,21 +62,34 @@
     @Component({components: {Gallery}})
     export default class Contact extends Vue {
 
+        private auth = '';
+        private success = false;
         private driver = '';
         private speed = 0.0;
         private date = '';
 
+        private reset() {
+            this.driver = '';
+            this.speed = 0.0;
+            this.date = '';
+            this.success = false;
+        }
+
         private send() {
-            Axios.post(`https://api.grosses-meer.surf/api/speedranking?name=${this.driver}&speed=${this.speed}&date=${this.date}`)
-                .then((response) => {
-                    this.driver = '';
-                    this.speed = 0.0;
-                    this.date = '';
+            Axios.post(`https://api.grosses-meer.surf/api/speedranking?auth=${this.auth}&name=${this.driver}&speed=${this.speed}&date=${this.date}`)
+                .then(() => {
+                    this.success = true;
                 });
         }
 
         private created() {
-            Axios.get(`https://api.grosses-meer.surf/api/auth?token=${this.$route.query.auth}`)
+            if (this.$route.query.auth !== null) {
+                this.auth = this.$route.query.auth;
+                localStorage.setItem('auth', this.auth);
+            } else {
+                this.auth = localStorage.getItem('auth') || '';
+            }
+            Axios.get(`https://api.grosses-meer.surf/api/auth?token=${this.auth}`)
                 .catch((response) => {
                     this.$router.push('/home');
                 });
