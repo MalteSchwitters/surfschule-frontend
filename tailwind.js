@@ -53,7 +53,7 @@ let colors = {
     'grey': '#e5e5e5',
     'grey-light': '#dae1e7',
     'grey-lighter': '#f1f5f8',
-    'grey-lightest': '#f8fafc',
+    'grey-lightest': '#f8f8f8',
     'white': '#ffffff',
 
     'red-darkest': '#3b0d0c',
@@ -127,7 +127,7 @@ let colors = {
     'pink-light': '#fa7ea8',
     'pink-lighter': '#ffbbca',
     'pink-lightest': '#ffebef',
-}
+};
 
 module.exports = {
 
@@ -951,4 +951,4 @@ module.exports = {
         separator: ':',
     },
 
-}
+};

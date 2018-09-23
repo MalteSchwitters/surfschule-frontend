@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full bg-grey pb-2">
+    <div class="relative w-full pb-2">
         <div class="w-full px-2 py-2 xl:px-0 xl:py-0 flex items-center overflow-x-scroll xl:overflow-hidden"
              ref="scrollcontainer" v-scroll="onScroll">
             <img class="w-full rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none" :src="image1"/>
@@ -9,28 +9,31 @@
             <img class="w-full rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none" :src="image3"/>
             <img class="px-1 xl:hidden" src="../assets/transparent-1x1.png"/>
         </div>
-        <div class="md:hidden absolute pin-y pin-l my-16 flex flex-col justify-center opacity-75"
-             @click="scrollToImage($refs.scrollcontainer, scrollover - 1)">
-            <img  class="pl-2 pr-8" src="https://png.icons8.com/ios/40/ffffff/less-than.png">
-        </div>
+        <!--<div class="md:hidden absolute pin-y pin-l my-16 flex flex-col justify-center opacity-75"-->
+        <!--@click="scrollToImage($refs.scrollcontainer, scrollover - 1)">-->
+        <!--<img class="pl-2 pr-8" src="https://png.icons8.com/ios/40/ffffff/less-than.png">-->
+        <!--</div>-->
 
-        <div class="md:hidden absolute pin-y pin-r my-16 flex flex-col justify-center opacity-75"
-             @click="scrollToImage($refs.scrollcontainer, scrollover + 1)">
-            <img  class="pr-2 pl-8" src="https://png.icons8.com/ios/40/ffffff/more-than.png">
-        </div>
+        <!--<div class="md:hidden absolute pin-y pin-r my-16 flex flex-col justify-center opacity-75"-->
+        <!--@click="scrollToImage($refs.scrollcontainer, scrollover + 1)">-->
+        <!--<img class="pr-2 pl-8" src="https://png.icons8.com/ios/40/ffffff/more-than.png">-->
+        <!--</div>-->
 
         <div class="md:hidden absolute pin-b w-full mb-6 flex flex-col opacity-75 pointer-events-none">
             <div class="flex justify-center ">
-                <div class="w-4 h-4 mx-2 border-2 border-white rounded-full" :class="{'bg-grey-lighter': scrollover === 0}"></div>
-                <div class="w-4 h-4 mx-2 border-2 border-white rounded-full" :class="{'bg-grey-lighter': scrollover === 1}"></div>
-                <div class="w-4 h-4 mx-2 border-2 border-white rounded-full" :class="{'bg-grey-lighter': scrollover === 2}"></div>
+                <div class="w-4 h-4 mx-2 border-2 border-white rounded-full"
+                     :class="{'bg-grey-lighter': scrollover === 0}"></div>
+                <div class="w-4 h-4 mx-2 border-2 border-white rounded-full"
+                     :class="{'bg-grey-lighter': scrollover === 1}"></div>
+                <div class="w-4 h-4 mx-2 border-2 border-white rounded-full"
+                     :class="{'bg-grey-lighter': scrollover === 2}"></div>
             </div>
         </div>
     </div>
 </template>
 
 <script lang="ts">
-    import { Component, Prop, Vue } from 'vue-property-decorator';
+    import {Component, Prop, Vue} from 'vue-property-decorator';
     import vuescroll from 'vue-scroll';
 
     Vue.use(vuescroll);
@@ -40,13 +43,13 @@
     })
     export default class Gallery extends Vue {
 
-        @Prop({ default: null })
+        @Prop({default: null})
         private image1!: string;
 
-        @Prop({ default: null })
+        @Prop({default: null})
         private image2!: string;
 
-        @Prop({ default: null })
+        @Prop({default: null})
         private image3!: string;
 
         private imageCount = 3;
@@ -106,7 +109,7 @@
             //     imageNumber -= 1;
             // }
             const imageCenterOffset = imageNumber > 0 ? (viewWidth - imageWidth) / 2 : 0;
-            const targetScrollLeft = imageNumber * imageWidth - imageCenterOffset ;
+            const targetScrollLeft = imageNumber * imageWidth - imageCenterOffset;
 
             this.scrollAnimation = imageNumber >= this.scrollover ? 40 : -40;
 
