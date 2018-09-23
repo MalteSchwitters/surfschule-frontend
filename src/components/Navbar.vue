@@ -1,75 +1,65 @@
 <template>
-    <div ref="nav"
-         class="h-12 xl:h-24 flex justify-center items-center bg-white whitespace-no-wrap z-20 text-grey-dark uppercase font-sans font-thin">
+    <div class="h-12 xl:h-24 flex justify-center items-center bg-white whitespace-no-wrap z-20 text-grey-dark uppercase font-sans font-thin">
 
-        <div v-if="showdrawer" class="min-w-screen min-h-screen fixed pin z-30 flex" @click="showdrawer = false">
-            <div ref="drawer" class="min-h-screen bg-grey-darkest shadow-md w-menu-anim">
+        <div v-if="showdrawer" class="min-w-screen min-h-screen fixed pin z-30 flex" @click="showDrawer(false)">
+            <div class="w-64 min-h-screen bg-grey-darkest shadow-md" :class="animation">
                 <div class=" h-24 mb-4">
-                    <img class="p-2" align="right" src="https://png.icons8.com/ios/16/ffffff/delete-sign.png"
-                         @click="showdrawer = false">
                     <img src="../assets/logos/logo_white.png" class="h-12 m-4">
                 </div>
-
                 <div class="flex items-center">
-                    <router-link to="home" class="flex-grow pl-4 py-2 text-white no-underline text-base sm:text-lg"
-                                 :class="{ 'font-bold': activeTab === 'home' }">
+                    <router-link class="flex-grow pl-4 py-2 text-white no-underline text-base sm:text-lg"
+                                 to="home" :class="{ 'bg-grey-darker': activeTab === 'home' }">
                         Startseite
                     </router-link>
-                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
-                <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="surfing" class="flex-grow pl-4 py-2 text-white no-underline  text-base sm:text-lg"
-                                 :class="{ 'font-bold': activeTab === 'surfing' }">
+                    <router-link class="flex-grow pl-4 py-2 text-white no-underline  text-base sm:text-lg"
+                                 to="surfing" :class="{ 'bg-grey-darker': activeTab === 'surfing' }">
                         Windsurfen
                     </router-link>
-                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
-                <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="sup" class="flex-grow pl-4 py-2 text-white no-underline text-base sm:text-lg"
-                                 :class="{ 'font-bold': activeTab === 'sup' }">
+                    <router-link class="flex-grow pl-4 py-2 text-white no-underline text-base sm:text-lg"
+                                 to="sup" :class="{ 'bg-grey-darker': activeTab === 'sup' }">
                         Stand Up Paddling
                     </router-link>
-                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
-                <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="sailing" class="flex-grow pl-4 py-2 text-white no-underline text-base sm:text-lg"
-                                 :class="{ 'font-bold': activeTab === 'sailing' }">
+                    <router-link class="flex-grow pl-4 py-2 text-white no-underline text-base sm:text-lg"
+                                 to="sailing" :class="{ 'bg-grey-darker': activeTab === 'sailing' }">
                         Segeln
                     </router-link>
-                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
-                <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="weather" class="flex-grow pl-4 py-2 text-white no-underline text-base sm:text-lg"
-                                 :class="{ 'font-bold': activeTab === 'weather' }">
+                    <router-link class="flex-grow pl-4 py-2 text-white no-underline text-base sm:text-lg"
+                                 to="weather" :class="{ 'bg-grey-darker': activeTab === 'weather' }">
                         Wetter
                     </router-link>
-                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
-                <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="contact" class="flex-grow pl-4 py-2 text-white no-underline text-base sm:text-lg"
-                                 :class="{ 'font-bold': activeTab === 'contact' }">
+                    <router-link class="flex-grow pl-4 py-2 text-white no-underline text-base sm:text-lg"
+                                 to="contact" :class="{ 'bg-grey-darker': activeTab === 'contact' }">
                         Kontakt & Anfahrt
                     </router-link>
-                    <!--<img class="pr-4" src="https://png.icons8.com/ios/24/ffffff/sort-down.png">-->
                 </div>
-                <div class="mx-4 border-b border-grey-dark"></div>
                 <div class="flex items-center">
-                    <router-link to="impressum"
-                                 class="flex-grow px-4 py-2 text-white no-underline text-base sm:text-lg">
+                    <router-link class="flex-grow px-4 py-2 text-white no-underline text-base sm:text-lg"
+                                 to="impressum" :class="{ 'bg-grey-darker': activeTab === 'impressum' }">
                         Impressum
                     </router-link>
                 </div>
+                <div class="flex items-center">
+                    <router-link class="flex-grow px-4 py-2 text-white no-underline text-base sm:text-lg"
+                                 to="hochschulsport" :class="{ 'bg-grey-darker': activeTab === 'hochschulsport' }">
+                        Hochschulsport
+                    </router-link>
+                </div>
             </div>
-            <div class="bg-black bg-fadeout-anim flex-grow"></div>
+            <div class="bg-black anim-fadeout-background flex-grow"></div>
         </div>
 
         <div class="xl:hidden fixed pin-l pl-4">
-            <button @click="showdrawer = true">
+            <button class="outline-none" @click="showDrawer(true)">
                 <img src="https://png.icons8.com/windows/32/000000/menu.png">
             </button>
         </div>
@@ -122,18 +112,43 @@
     })
     export default class Navbar extends Vue {
 
+        private animation = '';
+        private animationComplete = true;
         private showdrawer = false;
         private activeTab: any;
+
+        private closeOnScroll() {
+            this.showDrawer(false);
+        }
+
+        private showDrawer(show: boolean) {
+            if (this.animation === '') {
+                if (show && !this.showdrawer) {
+                    this.showdrawer = true;
+                    this.animation = 'anim-open-menu';
+                    setTimeout(() => {
+                        this.animation = '';
+                    }, 200);
+                } else if (!show && this.showdrawer) {
+                    this.animation = 'anim-close-menu';
+                    setTimeout(() => {
+                        this.animation = '';
+                        this.showdrawer = false;
+                    }, 200);
+                }
+            }
+        }
 
         private async created() {
             this.activeTab = this.$router.currentRoute.name;
             this.$router.beforeResolve((to, from, next) => {
                 this.activeTab = to.name;
                 this.$nextTick(() => {
-                    this.$forceUpdate()
+                    this.$forceUpdate();
                 });
                 next();
             });
+            window.addEventListener('scroll', this.closeOnScroll);
         }
     }
 </script>
@@ -141,7 +156,7 @@
 <style>
     @keyframes anim-menu {
         from {
-            margin-left: -70%;
+            margin-left: -16rem;
         }
         to {
             margin-left: 0;
@@ -157,16 +172,25 @@
         }
     }
 
-    .bg-fadeout-anim {
+    .anim-fadeout-background {
         opacity: 0.4;
         animation-name: anim-fadeout;
         animation-duration: 0.2s;
     }
 
-    .w-menu-anim {
+    .anim-open-menu {
         margin-left: 0;
-        width: 70%;
         animation-name: anim-menu;
+        animation-timing-function: linear;
         animation-duration: 0.2s;
     }
+
+    .anim-close-menu {
+        margin-left: -16rem;
+        animation-name: anim-menu;
+        animation-timing-function: linear;
+        animation-duration: 0.2s;
+        animation-direction: reverse;
+    }
+
 </style>
