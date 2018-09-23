@@ -22,7 +22,7 @@
         <!--<img class="pr-2 pl-8" src="https://png.icons8.com/ios/40/ffffff/more-than.png">-->
         <!--</div>-->
 
-        <div class="sm:hidden absolute pin-b mb-8 w-full flex flex-col opacity-75 pointer-events-none">
+        <div class="sm:hidden absolute pin-b mb-4 w-full flex flex-col opacity-75 pointer-events-none">
             <div class="flex justify-center ">
                 <div class="w-4 h-4 mx-2 border-2 border-white rounded-full"
                      :class="{'bg-grey-lighter': scrollover === 0}"></div>
