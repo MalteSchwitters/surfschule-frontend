@@ -11,9 +11,7 @@
                         <router-view class="bg-grey-lightest xl:bg-white shadow-md"/>
                         <Footer></Footer>
                     </div>
-                    <div class="xl:w-1 xl:flex-grow">
-                        <!--<img class="w-full p-8" src="./assets/logos/vdws.png"/>-->
-                    </div>
+                    <div class="xl:w-1 xl:flex-grow"></div>
                 </div>
             </div>
         </div>
@@ -32,6 +30,10 @@
     })
 
     export default class App extends Vue {
+
+        private onScroll() {
+            console.log('test');
+        }
 
         private created() {
             this.$router.beforeResolve((to, from, next) => {
