@@ -85,24 +85,25 @@
 
                 <h2 class="py-2 text-base sm:text-lg xl:text-xl">Welche Sportarten werden angeboten?</h2>
                 <p class="pb-6 text-sm sm:text-base xl:text-lg">
-                    Wir bieten sowohl Windsurfkurse, als auch SUP Touren zu ermäßigten Preisen an. Bei den Surfkursen
-                    handelt es sich um 3 stündige Schnupperkurse für <b>20€</b>, die optional zum ebenfalls ermäßigten
-                    Einsteigerkurs ausgebaut werden können. Dieser dauert 14 Stunden und kostet <b>140€</b>. Die SUP
-                    Touren
-                    dauern etwa 2 Stunden und kosten <b>10€</b>.
+                    Ihr könnt bei uns sowohl Windsurfmaterial, als auch SUP Boards ausleihen. Zu einigen festgelegten
+                    Terminen gibt es außerdem Windsurf Schnupperkurse über den Hochschulsport. Die Kurse dauern je <b>3
+                    Stunden</b> und kosten <b>20€</b> pro Teilnehmer. Sollte der Wind nicht zum Surfen reichen wird
+                    stattdessen eine SUP Tour durch die Kanäle gemacht. Nach Absprache könnt ihr auch einen kompletten
+                    Windsurfgrundkurs mit VDWS Surfschein bei uns belegen. Dieser dauert <b>14 Stunden</b> und kostet
+                    <b>140€</b>.
                 </p>
 
                 <h2 class="py-2 text-base sm:text-lg xl:text-xl">Wo finden die Kurse statt?</h2>
                 <p class="pb-6 text-sm sm:text-base xl:text-lg">
-                    Die Surfkurse und die SUP Touren finden am <b>Grossen Meer</b> statt. Treffen ist dabei jeweils an
-                    der Surfschule vor Ort.
+                    Alle Schnupperkurse finden am <b>Grossen Meer</b> statt. Treffen ist dabei jeweils an der Surfschule
+                    vor Ort.
                     <router-link class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
                                  to="/Contact#anfahrt">Hier
                     </router-link>
                     findest du Informationen zur Anfahrt.
                 </p>
 
-                <h2 class="py-2 text-base sm:text-lg xl:text-xl">Was muss ich zum Surfen/SUP mitnehmen?</h2>
+                <h2 class="py-2 text-base sm:text-lg xl:text-xl">Was muss ich zum Surfen / SUP mitnehmen?</h2>
                 <p class="pb-6 text-sm sm:text-base xl:text-lg">
                     Das gesammte Material vom Board bis zum Neoprenanzug wird von der Surfschule gestellt. Mitnehmen
                     brauchst du also nur, was du sonst auch im Schwimmbad dabei hast.
@@ -129,27 +130,23 @@
                 <div v-else>
                     <p class="pb-6 text-sm sm:text-base xl:text-lg">
                         Hier findest du eine Auflistung aller angebotenen Termine. Für alle Kurse gibt es eine
-                        Mindestteilnehmerzahl von 3 Personen. Bitte achte dazu in den Tagen vor dem Kurs auf deine
-                        eMails, da wir dich so über eventuelle Ausfälle oder wetterbedingte Terminverschiebungen
-                        informieren.
+                        Mindestteilnehmerzahl von 3 Personen. Bitte achte in den Tagen vor dem Kurs auf deine E-Mails,
+                        da wir dich so über eventuelle Ausfälle oder wetterbedingte Terminänderungen informieren.
                     </p>
                     <table class="pb-6 w-full">
                         <tr>
-                            <!--<th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Kursname</th>-->
+                            <th class="whitespace-no-wrap uppercase text-xs xl:text-sm hidden sm:block">Kursname</th>
                             <th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Datum</th>
-                            <th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Von</th>
-                            <th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Bis</th>
+                            <th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Zeit</th>
                             <th class="whitespace-no-wrap uppercase text-xs xl:text-sm">Preis</th>
                         </tr>
                         <tr v-for="c in courses" :key="c.id">
-                            <!--<td class="text-sm sm:text-base xl:text-lg">{{ c.name}}</td>-->
-                            <td class="text-sm sm:text-base xl:text-lg whitespace-no-wrap pr-2">{{ formatDate(c.start)
-                                }}
+                            <td class="text-sm sm:text-base xl:text-lg hidden sm:block">{{ c.name}}</td>
+                            <td class="text-sm sm:text-base xl:text-lg whitespace-no-wrap">{{ formatDate(c.start) }}
                             </td>
-                            <td class="text-sm sm:text-base xl:text-lg whitespace-no-wrap pr-2">{{ formatTime(c.start)
-                                }}
+                            <td class="text-sm sm:text-base xl:text-lg whitespace-no-wrap pr-2">
+                                {{ formatTime(c.start) }} - {{ formatTime(c.end) }} Uhr
                             </td>
-                            <td class="text-sm sm:text-base xl:text-lg whitespace-no-wrap">{{ formatTime(c.end) }}</td>
                             <td class="text-sm sm:text-base xl:text-lg whitespace-no-wrap">{{ c.price }}</td>
                         </tr>
                     </table>
@@ -177,29 +174,29 @@
                             <div class="flex mb-4 flex-col sm:flex-row">
                                 <p class="w-32 my-1 flex-no-shrink text-base xl:text-lg">
                                     Vorname</p>
-                                <input class="w-full p-2 border-2 rounded outline-none shadow-inner"
+                                <input class="w-full p-2 border-2 rounded outline-none shadow-inner" required
                                        v-model="forename" placeholder="Max"/>
                             </div>
                             <div class="flex mb-4 flex-col sm:flex-row">
                                 <p class="w-32 my-1 flex-no-shrink text-base xl:text-lg">
                                     Nachname</p>
-                                <input class="w-full p-2 border-2 rounded outline-none shadow-inner"
+                                <input class="w-full p-2 border-2 rounded outline-none shadow-inner" required
                                        v-model="surname" placeholder="Mustersurfer"/>
                             </div>
                             <div class="flex mb-4 flex-col sm:flex-row">
                                 <p class="w-32 my-1 flex-no-shrink text-base xl:text-lg">
                                     E-Mail</p>
-                                <input class="w-full p-2 border-2 rounded outline-none shadow-inner"
+                                <input class="w-full p-2 border-2 rounded outline-none shadow-inner" required
                                        v-model="email" placeholder="max.muster@muster.de"/>
                             </div>
                             <div class="flex flex-col sm:flex-row">
                                 <p class="w-32 my-1 flex-no-shrink text-base xl:text-lg">Kurs</p>
-                                <select class="w-full p-2 border-2 rounded outline-none bg-white shadow-inner"
+                                <select class="w-full p-2 border-2 rounded outline-none bg-white shadow-inner" required
                                         v-model="course"
                                         v-bind:class="{ 'text-grey-dark': course === '' }">
                                     <option value="" disabled selected>- Bitte wähle einen Kurs -</option>
                                     <option class="text-black" v-for="c in courses" v-bind:key="c.start" :value="c">
-                                        {{ c.name }} am {{ formatDate(c.start) }}
+                                        {{ formatDate(c.start) }}, {{ formatTime(c.start) }} Uhr
                                     </option>
                                 </select>
                             </div>
@@ -244,7 +241,7 @@
 
         private studentoffers = [
             {
-                course: 'Windsurf Schnupperkurs (feste Termine)',
+                course: 'Windsurf / SUP Schnupperkurs',
                 duration: '3 Std.',
                 normalprice: '55,00€',
                 price: '20,00€',
@@ -254,12 +251,6 @@
                 duration: '14 Std.',
                 normalprice: '225,00€',
                 price: '140,00€',
-            },
-            {
-                course: 'SUP Tour / Einsteigerkurs (feste Termine)',
-                duration: '2 Std.',
-                normalprice: '40,00€',
-                price: '10,00€',
             },
             {
                 course: 'Verleih: Windsurfboard mit Segel',
@@ -284,11 +275,11 @@
         }
 
         private formatDate(date: any): string {
-            return Moment(date).format('DD.MM.YYYY');
+            return Moment(date).format('dd, DD.MM.YYYY');
         }
 
         private formatTime(date: any): string {
-            return Moment(date).format('hh:mm');
+            return Moment(date).format('HH:mm');
         }
 
         private created() {
