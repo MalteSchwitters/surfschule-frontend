@@ -169,29 +169,32 @@
                         planen können. Eine kurze email an info@grosses-meer.surf ohne Angabe von Gründen genügt.
                     </p>
 
-                    <div class="flex flex-col xl:flex-row justify-between mb-6">
+                    <div class="justify-between mb-6">
                         <div class="sm:ml-8 sm:max-w-sm mt-4 sm:pl-4 sm:border-l-2 sm:border-grey-light mb-6">
                             <div class="flex mb-4 flex-col sm:flex-row">
                                 <p class="w-32 my-1 flex-no-shrink text-base xl:text-lg">
                                     Vorname</p>
-                                <input class="w-full p-2 border-2 rounded outline-none shadow-inner" required
-                                       v-model="forename" placeholder="Max"/>
+                                <input-text ref="inputForename" v-model="forename" :required="true" placeholder="Max"
+                                            pattern="^[a-zA-Z\s,.'-\pL]+$"></input-text>
                             </div>
                             <div class="flex mb-4 flex-col sm:flex-row">
                                 <p class="w-32 my-1 flex-no-shrink text-base xl:text-lg">
                                     Nachname</p>
-                                <input class="w-full p-2 border-2 rounded outline-none shadow-inner" required
-                                       v-model="surname" placeholder="Mustersurfer"/>
+                                <input-text ref="inputSurname" v-model="surname" :required="true"
+                                            placeholder="Mustermann"
+                                            pattern="^[a-zA-Z\s,.'-\pL]+$"></input-text>
                             </div>
                             <div class="flex mb-4 flex-col sm:flex-row">
                                 <p class="w-32 my-1 flex-no-shrink text-base xl:text-lg">
                                     E-Mail</p>
-                                <input class="w-full p-2 border-2 rounded outline-none shadow-inner" required
-                                       v-model="email" placeholder="max.muster@muster.de"/>
+                                <input-text ref="inputEmail" v-model="email" :required="true"
+                                            pattern="^([A-Za-z0-9_\.-]+)@([\dA-Za-z\.-]+)\.([A-Za-z\.]{2,6})+$"
+                                            placeholder="max.muster@muster.de"></input-text>
                             </div>
                             <div class="flex flex-col sm:flex-row">
                                 <p class="w-32 my-1 flex-no-shrink text-base xl:text-lg">Kurs</p>
-                                <select class="w-full p-2 border-2 rounded outline-none bg-white shadow-inner" required
+                                <select ref="selectCourse"
+                                        class="w-full p-2 border-2 rounded outline-none bg-white shadow-inner" required
                                         v-model="course"
                                         v-bind:class="{ 'text-grey-dark': course === '' }">
                                     <option value="" disabled selected>- Bitte wähle einen Kurs -</option>
@@ -201,18 +204,14 @@
                                 </select>
                             </div>
                         </div>
-
-                        <p class="xl:w-1/3 text-sm sm:text-base xl:text-lg">
-                            Keine Sorge, wir werden dir keinen Spam schicken und deine Daten auch nicht an andere
-                            weitergeben.
-                            Deine Daten werden nur für die Planung der Surfkurse gespeichert und anschließend wieder
-                            gelöscht.
-                        </p>
                     </div>
 
                     <div class="flex justify-center py-4">
-                        <button class="w-full sm:w-auto bg-blue hover:bg-blue-dark text-white font-bold py-4 px-32 rounded"
-                                @click="register()">
+                        <button v-if="isAllValid()" @click="register()"
+                                class="w-full sm:w-auto bg-blue hover:bg-blue-dark text-white font-bold py-4 px-32 rounded">
+                            Anmelden
+                        </button>
+                        <button v-else class="w-full sm:w-auto bg-grey-dark text-white font-bold py-4 px-32 rounded">
                             Anmelden
                         </button>
                     </div>
@@ -226,8 +225,9 @@
     import {Component, Vue} from 'vue-property-decorator';
     import Axios from 'axios';
     import Moment from 'moment';
+    import InputText from '../components/InputText.vue';
 
-    @Component({components: {}})
+    @Component({components: {InputText}})
     export default class University extends Vue {
         private registering = false;
         private registerSuccess = false;
@@ -266,11 +266,21 @@
             },
         ];
 
+        private isAllValid(): boolean {
+            return this.course !== '' &&
+                (<InputText>this.$refs.inputForename).isValid() &&
+                (<InputText>this.$refs.inputSurname).isValid() &&
+                (<InputText>this.$refs.inputEmail).isValid();
+        }
+
         private register() {
-            this.registerSuccess = true;
             Axios.post(`https://api.grosses-meer.surf/api/university/register?forename=${this.forename}&surname=${this.surname}&email=${this.email}&courseid=${this.course.id}`)
                 .then(() => {
                     this.registerSuccess = true;
+                    this.forename = '';
+                    this.surname = '';
+                    this.email = '';
+                    this.course = '';
                 });
         }
 
