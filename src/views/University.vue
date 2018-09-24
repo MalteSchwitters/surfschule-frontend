@@ -211,7 +211,7 @@
                                 class="w-full sm:w-auto bg-blue hover:bg-blue-dark text-white font-bold py-4 px-32 rounded">
                             Anmelden
                         </button>
-                        <button v-else class="w-full sm:w-auto bg-grey-dark text-white font-bold py-4 px-32 rounded">
+                        <button v-else disabled class="w-full sm:w-auto bg-grey-dark text-white font-bold py-4 px-32 rounded">
                             Anmelden
                         </button>
                     </div>
