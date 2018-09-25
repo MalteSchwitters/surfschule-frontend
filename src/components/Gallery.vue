@@ -2,13 +2,13 @@
     <div class="relative w-full pb-2">
         <div class="w-full px-2 xl:px-0 flex items-center overflow-x-scroll xl:overflow-hidden"
              ref="scrollcontainer" v-scroll="onScroll">
-            <img class="min-w-full sm:min-w-0 sm:w-64 rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none"
+            <img class="min-w-full sm:min-w-0 sm:w-1/3 rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none"
                  :src="image1"/>
             <img class="px-1 xl:hidden" src="../assets/transparent-1x1.png"/>
-            <img class="min-w-full sm:min-w-0 sm:w-64 rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none"
+            <img class="min-w-full sm:min-w-0 sm:w-1/3 rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none"
                  :src="image2"/>
             <img class="px-1 xl:hidden" src="../assets/transparent-1x1.png"/>
-            <img class="min-w-full sm:min-w-0 sm:w-64 rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none"
+            <img class="min-w-full sm:min-w-0 sm:w-1/3 rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none"
                  :src="image3"/>
             <img class="px-1 sm:hidden" src="../assets/transparent-1x1.png"/>
         </div>
