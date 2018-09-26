@@ -1,7 +1,7 @@
 <template>
     <div id="app" class="">
         <div>
-            <navbar class="fixed w-full z-10 shadow-md"></navbar>
+            <navbar class="fixed w-full z-10"></navbar>
             <div class="min-h-screen flex flex-col bg-transparent">
                 <div class="h-12 xl:h-24"></div>
                 <img class="h-screen w-screen fixed z-0" src="./assets/backgrounds/sup.jpg"/>
