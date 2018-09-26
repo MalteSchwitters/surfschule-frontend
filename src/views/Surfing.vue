@@ -1,7 +1,7 @@
 <template>
     <div class="">
 
-        <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/surfing/header.jpg"/>
+        <img class="w-full h-64 xl:h-80 object-fit-cover" src="../assets/surfing/header.jpg"/>
 
         <!--<nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">-->
         <!--<a href="#windsurfen" class="text-grey-darker hover:text-blue uppercase no-underline"># Windsurfen</a>-->
@@ -31,9 +31,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/surfing/thumbs/surfen02.jpg')"
-                :image2="require('../assets/surfing/thumbs/surfen15.jpg')"
-                :image3="require('../assets/surfing/thumbs/surfen06.jpg')">
+                :image1="require('../assets/surfing/thumbs/surfing06.jpg')"
+                :image2="require('../assets/surfing/thumbs/surfing01.jpg')"
+                :image3="require('../assets/surfing/thumbs/surfing07.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -68,9 +68,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/surfing/thumbs/surfen05.jpg')"
-                :image2="require('../assets/surfing/thumbs/surfen04.jpg')"
-                :image3="require('../assets/surfing/thumbs/surfen16.jpg')">
+                :image1="require('../assets/surfing/thumbs/surfing02.jpg')"
+                :image2="require('../assets/surfing/thumbs/surfing14.jpg')"
+                :image3="require('../assets/surfing/thumbs/surfing03.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -99,9 +99,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/surfing/thumbs/surfen20.jpg')"
-                :image2="require('../assets/surfing/thumbs/surfen01.jpg')"
-                :image3="require('../assets/surfing/thumbs/surfen21.jpg')">
+                :image1="require('../assets/surfing/thumbs/surfing09.jpg')"
+                :image2="require('../assets/surfing/thumbs/surfing10.jpg')"
+                :image3="require('../assets/surfing/thumbs/surfing11.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -132,9 +132,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/surfing/thumbs/surfen08.jpg')"
-                :image2="require('../assets/surfing/thumbs/surfen03.jpg')"
-                :image3="require('../assets/surfing/thumbs/surfen07.jpg')">
+                :image1="require('../assets/surfing/thumbs/surfing05.jpg')"
+                :image2="require('../assets/surfing/thumbs/surfing13.jpg')"
+                :image3="require('../assets/surfing/thumbs/surfing12.jpg')">
         </gallery>
     </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/sup/header.jpg"/>
+        <img class="w-full h-64 xl:h-80 object-fit-cover z-0" src="../assets/sup/header.jpg"/>
 
         <!--<nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">-->
         <!--<a href="#sup" class="text-grey-darker hover:text-blue uppercase no-underline"># Stand Up Paddling</a>-->
@@ -26,9 +26,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sup/thumbs/sup02.jpg')"
-                :image2="require('../assets/sup/thumbs/sup12.jpg')"
-                :image3="require('../assets/sup/thumbs/sup13.jpg')">
+                :image1="require('../assets/sup/thumbs/sup05.jpg')"
+                :image2="require('../assets/sup/thumbs/sup02.jpg')"
+                :image3="require('../assets/sup/thumbs/sup03.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -66,9 +66,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sup/thumbs/sup02.jpg')"
-                :image2="require('../assets/sup/thumbs/sup03.jpg')"
-                :image3="require('../assets/sup/thumbs/sup11.jpg')">
+                :image1="require('../assets/sup/thumbs/sup06.jpg')"
+                :image2="require('../assets/sup/thumbs/sup09.jpg')"
+                :image3="require('../assets/sup/thumbs/sup04.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -102,9 +102,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sup/thumbs/sup04.jpg')"
-                :image2="require('../assets/sup/thumbs/sup03.jpg')"
-                :image3="require('../assets/sup/thumbs/sup06.jpg')">
+                :image1="require('../assets/sup/thumbs/sup10.jpg')"
+                :image2="require('../assets/sup/thumbs/sup08.jpg')"
+                :image3="require('../assets/sup/thumbs/sup11.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -135,9 +135,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sup/thumbs/sup05.jpg')"
-                :image2="require('../assets/sup/thumbs/sup11.jpg')"
-                :image3="require('../assets/sup/thumbs/sup09.jpg')">
+                :image1="require('../assets/sup/thumbs/sup01.jpg')"
+                :image2="require('../assets/sup/thumbs/sup07.jpg')"
+                :image3="require('../assets/sup/thumbs/sup12.jpg')">
         </gallery>
     </div>
 </template>

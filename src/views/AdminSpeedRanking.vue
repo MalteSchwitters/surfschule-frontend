@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/contact/header.jpg"/>
+        <img class="w-full h-64 xl:h-80 object-fit-cover" src="../assets/surfing/header.jpg"/>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -45,7 +45,6 @@
                         </div>
                     </form>
                     <div class="w-1/3 invisible xl:visible">
-                        <img src="../assets/surfing/thumbs/surfen03.jpg"/>
                     </div>
                 </div>
             </div>

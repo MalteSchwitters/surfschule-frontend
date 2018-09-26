@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/start/header.jpg"/>
+        <img class="w-full h-64 xl:h-80 object-fit-cover" src="../assets/university/header.jpg"/>
 
         <!--<nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">-->
         <!--<a href="#hochschulsport" class="text-grey-darker hover:text-blue uppercase no-underline"># Hochschulsport</a>-->

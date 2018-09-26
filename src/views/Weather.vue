@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/weather/header.jpg"/>
+        <img class="w-full h-64 xl:h-80 object-fit-cover" src="../assets/weather/header.jpg"/>
 
         <!--<nav class-->
 

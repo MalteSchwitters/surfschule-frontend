@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="w-full h-32 xl:h-48 object-fit-cover" src="../assets/start/header.jpg"/>
+        <img class="w-full h-64 xl:h-80 object-fit-cover" src="../assets/start/header.jpg"/>
 
         <!--<nav class="xl:px-6 py-4 -mt-2 flex flex-wrap hidden justify-around bg-grey">-->
         <!--<a href="#willkommen" class="text-base text-grey-darker hover:text-blue uppercase no-underline"># Willkommen</a>-->
@@ -43,9 +43,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/start/thumbs/meer04.jpg')"
-                :image2="require('../assets/start/thumbs/start01.jpg')"
-                :image3="require('../assets/start/thumbs/start02.jpg')">
+                :image1="require('../assets/surfing/thumbs/surfing06.jpg')"
+                :image2="require('../assets/sup/thumbs/sup05.jpg')"
+                :image3="require('../assets/sailing/thumbs/segeln05.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -76,8 +76,8 @@
         </div>
 
         <gallery
-                :image1="require('../assets/start/thumbs/meer01.jpg')"
-                :image2="require('../assets/start/thumbs/meer02.jpg')"
+                :image1="require('../assets/start/thumbs/meer05.jpg')"
+                :image2="require('../assets/start/thumbs/meer04.jpg')"
                 :image3="require('../assets/start/thumbs/meer03.jpg')">
         </gallery>
 
