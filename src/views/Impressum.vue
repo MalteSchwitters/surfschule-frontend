@@ -286,7 +286,8 @@
                 </p>
                 <p class="pb-6 text-sm sm:text-base xl:text-lg">
                     Durch die Zertifizierung nach dem
-                    <a href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active">EU-US-Datenschutzschild
+                    <a class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
+                       href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active">EU-US-Datenschutzschild
                         („EU-US Privacy Shield“)</a>
                     garantiert Google, dass die Datenschutzvorgaben der EU auch bei der Verarbeitung von Daten in den
                     USA eingehalten werden.
@@ -316,8 +317,10 @@
                 </p>
                 <p class="pb-6 text-sm sm:text-base xl:text-lg">
                     Zudem erfolgt die Nutzung von Google Maps sowie der über Google Maps erlangten Informationen nach
-                    den <a href="https://policies.google.com/terms?gl=DE&hl=de">Google-Nutzungsbedingungen</a> und den
-                    <a href="https://www.google.com/intl/de_de/help/terms_maps.html">Geschäftsbedingungen für Google
+                    den <a class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
+                           href="https://policies.google.com/terms?gl=DE&hl=de">Google-Nutzungsbedingungen</a> und den
+                    <a class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
+                       href="https://www.google.com/intl/de_de/help/terms_maps.html">Geschäftsbedingungen für Google
                         Maps</a>.
                 </p>
                 <p class="pb-6 text-sm sm:text-base xl:text-lg">
@@ -325,10 +328,12 @@
                 </p>
                 <ul class="pb-6">
                     <li class="text-sm sm:text-base xl:text-lg">
-                        <a href="https://adssettings.google.com/authenticated">https://adssettings.google.com/authenticated</a>
+                        <a class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
+                           href="https://adssettings.google.com/authenticated">https://adssettings.google.com/authenticated</a>
                     </li>
                     <li class="text-sm sm:text-base xl:text-lg">
-                        <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
+                        <a class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
+                           href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
                     </li>
                 </ul>
 
@@ -340,7 +345,8 @@
                 </p>
                 <p class="pb-6 text-sm sm:text-base xl:text-lg">
                     Durch die Zertifizierung nach dem
-                    <a href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active">EU-US-Datenschutzschild
+                    <a class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
+                       href="https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active">EU-US-Datenschutzschild
                         („EU-US Privacy Shield“)</a>
                     garantiert Google, dass die Datenschutzvorgaben der EU auch bei der Verarbeitung von Daten in den
                     USA eingehalten werden.
@@ -363,10 +369,12 @@
                 </p>
                 <ul class="pb-6">
                     <li class="text-sm sm:text-base xl:text-lg">
-                        <a href="https://adssettings.google.com/authenticated">https://adssettings.google.com/authenticated</a>
+                        <a class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
+                           href="https://adssettings.google.com/authenticated">https://adssettings.google.com/authenticated</a>
                     </li>
                     <li class="text-sm sm:text-base xl:text-lg">
-                        <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
+                        <a class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
+                           href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
                     </li>
                 </ul>
                 <p class="pb-6 text-sm sm:text-base xl:text-lg">
@@ -374,8 +382,10 @@
                     Datennutzung.
                 </p>
                 <p class="pb-6 text-sm sm:text-base xl:text-lg">
-                    <a href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html">Muster-Datenschutzerklärung</a>
-                    der <a href="https://www.ratgeberrecht.eu/">Anwaltskanzlei Weiß & Partner</a>
+                    <a class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
+                       href="https://www.ratgeberrecht.eu/leistungen/muster-datenschutzerklaerung.html">Muster-Datenschutzerklärung</a>
+                    der <a class="text-sm sm:text-base xl:text-lg no-underline hover:underline"
+                           href="https://www.ratgeberrecht.eu/">Anwaltskanzlei Weiß & Partner</a>
                 </p>
             </div>
         </div>
