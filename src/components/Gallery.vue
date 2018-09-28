@@ -1,6 +1,6 @@
 <template>
     <div class="relative w-full pb-2 xl:pb-0">
-        <div class="w-full px-2 xl:px-0 flex items-center overflow-x-scroll xl:overflow-hidden"
+        <div class="w-full px-2 xl:px-0 flex items-center overflow-x-auto xl:overflow-hidden"
              ref="scrollcontainer" v-scroll="onScroll">
             <img class="min-w-full sm:min-w-0 sm:w-1/3 rounded shadow xl:w-1/4 xl:flex-grow xl:rounded-none xl:shadow-none"
                  :src="image1"/>
