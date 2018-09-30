@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="w-full h-64 xl:h-96 object-fit-cover" src="../assets/surfing/header.jpg"/>
+        <img class="w-full h-64 md:h-96 object-fit-cover" src="../assets/surfing/header.jpg"/>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">

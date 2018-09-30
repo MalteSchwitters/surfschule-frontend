@@ -1,6 +1,6 @@
 <template>
     <div class="">
-        <img class="w-full h-64 xl:h-96 object-fit-cover z-0" src="../assets/sup/header.jpg"/>
+        <img class="w-full h-64 md:h-96 object-fit-cover z-0" src="../assets/sup/header.jpg"/>
 
         <!--<nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">-->
         <!--<a href="#sup" class="text-grey-darker hover:text-blue uppercase no-underline"># Stand Up Paddling</a>-->
