@@ -26,9 +26,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sup/thumbs/sup05.jpg')"
-                :image2="require('../assets/sup/thumbs/sup02.jpg')"
-                :image3="require('../assets/sup/thumbs/sup03.jpg')">
+                :image1="require('../assets/sup/sup05_thumb.jpg')"
+                :image2="require('../assets/sup/sup02_thumb.jpg')"
+                :image3="require('../assets/sup/sup03_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -66,9 +66,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sup/thumbs/sup06.jpg')"
-                :image2="require('../assets/sup/thumbs/sup09.jpg')"
-                :image3="require('../assets/sup/thumbs/sup04.jpg')">
+                :image1="require('../assets/sup/sup06_thumb.jpg')"
+                :image2="require('../assets/sup/sup09_thumb.jpg')"
+                :image3="require('../assets/sup/sup04_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -102,9 +102,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sup/thumbs/sup10.jpg')"
-                :image2="require('../assets/sup/thumbs/sup08.jpg')"
-                :image3="require('../assets/sup/thumbs/sup11.jpg')">
+                :image1="require('../assets/sup/sup10_thumb.jpg')"
+                :image2="require('../assets/sup/sup08_thumb.jpg')"
+                :image3="require('../assets/sup/sup11_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -135,9 +135,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sup/thumbs/sup01.jpg')"
-                :image2="require('../assets/sup/thumbs/sup07.jpg')"
-                :image3="require('../assets/sup/thumbs/sup12.jpg')">
+                :image1="require('../assets/sup/sup01_thumb.jpg')"
+                :image2="require('../assets/sup/sup07_thumb.jpg')"
+                :image3="require('../assets/sup/sup12_thumb.jpg')">
         </gallery>
     </div>
 </template>

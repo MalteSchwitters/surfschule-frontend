@@ -25,9 +25,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sailing/thumbs/segeln01.jpg')"
-                :image2="require('../assets/sailing/thumbs/segeln04.jpg')"
-                :image3="require('../assets/sailing/thumbs/segeln03.jpg')">
+                :image1="require('../assets/sailing/segeln01_thumb.jpg')"
+                :image2="require('../assets/sailing/segeln04_thumb.jpg')"
+                :image3="require('../assets/sailing/segeln03_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -60,9 +60,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sailing/thumbs/segeln06.jpg')"
-                :image2="require('../assets/sailing/thumbs/segeln05.jpg')"
-                :image3="require('../assets/sailing/thumbs/segeln02.jpg')">
+                :image1="require('../assets/sailing/segeln06_thumb.jpg')"
+                :image2="require('../assets/sailing/segeln05_thumb.jpg')"
+                :image3="require('../assets/sailing/segeln02_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -90,9 +90,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/sailing/thumbs/segeln08.jpg')"
-                :image2="require('../assets/sailing/thumbs/segeln09.jpg')"
-                :image3="require('../assets/sailing/thumbs/segeln10.jpg')">
+                :image1="require('../assets/sailing/segeln08_thumb.jpg')"
+                :image2="require('../assets/sailing/segeln09_thumb.jpg')"
+                :image3="require('../assets/sailing/segeln10_thumb.jpg')">
         </gallery>
     </div>
 </template>

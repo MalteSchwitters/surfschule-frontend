@@ -31,9 +31,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/surfing/thumbs/surfing06.jpg')"
-                :image2="require('../assets/surfing/thumbs/surfing01.jpg')"
-                :image3="require('../assets/surfing/thumbs/surfing07.jpg')">
+                :image1="require('../assets/surfing/surfing01_thumb.jpg')"
+                :image2="require('../assets/surfing/surfing02_thumb.jpg')"
+                :image3="require('../assets/surfing/surfing03_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -68,9 +68,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/surfing/thumbs/surfing02.jpg')"
-                :image2="require('../assets/surfing/thumbs/surfing14.jpg')"
-                :image3="require('../assets/surfing/thumbs/surfing03.jpg')">
+                :image1="require('../assets/surfing/course01_thumb.jpg')"
+                :image2="require('../assets/surfing/course02_thumb.jpg')"
+                :image3="require('../assets/surfing/course03_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -99,9 +99,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/surfing/thumbs/surfing09.jpg')"
-                :image2="require('../assets/surfing/thumbs/surfing10.jpg')"
-                :image3="require('../assets/surfing/thumbs/surfing11.jpg')">
+                :image1="require('../assets/surfing/material01_thumb.jpg')"
+                :image2="require('../assets/surfing/material02_thumb.jpg')"
+                :image3="require('../assets/surfing/material03_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -132,9 +132,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/surfing/thumbs/surfing05.jpg')"
-                :image2="require('../assets/surfing/thumbs/surfing13.jpg')"
-                :image3="require('../assets/surfing/thumbs/surfing12.jpg')">
+                :image1="require('../assets/surfing/speed01_thumb.jpg')"
+                :image2="require('../assets/surfing/speed02_thumb.jpg')"
+                :image3="require('../assets/surfing/speed03_thumb.jpg')">
         </gallery>
     </div>
 </template>

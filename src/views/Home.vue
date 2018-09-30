@@ -21,23 +21,26 @@
                     (Schulklasse, Jugendgruppe, Studenten) auf dem Campingplatz gleich nebenan übernachten und gemeinsam
                     zum Surfen gehen!
                 </p>
-                <div class="pt-10 pb-6 flex flex-row justify-between sm:justify-around text-center">
-                    <router-link to="/surfing" class="flex flex-col items-center w-1/4 no-underline hover:bg-grey-lightest py-4">
-                        <img class="bg-green-light rounded-full p-3 mb-6"
+                <div class="py-6 flex flex-row justify-between sm:justify-around text-center">
+                    <router-link to="/surfing"
+                                 class="flex flex-col items-center w-1/4 no-underline rounded xl:hover:bg-blue-lightest py-6">
+                        <img class="bg-blue-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/windsurfing.png">
                         <div>
                             <p class="text-sm sm:text-base xl:text-lg">Windsurfkurse & Verleih</p>
                         </div>
                     </router-link>
-                    <router-link to="/sup" class="flex flex-col items-center w-1/4 no-underline hover:bg-grey-lightest py-4">
-                        <img class="bg-green-light rounded-full p-3 mb-6"
+                    <router-link to="/sup"
+                                 class="flex flex-col items-center w-1/4 no-underline rounded xl:hover:bg-green-lightest py-6">
+                        <img class="bg-green-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/sup.png">
                         <div>
                             <p class="text-sm sm:text-base xl:text-lg">SUP Kurse & Verleih</p>
                         </div>
                     </router-link>
-                    <router-link to="/sailing" class="flex flex-col items-center w-1/4 no-underline hover:bg-grey-lightest py-4">
-                        <img class="bg-green-light rounded-full p-3 mb-6"
+                    <router-link to="/sailing"
+                                 class="flex flex-col items-center w-1/4 no-underline rounded hover:bg-grey-lightest py-6">
+                        <img class="bg-grey-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/sail.png">
                         <div>
                             <p class="text-sm sm:text-base xl:text-lg">Segelkurse & Verleih</p>
@@ -48,9 +51,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/surfing/thumbs/surfing06.jpg')"
-                :image2="require('../assets/sup/thumbs/sup05.jpg')"
-                :image3="require('../assets/sailing/thumbs/segeln05.jpg')">
+                :image1="require('../assets/surfing/surfing01_thumb.jpg')"
+                :image2="require('../assets/sup/sup05_thumb.jpg')"
+                :image3="require('../assets/sailing/segeln05_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -81,15 +84,15 @@
         </div>
 
         <gallery
-                :image1="require('../assets/start/thumbs/meer05.jpg')"
-                :image2="require('../assets/start/thumbs/meer04.jpg')"
-                :image3="require('../assets/start/thumbs/meer03.jpg')">
+                :image1="require('../assets/start/meer05_thumb.jpg')"
+                :image2="require('../assets/start/meer04_thumb.jpg')"
+                :image3="require('../assets/start/meer03_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
                 <a id="shop" class="anchor"></a>
-                <h1 class="pt-8 text-xl sm:text-3xl">Unser Shop</h1>
+                <h1 class="pt-8 text-xl sm:text-3xl">Unser Surfschulshop</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
                 <p class="pb-6 text-sm sm:text-base xl:text-lg">
                     In unserem Shop findet ihr alles was das Surfer-Herz begehrt: Boards, Segel, Masten, Gabeln und
@@ -102,9 +105,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/start/thumbs/shop04.jpg')"
-                :image2="require('../assets/start/thumbs/shop03.jpg')"
-                :image3="require('../assets/start/thumbs/shop05.jpg')">
+                :image1="require('../assets/start/shop04_thumb.jpg')"
+                :image2="require('../assets/start/shop03_thumb.jpg')"
+                :image3="require('../assets/start/shop05_thumb.jpg')">
         </gallery>
 
     </div>

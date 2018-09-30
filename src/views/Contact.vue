@@ -62,9 +62,9 @@
         </div>
 
         <gallery
-                :image1="require('../assets/contact/thumbs/team01.jpg')"
-                :image2="require('../assets/contact/thumbs/team02.jpg')"
-                :image3="require('../assets/contact/thumbs/joy01.jpg')">
+                :image1="require('../assets/contact/team01_thumb.jpg')"
+                :image2="require('../assets/contact/team02_thumb.jpg')"
+                :image3="require('../assets/contact/joy01_thumb.jpg')">
         </gallery>
 
         <div class="p-2">
@@ -87,8 +87,8 @@
                 <a id="parken" class="anchor"></a>
                 <h1 class="pt-8 text-xl sm:text-3xl">Parkmöglichkeiten</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
-                <div class="pb-6 xl:flex">
-                    <div class="flex-grow xl:pr-8">
+                <div class="pb-6 md:flex">
+                    <div class="flex-grow md:pr-8">
                         <h2 class="text-base sm:text-lg xl:text-xl pb-2">PKW</h2>
                         <p class="pb-6 text-sm sm:text-base xl:text-lg">
                             Mit dem PKW kann man entweder auf P1 oder P2 parken. Den kürzesten Weg zur Surfschule hat
@@ -107,7 +107,7 @@
                             Achtung: Das Parken mit einem Wohnmobil auf P2 ist nicht gestattet!
                         </p>
                     </div>
-                    <img class="rounded shadow" src="../assets/contact/thumbs/parking.jpg"/>
+                    <img class="md:h-80 rounded shadow" src="../assets/contact/parking.jpg"/>
                 </div>
             </div>
         </div>
