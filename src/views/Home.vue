@@ -21,24 +21,29 @@
                     (Schulklasse, Jugendgruppe, Studenten) auf dem Campingplatz gleich nebenan übernachten und gemeinsam
                     zum Surfen gehen!
                 </p>
-                <p class="text-sm sm:text-base xl:text-lg">
-                    Bei uns könnt ihr:
-                </p>
-                <p class="text-sm sm:text-base xl:text-lg">-
-                    <router-link class="text-sm sm:text-base xl:text-lg no-underline hover:underline" to="surfing">
-                        Windsurfen lernen und Surfmaterial leihen
+                <div class="pt-10 pb-6 flex flex-row justify-between sm:justify-around text-center">
+                    <router-link to="/surfing" class="flex flex-col items-center w-1/4 no-underline hover:bg-grey-lightest py-4">
+                        <img class="bg-green-light rounded-full p-3 mb-6"
+                             src="https://png.icons8.com/ios/50/fafafa/windsurfing.png">
+                        <div>
+                            <p class="text-sm sm:text-base xl:text-lg">Windsurfkurse & Verleih</p>
+                        </div>
                     </router-link>
-                </p>
-                <p class="text-sm sm:text-base xl:text-lg">-
-                    <router-link class="text-sm sm:text-base xl:text-lg no-underline hover:underline" to="sup">
-                        SUP Boards ausleihen
+                    <router-link to="/sup" class="flex flex-col items-center w-1/4 no-underline hover:bg-grey-lightest py-4">
+                        <img class="bg-green-light rounded-full p-3 mb-6"
+                             src="https://png.icons8.com/ios/50/fafafa/sup.png">
+                        <div>
+                            <p class="text-sm sm:text-base xl:text-lg">SUP Kurse & Verleih</p>
+                        </div>
                     </router-link>
-                </p>
-                <p class="text-sm sm:text-base xl:text-lg">-
-                    <router-link class="text-sm sm:text-base xl:text-lg no-underline hover:underline" to="sailing">
-                        Segeln lernen und Jollen leihen
+                    <router-link to="/sailing" class="flex flex-col items-center w-1/4 no-underline hover:bg-grey-lightest py-4">
+                        <img class="bg-green-light rounded-full p-3 mb-6"
+                             src="https://png.icons8.com/ios/50/fafafa/sail.png">
+                        <div>
+                            <p class="text-sm sm:text-base xl:text-lg">Segelkurse & Verleih</p>
+                        </div>
                     </router-link>
-                </p>
+                </div>
             </div>
         </div>
 
