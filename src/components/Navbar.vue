@@ -14,45 +14,51 @@
                     </div>
                 </div>
 
-                <div class="flex items-center">
-                    <router-link class="flex-grow pl-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg"
-                                 to="home" :class="{ 'bg-grey-light': activeTab === 'home' }">
+                <div class="flex items-center" :class="{ 'bg-grey-light': activeTab === 'home' }">
+                    <img class="pl-4 pr-2 h-6" src="https://png.icons8.com/ios/40/444444/home.png">
+                    <router-link to="home"
+                                 class="flex-grow pl-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg">
                         Startseite
                     </router-link>
                 </div>
-                <div class="flex items-center">
-                    <router-link class="flex-grow pl-4 py-2 text-grey-darkest no-underline  text-lg sm:text-lg"
-                                 to="surfing" :class="{ 'bg-grey-light': activeTab === 'surfing' }">
+                <div class="flex items-center" :class="{ 'bg-grey-light': activeTab === 'surfing' }">
+                    <img class="pl-4 pr-2 h-6" src="https://png.icons8.com/ios/40/444444/windsurfing.png">
+                    <router-link to="surfing"
+                                 class="flex-grow pl-4 py-2 text-grey-darkest no-underline  text-lg sm:text-lg">
                         Windsurfen
                     </router-link>
                 </div>
-                <div class="flex items-center">
-                    <router-link class="flex-grow pl-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg"
-                                 to="sup" :class="{ 'bg-grey-light': activeTab === 'sup' }">
+                <div class="flex items-center" :class="{ 'bg-grey-light': activeTab === 'sup' }">
+                    <img class="pl-4 pr-2 h-6" src="https://png.icons8.com/ios/40/444444/sup.png">
+                    <router-link to="sup" class="flex-grow pl-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg">
                         Stand Up Paddling
                     </router-link>
                 </div>
-                <div class="flex items-center">
-                    <router-link class="flex-grow pl-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg"
-                                 to="sailing" :class="{ 'bg-grey-light': activeTab === 'sailing' }">
+                <div class="flex items-center" :class="{ 'bg-grey-light': activeTab === 'sailing' }">
+                    <img class="pl-4 pr-2 h-6" src="https://png.icons8.com/ios/40/444444/sail.png">
+                    <router-link to="sailing"
+                                 class="flex-grow pl-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg">
                         Segeln
                     </router-link>
                 </div>
-                <div class="flex items-center">
-                    <router-link class="flex-grow pl-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg"
-                                 to="weather" :class="{ 'bg-grey-light': activeTab === 'weather' }">
+                <div class="flex items-center" :class="{ 'bg-grey-light': activeTab === 'weather' }">
+                    <img class="pl-4 pr-2 h-6" src="https://png.icons8.com/ios/40/444444/partly-cloudy-day.png">
+                    <router-link to="weather"
+                                 class="flex-grow pl-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg">
                         Wetter
                     </router-link>
                 </div>
-                <div class="flex items-center">
-                    <router-link class="flex-grow pl-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg"
-                                 to="contact" :class="{ 'bg-grey-light': activeTab === 'contact' }">
+                <div class="flex items-center" :class="{ 'bg-grey-light': activeTab === 'contact' }">
+                    <img class="pl-4 pr-2 h-6" src="https://png.icons8.com/ios/40/444444/user.png">
+                    <router-link to="contact"
+                                 class="flex-grow pl-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg">
                         Kontakt & Anfahrt
                     </router-link>
                 </div>
-                <div class="flex items-center">
-                    <router-link class="flex-grow px-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg"
-                                 to="hochschulsport" :class="{ 'bg-grey-light': activeTab === 'hochschulsport' }">
+                <div class="flex items-center" :class="{ 'bg-grey-light': activeTab === 'hochschulsport' }">
+                    <img class="pl-4 pr-2 h-6" src="https://png.icons8.com/ios/40/444444/graduation-cap.png">
+                    <router-link to="hochschulsport"
+                                 class="flex-grow px-4 py-2 text-grey-darkest no-underline text-lg sm:text-lg">
                         Hochschulsport
                     </router-link>
                 </div>
@@ -131,6 +137,22 @@
                 Kontakt & Anfahrt
             </router-link>
         </div>
+
+        <!--<div class="pr-8">-->
+        <!--<div class="sm:hidden">-->
+        <!--xs-->
+        <!--</div>-->
+        <!--<div class="hidden sm:block md:hidden">-->
+        <!--sm-->
+        <!--</div>-->
+        <!--<div class="hidden md:block xl:hidden">-->
+        <!--md-->
+        <!--</div>-->
+
+        <!--<div class="hidden xl:block">-->
+        <!--xl-->
+        <!--</div>-->
+        <!--</div>-->
     </div>
 </template>
 
