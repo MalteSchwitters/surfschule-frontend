@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img class="w-full h-64 xl:h-80 object-fit-cover" src="../assets/start/header.jpg"/>
+        <img class="w-full h-64 xl:h-96 object-fit-cover" src="../assets/start/header.jpg"/>
 
         <!--<nav class="xl:px-6 py-4 -mt-2 flex flex-wrap hidden justify-around bg-grey">-->
         <!--<a href="#willkommen" class="text-base text-grey-darker hover:text-blue uppercase no-underline"># Willkommen</a>-->
