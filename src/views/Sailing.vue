@@ -24,11 +24,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/sailing/segeln01_thumb.jpg')"
-                :image2="require('../assets/sailing/segeln04_thumb.jpg')"
-                :image3="require('../assets/sailing/segeln03_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_sailing"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -59,11 +55,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/sailing/segeln06_thumb.jpg')"
-                :image2="require('../assets/sailing/segeln05_thumb.jpg')"
-                :image3="require('../assets/sailing/segeln02_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_courses"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -89,11 +81,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/sailing/segeln08_thumb.jpg')"
-                :image2="require('../assets/sailing/segeln09_thumb.jpg')"
-                :image3="require('../assets/sailing/segeln10_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_rent"></gallery>
     </div>
 </template>
 
@@ -103,6 +91,39 @@
 
     @Component({components: {Gallery}})
     export default class Sailing extends Vue {
+
+        private gallery_sailing = [{
+            image: require('../assets/sailing/segeln01.jpg'),
+            thumbnail: require('../assets/sailing/segeln01_thumb.jpg'),
+        }, {
+            image: require('../assets/sailing/segeln04.jpg'),
+            thumbnail: require('../assets/sailing/segeln04_thumb.jpg'),
+        }, {
+            image: require('../assets/sailing/segeln03.jpg'),
+            thumbnail: require('../assets/sailing/segeln03_thumb.jpg'),
+        }];
+
+        private gallery_courses = [{
+            image: require('../assets/sailing/segeln06.jpg'),
+            thumbnail: require('../assets/sailing/segeln06_thumb.jpg'),
+        }, {
+            image: require('../assets/sailing/segeln05.jpg'),
+            thumbnail: require('../assets/sailing/segeln05_thumb.jpg'),
+        }, {
+            image: require('../assets/sailing/segeln02.jpg'),
+            thumbnail: require('../assets/sailing/segeln02_thumb.jpg'),
+        }];
+
+        private gallery_rent = [{
+            image: require('../assets/sailing/segeln08.jpg'),
+            thumbnail: require('../assets/sailing/segeln08_thumb.jpg'),
+        }, {
+            image: require('../assets/sailing/segeln09.jpg'),
+            thumbnail: require('../assets/sailing/segeln09_thumb.jpg'),
+        }, {
+            image: require('../assets/sailing/segeln10.jpg'),
+            thumbnail: require('../assets/sailing/segeln10_thumb.jpg'),
+        }];
 
         private courses = [
             {

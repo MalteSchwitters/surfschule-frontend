@@ -30,11 +30,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/surfing/surfing01_thumb.jpg')"
-                :image2="require('../assets/surfing/surfing02_thumb.jpg')"
-                :image3="require('../assets/surfing/surfing03_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_surfing"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -67,11 +63,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/surfing/course01_thumb.jpg')"
-                :image2="require('../assets/surfing/course02_thumb.jpg')"
-                :image3="require('../assets/surfing/course03_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_courses"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -98,11 +90,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/surfing/material01_thumb.jpg')"
-                :image2="require('../assets/surfing/material02_thumb.jpg')"
-                :image3="require('../assets/surfing/material03_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_rent"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -131,11 +119,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/surfing/speed01_thumb.jpg')"
-                :image2="require('../assets/surfing/speed02_thumb.jpg')"
-                :image3="require('../assets/surfing/speed03_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_speed"></gallery>
     </div>
 </template>
 
@@ -147,6 +131,51 @@
 
     @Component({components: {Gallery}})
     export default class Surfing extends Vue {
+
+        private gallery_surfing = [{
+            image: require('../assets/surfing/surfing01.jpg'),
+            thumbnail: require('../assets/surfing/surfing01_thumb.jpg'),
+        }, {
+            image: require('../assets/surfing/surfing02.jpg'),
+            thumbnail: require('../assets/surfing/surfing02_thumb.jpg'),
+        }, {
+            image: require('../assets/surfing/surfing03.jpg'),
+            thumbnail: require('../assets/surfing/surfing03_thumb.jpg'),
+        }];
+
+        private gallery_courses = [{
+            image: require('../assets/surfing/course01.jpg'),
+            thumbnail: require('../assets/surfing/course01_thumb.jpg'),
+        }, {
+            image: require('../assets/surfing/course02.jpg'),
+            thumbnail: require('../assets/surfing/course02_thumb.jpg'),
+        }, {
+            image: require('../assets/surfing/course03.jpg'),
+            thumbnail: require('../assets/surfing/course03_thumb.jpg'),
+        }];
+
+        private gallery_rent = [{
+            image: require('../assets/surfing/material01.jpg'),
+            thumbnail: require('../assets/surfing/material01_thumb.jpg'),
+        }, {
+            image: require('../assets/surfing/material02.jpg'),
+            thumbnail: require('../assets/surfing/material02_thumb.jpg'),
+        }, {
+            image: require('../assets/surfing/material03.jpg'),
+            thumbnail: require('../assets/surfing/material03_thumb.jpg'),
+        }];
+
+        private gallery_speed = [{
+            image: require('../assets/surfing/speed01.jpg'),
+            thumbnail: require('../assets/surfing/speed01_thumb.jpg'),
+        }, {
+            image: require('../assets/surfing/speed02.jpg'),
+            thumbnail: require('../assets/surfing/speed02_thumb.jpg'),
+        }, {
+            image: require('../assets/surfing/speed03.jpg'),
+            thumbnail: require('../assets/surfing/speed03_thumb.jpg'),
+        }];
+
         private courses = [
             {
                 name: 'Schnuppersurfen (ab 8 Personen)',

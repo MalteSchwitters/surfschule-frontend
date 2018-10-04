@@ -25,11 +25,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/sup/sup05_thumb.jpg')"
-                :image2="require('../assets/sup/sup02_thumb.jpg')"
-                :image3="require('../assets/sup/sup03_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_sup"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -65,11 +61,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/sup/sup06_thumb.jpg')"
-                :image2="require('../assets/sup/sup09_thumb.jpg')"
-                :image3="require('../assets/sup/sup04_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_tours"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -101,11 +93,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/sup/sup10_thumb.jpg')"
-                :image2="require('../assets/sup/sup08_thumb.jpg')"
-                :image3="require('../assets/sup/sup11_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_courses"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -134,11 +122,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/sup/sup01_thumb.jpg')"
-                :image2="require('../assets/sup/sup07_thumb.jpg')"
-                :image3="require('../assets/sup/sup12_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_rent"></gallery>
     </div>
 </template>
 
@@ -148,6 +132,51 @@
 
     @Component({components: {Gallery}})
     export default class StandUpPaddling extends Vue {
+
+        private gallery_sup = [{
+            image: require('../assets/sup/sup05.jpg'),
+            thumbnail: require('../assets/sup/sup05_thumb.jpg'),
+        }, {
+            image: require('../assets/sup/sup02.jpg'),
+            thumbnail: require('../assets/sup/sup02_thumb.jpg'),
+        }, {
+            image: require('../assets/sup/sup03.jpg'),
+            thumbnail: require('../assets/sup/sup03_thumb.jpg'),
+        }];
+
+        private gallery_tours = [{
+            image: require('../assets/sup/sup06.jpg'),
+            thumbnail: require('../assets/sup/sup06_thumb.jpg'),
+        }, {
+            image: require('../assets/sup/sup09.jpg'),
+            thumbnail: require('../assets/sup/sup09_thumb.jpg'),
+        }, {
+            image: require('../assets/sup/sup04.jpg'),
+            thumbnail: require('../assets/sup/sup04_thumb.jpg'),
+        }];
+
+        private gallery_courses = [{
+            image: require('../assets/sup/sup10.jpg'),
+            thumbnail: require('../assets/sup/sup10_thumb.jpg'),
+        }, {
+            image: require('../assets/sup/sup08.jpg'),
+            thumbnail: require('../assets/sup/sup08_thumb.jpg'),
+        }, {
+            image: require('../assets/sup/sup11.jpg'),
+            thumbnail: require('../assets/sup/sup11_thumb.jpg'),
+        }];
+
+        private gallery_rent = [{
+            image: require('../assets/sup/sup01.jpg'),
+            thumbnail: require('../assets/sup/sup01_thumb.jpg'),
+        }, {
+            image: require('../assets/sup/sup07.jpg'),
+            thumbnail: require('../assets/sup/sup07_thumb.jpg'),
+        }, {
+            image: require('../assets/sup/sup12.jpg'),
+            thumbnail: require('../assets/sup/sup12_thumb.jpg'),
+        }];
+
         private courses = [
             {
                 name: 'Kurze Einweisung',

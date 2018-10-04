@@ -61,11 +61,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/contact/team01_thumb.jpg')"
-                :image2="require('../assets/contact/team02_thumb.jpg')"
-                :image3="require('../assets/contact/joy01_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_team"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -120,6 +116,15 @@
 
     @Component({components: {Gallery}})
     export default class Contact extends Vue {
-
+        private gallery_team = [{
+            image: require('../assets/contact/team01.jpg'),
+            thumbnail: require('../assets/contact/team01_thumb.jpg'),
+        }, {
+            image: require('../assets/contact/team02.jpg'),
+            thumbnail: require('../assets/contact/team02_thumb.jpg'),
+        }, {
+            image: require('../assets/contact/joy01.jpg'),
+            thumbnail: require('../assets/contact/joy01_thumb.jpg'),
+        }];
     }
 </script>

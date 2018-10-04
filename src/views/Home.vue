@@ -23,7 +23,7 @@
                 </p>
                 <div class="py-6 flex flex-row justify-between sm:justify-around text-center">
                     <router-link to="/surfing"
-                                 class="flex flex-col items-center w-1/4 no-underline rounded xl:hover:bg-green-lightest py-6">
+                                 class="flex flex-col items-center w-1/4 no-underline rounded xl:hover:bg-grey-lightest py-6">
                         <img class="bg-green-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/windsurfing.png">
                         <div>
@@ -31,7 +31,7 @@
                         </div>
                     </router-link>
                     <router-link to="/sup"
-                                 class="flex flex-col items-center w-1/4 no-underline rounded xl:hover:bg-green-lightest py-6">
+                                 class="flex flex-col items-center w-1/4 no-underline rounded xl:hover:bg-grey-lightest py-6">
                         <img class="bg-green-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/sup.png">
                         <div>
@@ -39,7 +39,7 @@
                         </div>
                     </router-link>
                     <router-link to="/sailing"
-                                 class="flex flex-col items-center w-1/4 no-underline rounded hover:bg-green-lightest py-6">
+                                 class="flex flex-col items-center w-1/4 no-underline rounded hover:bg-grey-lightest py-6">
                         <img class="bg-green-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/sail.png">
                         <div>
@@ -50,14 +50,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/surfing/surfing01.jpg')"
-                :image1_thumb="require('../assets/surfing/surfing01_thumb.jpg')"
-                :image2="require('../assets/sup/sup05.jpg')"
-                :image2_thumb="require('../assets/sup/sup05_thumb.jpg')"
-                :image3="require('../assets/sailing/segeln05.jpg')"
-                :image3_thumb="require('../assets/sailing/segeln05_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_home"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -86,11 +79,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/start/meer05_thumb.jpg')"
-                :image2="require('../assets/start/meer04_thumb.jpg')"
-                :image3="require('../assets/start/meer03_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_grosses_meer"></gallery>
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -107,11 +96,7 @@
             </div>
         </div>
 
-        <gallery
-                :image1="require('../assets/start/shop04_thumb.jpg')"
-                :image2="require('../assets/start/shop03_thumb.jpg')"
-                :image3="require('../assets/start/shop05_thumb.jpg')">
-        </gallery>
+        <gallery :images="gallery_shop"></gallery>
 
     </div>
 </template>
@@ -122,6 +107,37 @@
 
     @Component({components: {Gallery}})
     export default class Home extends Vue {
+        private gallery_home = [{
+            image: require('../assets/surfing/surfing01.jpg'),
+            thumbnail: require('../assets/surfing/surfing01_thumb.jpg'),
+        }, {
+            image: require('../assets/sup/sup05.jpg'),
+            thumbnail: require('../assets/sup/sup05_thumb.jpg'),
+        }, {
+            image: require('../assets/sailing/segeln05.jpg'),
+            thumbnail: require('../assets/sailing/segeln05_thumb.jpg'),
+        }];
 
+        private gallery_grosses_meer = [{
+            image: require('../assets/start/meer05.jpg'),
+            thumbnail: require('../assets/start/meer05_thumb.jpg'),
+        }, {
+            image: require('../assets/start/meer04.jpg'),
+            thumbnail: require('../assets/start/meer04_thumb.jpg'),
+        }, {
+            image: require('../assets/start/meer03.jpg'),
+            thumbnail: require('../assets/start/meer03_thumb.jpg'),
+        }];
+
+        private gallery_shop = [{
+            image: require('../assets/start/shop04.jpg'),
+            thumbnail: require('../assets/start/shop04_thumb.jpg'),
+        }, {
+            image: require('../assets/start/shop03.jpg'),
+            thumbnail: require('../assets/start/shop03_thumb.jpg'),
+        }, {
+            image: require('../assets/start/shop05.jpg'),
+            thumbnail: require('../assets/start/shop05_thumb.jpg'),
+        }];
     }
 </script>
