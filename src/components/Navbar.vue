@@ -1,5 +1,5 @@
 <template>
-    <div class="h-12 xl:h-24 flex justify-center items-center shadow-md bg-white whitespace-no-wrap z-20 text-grey-dark font-sans font-thin">
+    <div class="h-12 xl:h-24 fixed w-full flex justify-center items-center shadow-md bg-white whitespace-no-wrap z-20 text-grey-dark font-sans font-thin">
 
         <div v-if="showdrawer" class="min-w-screen fixed pin z-30 flex" @click="showDrawer(false)">
             <div class="w-64 min-h-screen bg-grey-lighter shadow-lg flex flex-col" :class="animation">

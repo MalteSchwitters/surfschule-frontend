@@ -164,3 +164,23 @@ a.anchor {
 .bg-black-transparent {
   background: rgba(5, 5, 5, 0.4);
 }
+
+.bg-black-transparent-50 {
+  background: rgba(5, 5, 5, 0.5);
+}
+
+.bg-black-transparent-60 {
+  background: rgba(5, 5, 5, 0.6);
+}
+
+.bg-black-transparent-70 {
+  background: rgba(5, 5, 5, 0.7);
+}
+
+.bg-black-transparent-80 {
+  background: rgba(5, 5, 5, 0.8);
+}
+
+.bg-black-transparent-90 {
+  background: rgba(5, 5, 5, 0.9);
+}

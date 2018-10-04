@@ -23,8 +23,8 @@
                 </p>
                 <div class="py-6 flex flex-row justify-between sm:justify-around text-center">
                     <router-link to="/surfing"
-                                 class="flex flex-col items-center w-1/4 no-underline rounded xl:hover:bg-blue-lightest py-6">
-                        <img class="bg-blue-light rounded-full p-3 xl:p-6 mb-6"
+                                 class="flex flex-col items-center w-1/4 no-underline rounded xl:hover:bg-green-lightest py-6">
+                        <img class="bg-green-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/windsurfing.png">
                         <div>
                             <p class="text-sm sm:text-base xl:text-lg">Windsurfkurse & Verleih</p>
@@ -39,8 +39,8 @@
                         </div>
                     </router-link>
                     <router-link to="/sailing"
-                                 class="flex flex-col items-center w-1/4 no-underline rounded hover:bg-grey-lightest py-6">
-                        <img class="bg-grey-light rounded-full p-3 xl:p-6 mb-6"
+                                 class="flex flex-col items-center w-1/4 no-underline rounded hover:bg-green-lightest py-6">
+                        <img class="bg-green-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/sail.png">
                         <div>
                             <p class="text-sm sm:text-base xl:text-lg">Segelkurse & Verleih</p>
@@ -51,9 +51,12 @@
         </div>
 
         <gallery
-                :image1="require('../assets/surfing/surfing01_thumb.jpg')"
-                :image2="require('../assets/sup/sup05_thumb.jpg')"
-                :image3="require('../assets/sailing/segeln05_thumb.jpg')">
+                :image1="require('../assets/surfing/surfing01.jpg')"
+                :image1_thumb="require('../assets/surfing/surfing01_thumb.jpg')"
+                :image2="require('../assets/sup/sup05.jpg')"
+                :image2_thumb="require('../assets/sup/sup05_thumb.jpg')"
+                :image3="require('../assets/sailing/segeln05.jpg')"
+                :image3_thumb="require('../assets/sailing/segeln05_thumb.jpg')">
         </gallery>
 
         <div class="p-2">

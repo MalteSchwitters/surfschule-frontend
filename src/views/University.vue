@@ -1,6 +1,8 @@
 <template>
     <div class="">
-        <img class="w-full h-64 md:h-96 object-fit-cover" src="../assets/university/header.jpg"/>
+        <a href="https://www.buehlerbild.de/" target="_blank">
+            <img class="w-full h-64 md:h-96 object-fit-cover" src="../assets/university/header.jpg"/>
+        </a>
 
         <!--<nav class="px-6 py-6 -mt-2 flex flex-col xl:flex-row justify-around bg-grey">-->
         <!--<a href="#hochschulsport" class="text-grey-darker hover:text-blue uppercase no-underline"># Hochschulsport</a>-->
