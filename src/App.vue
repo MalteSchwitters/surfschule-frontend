@@ -34,11 +34,7 @@
     })
 
     export default class App extends Vue {
-
-        public static instance: App = null;
-
         private created() {
-            App.instance = this;
             this.$router.beforeResolve((to, from, next) => {
                 window.scrollTo(0, 0);
                 next();

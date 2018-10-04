@@ -89,7 +89,7 @@
     export default class Gallery extends Vue {
 
         @Prop({default: null})
-        private images: { image: string, thumbnail: string }[];
+        private images!: { image: string, thumbnail: string }[];
 
         private isFullscreen = false;
         private fullresIndex = -1;
@@ -115,14 +115,15 @@
         }
 
         private closeFullscreen() {
-            if (document.exitFullscreen) {
-                document.exitFullscreen();
-            } else if (document.mozCancelFullScreen) {
-                document.mozCancelFullScreen();
-            } else if (document.webkitExitFullscreen) {
-                document.webkitExitFullscreen();
-            } else if (document.msExitFullscreen) {
-                document.msExitFullscreen();
+            let doc: any = document;
+            if (doc.exitFullscreen) {
+                doc.exitFullscreen();
+            } else if (doc.mozCancelFullScreen) {
+                doc.mozCancelFullScreen();
+            } else if (doc.webkitExitFullscreen) {
+                doc.webkitExitFullscreen();
+            } else if (doc.msExitFullscreen) {
+                doc.msExitFullscreen();
             }
             this.isFullscreen = false;
         }
@@ -130,14 +131,14 @@
         private openFullres(index: number) {
             this.fullresIndex = index;
             document.body.classList.toggle('overflow-hidden', true);
-            this.$refs.overlay.setAttribute('aria-hidden', false);
-            this.$refs.overlay.focus();
+            (<HTMLElement>this.$refs.overlay).setAttribute('aria-hidden', 'false');
+            (<HTMLElement>this.$refs.overlay).focus();
         }
 
         private closeFullres() {
             this.fullresIndex = -1;
             document.body.classList.toggle('overflow-hidden', false);
-            this.$refs.overlay.setAttribute('aria-hidden', true);
+            (<HTMLElement>this.$refs.overlay).setAttribute('aria-hidden', 'true');
             this.closeFullscreen();
         }
 
@@ -197,8 +198,8 @@
             if (imageNumber < 0) {
                 imageNumber = 0;
             }
-            if (imageNumber >= this.imageCount) {
-                imageNumber = this.imageCount - 1;
+            if (imageNumber >= this.images.length) {
+                imageNumber = this.images.length - 1;
             }
             // if (scrollLeft < imageNumber * imageWidth) {
             //     imageNumber -= 1;

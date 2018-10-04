@@ -2,9 +2,8 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import vuescroll from 'vue-scroll';
 
-Vue.use(vuescroll);
+Vue.use(require('vue-scroll'));
 
 Vue.config.productionTip = false;
 
