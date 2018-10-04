@@ -2,7 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-Vue.use(require('vue-scroll'));
+import vuescroll from 'vue-scroll';
+// let vuescroll = require('vue-scroll');
+Vue.use(vuescroll);
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
 new Vue({

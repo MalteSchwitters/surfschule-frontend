@@ -9,10 +9,39 @@
                 <a id="wetter" class="anchor"></a>
                 <h1 class="pt-8 text-xl sm:text-3xl">Live Wetter - Coming Soon</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
-                <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
+                <div v-if="$route.query.beta === 'true'">
+                    <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
+                        Hier seht ihr die aktuelle Windgeschwindigkeit, gemessen direkt bei uns an der Surfschule. Die
+                        Daten werden einmal pro Minute automatisch aktualisiert. Genauigkeit der Daten ohne Gewähr.
+                    </p>
+                    <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
+                        Zeitpunkt der letzte Messung: {{ formatDateTime(windspeed.time) }}
+                    </p>
+
+                    <div class="flex flex-wrap text-center justify-around">
+                        <div class="w-1/2 md:w-1/4 px-6 pb-6">
+                            <p class="text-5xl text-green-light">{{ windspeed.windRpm }}</p>
+                            <p class="text-sm sm:text-sm sm:text-base">Umdrehungen</p>
+                        </div>
+                        <div class="w-1/2 md:w-1/4 px-6 pb-6">
+                            <p class="text-5xl text-green-light">{{ windspeed.windRpsMin }}</p>
+                            <p class="text-sm sm:text-sm sm:text-base">Minimum RPS</p>
+                        </div>
+                        <div class="w-1/2 md:w-1/4 px-6 pb-6">
+                            <p class="text-5xl text-green-light">{{ windspeed.windRpsMax }}</p>
+                            <p class="text-sm sm:text-sm sm:text-base">Maximum RPS</p>
+                        </div>
+                        <div class="w-1/2 md:w-1/4 px-6 pb-6">
+                            <p class="text-5xl text-green-light">{{ windspeed.windRpsAvg }}</p>
+                            <p class="text-sm sm:text-sm sm:text-base">Durchschnitt RPS</p>
+                        </div>
+                    </div>
+
+                    <!--<wind-chart :data="windspeedHistory" :height="150"></wind-chart>-->
+                </div>
+                <p v-else class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
                     Schon bald könnt ihr hier Live die aktuelle Windgeschwindigkeit bei uns an der Surfschule sehen.
                 </p>
-                <!--<img src="http://wetterstationen.meteomedia.de/messnetz/vorhersagegrafik/102000.png?ver=1536073805"/>-->
             </div>
         </div>
 
@@ -52,7 +81,8 @@
                 <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
                     Keine Information ist wichtiger für einen Windsurfer, als die aktuelle Windvorhersage. Da jeder
                     Wetterbericht
-                    sich auch mal irren kann, sollte man immer mehrere checken. Um euch langes suchen zu ersparen, haben
+                    sich auch mal irren kann, sollte man immer mehrere checken. Um euch langes suchen zu ersparen,
+                    haben
                     wir
                     euch hier Links zu den wichtigsten Wetterberichten zusammengestellt:
                 </p>
@@ -102,14 +132,43 @@
             </div>
         </div>
     </div>
-    </div>
 </template>
 
 <script lang="ts">
     import {Component, Vue} from 'vue-property-decorator';
+    import Axios from 'axios';
+    import Moment from 'moment';
+    import WindChart from '../utils/WindChart';
 
-    @Component({components: {}})
+    @Component({components: {WindChart}})
     export default class Weather extends Vue {
+        private windspeedHistory = [1, 2, 3, 4, 5];
+        private windspeed = {
+            windRpm: 0,
+            windRpsMin: 0,
+            windRpsMax: 0,
+            windRpsAvfg: 0,
+        };
 
+        private formatDateTime(date: any): string {
+            return Moment(date).format('DD.MM.YYYY HH:mm');
+        }
+
+        private refreshLivedata() {
+            if (document.hasFocus()) {
+                Axios.get('https://api.grosses-meer.surf/api/weather/windspeed')
+                    .then((response) => {
+                        this.windspeed = response.data;
+                    });
+                console.log('Updated');
+            }
+            setTimeout(() => this.refreshLivedata(), 30000);
+        }
+
+        private created() {
+            if (this.$route.query.beta === 'true') {
+                this.refreshLivedata();
+            }
+        }
     }
 </script>
