@@ -186,13 +186,13 @@
                     this.animation = 'anim-open-menu';
                     setTimeout(() => {
                         this.animation = '';
-                    }, 200);
+                    }, 150);
                 } else if (!show && this.showdrawer) {
                     this.animation = 'anim-close-menu';
                     setTimeout(() => {
                         this.animation = '';
                         this.showdrawer = false;
-                    }, 200);
+                    }, 150);
                 }
             }
         }
@@ -233,21 +233,21 @@
     .anim-fadeout-background {
         opacity: 0.4;
         animation-name: anim-fadeout;
-        animation-duration: 0.2s;
+        animation-duration: 0.15s;
     }
 
     .anim-open-menu {
         margin-left: 0;
         animation-name: anim-menu;
         animation-timing-function: linear;
-        animation-duration: 0.2s;
+        animation-duration: 0.15s;
     }
 
     .anim-close-menu {
         margin-left: -16rem;
         animation-name: anim-menu;
         animation-timing-function: linear;
-        animation-duration: 0.2s;
+        animation-duration: 0.15s;
         animation-direction: reverse;
     }
 
