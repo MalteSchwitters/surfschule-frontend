@@ -14,30 +14,43 @@
                         Hier seht ihr die aktuelle Windgeschwindigkeit, gemessen direkt bei uns an der Surfschule. Die
                         Daten werden einmal pro Minute automatisch aktualisiert. Genauigkeit der Daten ohne Gewähr.
                     </p>
-                    <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
-                        Zeitpunkt der letzte Messung: {{ formatDateTime(windspeed.time) }}
+                    <p v-if="windspeed.time === 0">
+                        Leider haben wir keine aktuellen Daten der letzten 10 Minuten :-(
                     </p>
-
-                    <div class="flex flex-wrap text-center justify-around">
-                        <div class="w-1/2 md:w-1/4 px-6 pb-6">
-                            <p class="text-5xl text-green-light">{{ windspeed.windRpm }}</p>
-                            <p class="text-sm sm:text-sm sm:text-base">Umdrehungen</p>
+                    <div v-else>
+                        <div class="flex flex-wrap text-center justify-around">
+                            <button class="w-1/2 md:w-1/4 px-6 pb-6 outline-none" @click="cycleUnits()">
+                                <p class="text-3xl xl:text-5xl text-green-light inline">
+                                    {{ convertToUnit(windspeed.windMin) }}
+                                </p>
+                                <p class="pl-2 text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
+                                <p class="text-sm sm:text-sm sm:text-base">Windgeschwindigkeit</p>
+                            </button>
+                            <button class="w-1/2 md:w-1/4 px-6 pb-6 outline-none" @click="cycleUnits()">
+                                <p class="text-3xl xl:text-5xl text-green-light inline">
+                                    {{ convertToUnit(windspeed.windMax) }}
+                                </p>
+                                <p class="pl-2 text-lg xl:text-2xl  text-grey-dark inline">{{ unit }}</p>
+                                <p class="text-sm sm:text-sm sm:text-base">Windböen</p>
+                            </button>
+                            <button class="w-1/2 md:w-1/4 px-6 pb-6 outline-none" @click="cycleUnits()">
+                                <p class="text-3xl xl:text-5xl text-green-light inline">
+                                    {{ convertToUnit(windspeed.windAvg) }}
+                                </p>
+                                <p class="pl-2 text-lg xl:text-2xl  text-grey-dark inline">{{ unit }}</p>
+                                <p class="text-sm sm:text-sm sm:text-base">Durchschnitt</p>
+                            </button>
+                            <div class="w-1/2 md:w-1/4 px-6 pb-6">
+                                <p class="text-3xl xl:text-5xl text-green-light">{{ windspeed.windRpm }}</p>
+                                <p class="text-sm sm:text-sm sm:text-base">Umdrehungen</p>
+                            </div>
                         </div>
-                        <div class="w-1/2 md:w-1/4 px-6 pb-6">
-                            <p class="text-5xl text-green-light">{{ windspeed.windRpsMin }}</p>
-                            <p class="text-sm sm:text-sm sm:text-base">Minimum RPS</p>
-                        </div>
-                        <div class="w-1/2 md:w-1/4 px-6 pb-6">
-                            <p class="text-5xl text-green-light">{{ windspeed.windRpsMax }}</p>
-                            <p class="text-sm sm:text-sm sm:text-base">Maximum RPS</p>
-                        </div>
-                        <div class="w-1/2 md:w-1/4 px-6 pb-6">
-                            <p class="text-5xl text-green-light">{{ windspeed.windRpsAvg }}</p>
-                            <p class="text-sm sm:text-sm sm:text-base">Durchschnitt RPS</p>
-                        </div>
+                        <wind-chart :windspeed="windspeedHistory" :windgusts="windgustHistory"
+                                    :height="150"></wind-chart>
+                        <p class="py-6 text-sm sm:text-sm sm:text-base xl:text-lg">
+                            Zeitpunkt der letzte Messung: <b class="pl-2">{{ formatDateTime(windspeed.time) }}</b>
+                        </p>
                     </div>
-
-                    <!--<wind-chart :data="windspeedHistory" :height="150"></wind-chart>-->
                 </div>
                 <p v-else class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
                     Schon bald könnt ihr hier Live die aktuelle Windgeschwindigkeit bei uns an der Surfschule sehen.
@@ -140,18 +153,88 @@
     import Moment from 'moment';
     import WindChart from '../utils/WindChart';
 
+    enum Unit {
+        KMH = 'km/h',
+        KNOTS = 'Knoten',
+        BFT = 'Bft',
+        MS = 'm/s'
+    }
+
     @Component({components: {WindChart}})
     export default class Weather extends Vue {
-        private windspeedHistory = [1, 2, 3, 4, 5];
+
+        private windspeedHistory: number[] = [];
+        private windgustHistory: number[] = [];
+
+        private unit = Unit.KMH;
         private windspeed = {
+            time: 0,
             windRpm: 0,
-            windRpsMin: 0,
-            windRpsMax: 0,
-            windRpsAvfg: 0,
+            windMin: 0,
+            windMax: 0,
+            windAvg: 0,
         };
 
+        private cycleUnits() {
+            if (this.unit === Unit.KMH) {
+                this.unit = Unit.KNOTS;
+            } else if (this.unit === Unit.KNOTS) {
+                this.unit = Unit.BFT;
+            } else if (this.unit === Unit.BFT) {
+                this.unit = Unit.KMH;
+            }
+            // this.$forceUpdate();
+        }
+
+        private convertToUnit(kmh: number): string {
+            if (this.unit === Unit.KNOTS) {
+                return (kmh * 0.539957).toFixed(2).toString().replace('.', ',');
+            }
+            if (this.unit === Unit.BFT) {
+                if (kmh < 1) {
+                    return '0';
+                }
+                if (kmh < 5) {
+                    return '1';
+                }
+                if (kmh < 11) {
+                    return '2';
+                }
+                if (kmh < 19) {
+                    return '3';
+                }
+                if (kmh < 28) {
+                    return '4';
+                }
+                if (kmh < 38) {
+                    return '5';
+                }
+                if (kmh < 49) {
+                    return '6';
+                }
+                if (kmh < 61) {
+                    return '7';
+                }
+                if (kmh < 74) {
+                    return '8';
+                }
+                if (kmh < 88) {
+                    return '9';
+                }
+                if (kmh < 102) {
+                    return '10';
+                }
+                if (kmh < 117) {
+                    return '11';
+                }
+                return '12';
+            }
+            return kmh.toFixed(2).toString().replace('.', ',');
+        }
+
         private formatDateTime(date: any): string {
-            return Moment(date).format('DD.MM.YYYY HH:mm');
+            return Moment(date).format('HH:mm');
+            // return Moment(date).format('DD.MM.YYYY HH:mm');
         }
 
         private refreshLivedata() {
@@ -160,15 +243,23 @@
                     .then((response) => {
                         this.windspeed = response.data;
                     });
-                console.log('Updated');
+                setTimeout(() => this.refreshLivedata(), 30000);
+            } else {
+                setTimeout(() => this.refreshLivedata(), 5000);
             }
-            setTimeout(() => this.refreshLivedata(), 30000);
         }
 
         private created() {
             if (this.$route.query.beta === 'true') {
                 this.refreshLivedata();
             }
+            Axios.get('https://api.grosses-meer.surf/api/weather/windspeed/history')
+                .then((response) => {
+                    response.data.forEach((value) => {
+                        this.windspeedHistory.push(value.windMin);
+                        this.windgustHistory.push(value.windMax);
+                    });
+                });
         }
     }
 </script>
