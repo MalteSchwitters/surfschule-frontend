@@ -17,36 +17,31 @@
                     <p v-if="windspeed.time === 0">
                         Leider haben wir keine aktuellen Daten der letzten 10 Minuten :-(
                     </p>
-                    <div v-else>
+                    <div>
                         <div class="flex flex-wrap text-center justify-around">
-                            <button class="w-1/2 md:w-1/4 px-6 pb-6 outline-none" @click="cycleUnits()">
-                                <p class="text-3xl xl:text-5xl text-green-light inline">
-                                    {{ convertToUnit(windspeed.windMin) }}
-                                </p>
-                                <p class="pl-2 text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
-                                <p class="text-sm sm:text-sm sm:text-base">Windgeschwindigkeit</p>
-                            </button>
-                            <button class="w-1/2 md:w-1/4 px-6 pb-6 outline-none" @click="cycleUnits()">
-                                <p class="text-3xl xl:text-5xl text-green-light inline">
-                                    {{ convertToUnit(windspeed.windMax) }}
-                                </p>
-                                <p class="pl-2 text-lg xl:text-2xl  text-grey-dark inline">{{ unit }}</p>
-                                <p class="text-sm sm:text-sm sm:text-base">Windböen</p>
-                            </button>
-                            <button class="w-1/2 md:w-1/4 px-6 pb-6 outline-none" @click="cycleUnits()">
+                            <button class="w-1/2 md:w-1/3 px-6 pb-6 outline-none" @click="cycleUnits()">
                                 <p class="text-3xl xl:text-5xl text-green-light inline">
                                     {{ convertToUnit(windspeed.windAvg) }}
                                 </p>
-                                <p class="pl-2 text-lg xl:text-2xl  text-grey-dark inline">{{ unit }}</p>
-                                <p class="text-sm sm:text-sm sm:text-base">Durchschnitt</p>
+                                <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
+                                <p class="text-sm sm:text-sm sm:text-base">Windgeschwindigkeit</p>
                             </button>
-                            <div class="w-1/2 md:w-1/4 px-6 pb-6">
-                                <p class="text-3xl xl:text-5xl text-green-light">{{ windspeed.windRpm }}</p>
-                                <p class="text-sm sm:text-sm sm:text-base">Umdrehungen</p>
-                            </div>
+                            <button class="w-1/2 md:w-1/3 px-6 pb-6 outline-none" @click="cycleUnits()">
+                                <p class="text-3xl xl:text-5xl text-green-light inline">
+                                    {{ convertToUnit(windspeed.windMax) }}
+                                </p>
+                                <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
+                                <p class="text-sm sm:text-sm sm:text-base">Windböen</p>
+                            </button>
+                            <!--<div class="w-1/2 md:w-1/3 px-6 pb-6">-->
+                                <!--<p class="text-3xl xl:text-5xl text-green-light">-->
+                                    <!--{{ (windspeed.windRpm / 3).toFixed(2) }}-->
+                                <!--</p>-->
+                                <!--<p class="text-sm sm:text-sm sm:text-base">Umdrehungen pro Minute</p>-->
+                            <!--</div>-->
                         </div>
-                        <wind-chart :windspeed="windspeedHistory" :windgusts="windgustHistory"
-                                    :height="150"></wind-chart>
+                        <canvas id="windhistory" width="400" height="100"></canvas>
+                        <!--<wind-chart :data="graphdata" :height="150"></wind-chart>-->
                         <p class="py-6 text-sm sm:text-sm sm:text-base xl:text-lg">
                             Zeitpunkt der letzte Messung: <b class="pl-2">{{ formatDateTime(windspeed.time) }}</b>
                         </p>
@@ -151,6 +146,7 @@
     import {Component, Vue} from 'vue-property-decorator';
     import Axios from 'axios';
     import Moment from 'moment';
+    import Chart from 'chart.js';
     import WindChart from '../utils/WindChart';
 
     enum Unit {
@@ -163,9 +159,28 @@
     @Component({components: {WindChart}})
     export default class Weather extends Vue {
 
+        private chartWindspeedHistory: Chart;
+
         private windspeedHistory: number[] = [];
         private windgustHistory: number[] = [];
 
+        // private dataset1 = {
+        //     label: 'Windgeschwindigkeit',
+        //     backgroundColor: 'rgba(151, 184, 76, 0.3)',
+        //     data: this.windspeedHistory,
+        // }
+        //
+        // private dataset2 = {
+        //     label: 'Windböen',
+        //     backgroundColor: 'rgba(173, 199, 166, 0.5)',
+        //     data: this.windgustHistory,
+        // }
+        //
+        // private graphdata = {
+        //     labels: ['-02:00', '-01:50', '-01:40', '-01:30', '-01:20', '-01:10', '-01:00', '-00:50', '-00:40', '-00:30', '-00:20', '-00:10', '00:00'],
+        //     datasets: [this.dataset1, this.dataset2],
+        // }
+        //
         private unit = Unit.KMH;
         private windspeed = {
             time: 0,
@@ -183,6 +198,7 @@
             } else if (this.unit === Unit.BFT) {
                 this.unit = Unit.KMH;
             }
+            this.createChart();
             // this.$forceUpdate();
         }
 
@@ -249,13 +265,61 @@
             }
         }
 
+        private createChart() {
+            const ctx = document.getElementById('windhistory');
+            this.chartWindspeedHistory = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['-02:00', '-01:50', '-01:40', '-01:30', '-01:20', '-01:10', '-01:00',
+                        '-00:50', '-00:40', '-00:30', '-00:20', '-00:10', '00:00'],
+                    datasets: [
+                        {
+                            label: 'Windgeschwindigkeit',
+                            data: this.windspeedHistory,
+                            backgroundColor: [
+                                'rgba(138, 184, 129, 0.2)',
+                            ],
+                            borderColor: [
+                                'rgba(138, 184, 129, 1)',
+                            ],
+                            borderWidth: 1,
+                        }, {
+                            label: 'Böen',
+                            data: this.windgustHistory,
+                            backgroundColor: [
+                                'rgba(138, 184, 129, 0.2)',
+                            ],
+                            borderColor: [
+                                'rgba(138, 184, 129, 1)',
+                            ],
+                            borderWidth: 1,
+                        }],
+                },
+                options: {
+                    legend: {
+                        display: false,
+                    },
+                    animation: {
+                        duration: 0,
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                            },
+                        }],
+                    },
+                },
+            });
+        }
+
         private created() {
             if (this.$route.query.beta === 'true') {
                 this.refreshLivedata();
             }
             Axios.get('https://api.grosses-meer.surf/api/weather/windspeed/history')
                 .then((response) => {
-                    response.data.forEach((value) => {
+                    response.data.forEach((value: any) => {
                         this.windspeedHistory.push(value.windMin);
                         this.windgustHistory.push(value.windMax);
                     });
