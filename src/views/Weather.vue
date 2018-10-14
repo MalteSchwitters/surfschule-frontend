@@ -21,27 +21,28 @@
                         <div class="flex flex-wrap text-center justify-around">
                             <button class="w-1/2 md:w-1/3 px-6 pb-6 outline-none" @click="cycleUnits()">
                                 <p class="text-3xl xl:text-5xl text-green-light inline">
-                                    {{ convertToUnit(windspeed.windAvg) }}
+                                    {{ formatToUnit(windspeed.windAvg) }}
                                 </p>
                                 <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
                                 <p class="text-sm sm:text-sm sm:text-base">Windgeschwindigkeit</p>
                             </button>
                             <button class="w-1/2 md:w-1/3 px-6 pb-6 outline-none" @click="cycleUnits()">
                                 <p class="text-3xl xl:text-5xl text-green-light inline">
-                                    {{ convertToUnit(windspeed.windMax) }}
+                                    {{ formatToUnit(windspeed.windMax) }}
                                 </p>
                                 <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
                                 <p class="text-sm sm:text-sm sm:text-base">Windböen</p>
                             </button>
                             <!--<div class="w-1/2 md:w-1/3 px-6 pb-6">-->
-                                <!--<p class="text-3xl xl:text-5xl text-green-light">-->
-                                    <!--{{ (windspeed.windRpm / 3).toFixed(2) }}-->
-                                <!--</p>-->
-                                <!--<p class="text-sm sm:text-sm sm:text-base">Umdrehungen pro Minute</p>-->
+                            <!--<p class="text-3xl xl:text-5xl text-green-light">-->
+                            <!--{{ (windspeed.windRpm / 3).toFixed(2) }}-->
+                            <!--</p>-->
+                            <!--<p class="text-sm sm:text-sm sm:text-base">Umdrehungen pro Minute</p>-->
                             <!--</div>-->
                         </div>
-                        <canvas id="windhistory" width="400" height="100"></canvas>
-                        <!--<wind-chart :data="graphdata" :height="150"></wind-chart>-->
+                        <line-chart ref="chart"
+                                    :dataset1="windHistory.map(value => convertToUnit(value.windAvg))"
+                                    :dataset2="windHistory.map(value => convertToUnit(value.windMax))"></line-chart>
                         <p class="py-6 text-sm sm:text-sm sm:text-base xl:text-lg">
                             Zeitpunkt der letzte Messung: <b class="pl-2">{{ formatDateTime(windspeed.time) }}</b>
                         </p>
@@ -71,15 +72,6 @@
                 </div>
             </div>
         </div>
-
-        <!--<div class="px-6 md:px-16 lg:px-24 py-6">-->
-        <!--<a id="stats" class="anchor"></a>-->
-        <!--<h1 class="pt-8 text-2xl xl:text-3xl">Wind Statistiken</h1>-->
-        <!--<div class="w-24 my-4 border-grey-light border-b"></div>-->
-        <!--<p class="pb-6 text-sm sm:text-base xl:text-lg">-->
-        <!--Coming Soon-->
-        <!--</p>-->
-        <!--</div>-->
 
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
@@ -146,8 +138,7 @@
     import {Component, Vue} from 'vue-property-decorator';
     import Axios from 'axios';
     import Moment from 'moment';
-    import Chart from 'chart.js';
-    import WindChart from '../utils/WindChart';
+    import LineChart from '../components/LineChart.vue';
 
     enum Unit {
         KMH = 'km/h',
@@ -156,32 +147,11 @@
         MS = 'm/s'
     }
 
-    @Component({components: {WindChart}})
+    @Component({components: {LineChart}})
     export default class Weather extends Vue {
 
-        private chartWindspeedHistory: Chart;
-
-        private windspeedHistory: number[] = [];
-        private windgustHistory: number[] = [];
-
-        // private dataset1 = {
-        //     label: 'Windgeschwindigkeit',
-        //     backgroundColor: 'rgba(151, 184, 76, 0.3)',
-        //     data: this.windspeedHistory,
-        // }
-        //
-        // private dataset2 = {
-        //     label: 'Windböen',
-        //     backgroundColor: 'rgba(173, 199, 166, 0.5)',
-        //     data: this.windgustHistory,
-        // }
-        //
-        // private graphdata = {
-        //     labels: ['-02:00', '-01:50', '-01:40', '-01:30', '-01:20', '-01:10', '-01:00', '-00:50', '-00:40', '-00:30', '-00:20', '-00:10', '00:00'],
-        //     datasets: [this.dataset1, this.dataset2],
-        // }
-        //
         private unit = Unit.KMH;
+
         private windspeed = {
             time: 0,
             windRpm: 0,
@@ -189,6 +159,31 @@
             windMax: 0,
             windAvg: 0,
         };
+
+        private windHistory: { windMin: number, windAvg: number, windMax: number }[] = [];
+
+        private created() {
+            if (this.$route.query.beta === 'true') {
+                this.refreshLivedata();
+            }
+        }
+
+        private refreshLivedata() {
+            if (document.hasFocus()) {
+                Axios.get('https://api.grosses-meer.surf/api/weather/windspeed')
+                    .then((response) => {
+                        this.windspeed = response.data;
+                    });
+                Axios.get('https://api.grosses-meer.surf/api/weather/windspeed/history')
+                    .then((response) => {
+                        this.windHistory = response.data;
+                        (<LineChart>this.$refs.chart).$forceUpdate();
+                    });
+                setTimeout(() => this.refreshLivedata(), 30000);
+            } else {
+                setTimeout(() => this.refreshLivedata(), 5000);
+            }
+        }
 
         private cycleUnits() {
             if (this.unit === Unit.KMH) {
@@ -198,132 +193,65 @@
             } else if (this.unit === Unit.BFT) {
                 this.unit = Unit.KMH;
             }
-            this.createChart();
-            // this.$forceUpdate();
+            (<LineChart>this.$refs.chart).$forceUpdate();
         }
 
-        private convertToUnit(kmh: number): string {
+        private formatToUnit(kmh: number): string {
+            const converted = this.convertToUnit(kmh);
+            if (this.unit === Unit.BFT) {
+                return converted.toString();
+            }
+            return converted.toFixed(2).toString().replace('.', ',');
+        }
+
+        private convertToUnit(kmh: number): number {
             if (this.unit === Unit.KNOTS) {
-                return (kmh * 0.539957).toFixed(2).toString().replace('.', ',');
+                return (kmh * 0.539957);
             }
             if (this.unit === Unit.BFT) {
                 if (kmh < 1) {
-                    return '0';
+                    return 0;
                 }
                 if (kmh < 5) {
-                    return '1';
+                    return 1;
                 }
                 if (kmh < 11) {
-                    return '2';
+                    return 2;
                 }
                 if (kmh < 19) {
-                    return '3';
+                    return 3;
                 }
                 if (kmh < 28) {
-                    return '4';
+                    return 4;
                 }
                 if (kmh < 38) {
-                    return '5';
+                    return 5;
                 }
                 if (kmh < 49) {
-                    return '6';
+                    return 6;
                 }
                 if (kmh < 61) {
-                    return '7';
+                    return 7;
                 }
                 if (kmh < 74) {
-                    return '8';
+                    return 8;
                 }
                 if (kmh < 88) {
-                    return '9';
+                    return 9;
                 }
                 if (kmh < 102) {
-                    return '10';
+                    return 10;
                 }
                 if (kmh < 117) {
-                    return '11';
+                    return 11;
                 }
-                return '12';
+                return 12;
             }
-            return kmh.toFixed(2).toString().replace('.', ',');
+            return kmh;
         }
 
         private formatDateTime(date: any): string {
             return Moment(date).format('HH:mm');
-            // return Moment(date).format('DD.MM.YYYY HH:mm');
-        }
-
-        private refreshLivedata() {
-            if (document.hasFocus()) {
-                Axios.get('https://api.grosses-meer.surf/api/weather/windspeed')
-                    .then((response) => {
-                        this.windspeed = response.data;
-                    });
-                setTimeout(() => this.refreshLivedata(), 30000);
-            } else {
-                setTimeout(() => this.refreshLivedata(), 5000);
-            }
-        }
-
-        private createChart() {
-            const ctx = document.getElementById('windhistory');
-            this.chartWindspeedHistory = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['-02:00', '-01:50', '-01:40', '-01:30', '-01:20', '-01:10', '-01:00',
-                        '-00:50', '-00:40', '-00:30', '-00:20', '-00:10', '00:00'],
-                    datasets: [
-                        {
-                            label: 'Windgeschwindigkeit',
-                            data: this.windspeedHistory,
-                            backgroundColor: [
-                                'rgba(138, 184, 129, 0.2)',
-                            ],
-                            borderColor: [
-                                'rgba(138, 184, 129, 1)',
-                            ],
-                            borderWidth: 1,
-                        }, {
-                            label: 'Böen',
-                            data: this.windgustHistory,
-                            backgroundColor: [
-                                'rgba(138, 184, 129, 0.2)',
-                            ],
-                            borderColor: [
-                                'rgba(138, 184, 129, 1)',
-                            ],
-                            borderWidth: 1,
-                        }],
-                },
-                options: {
-                    legend: {
-                        display: false,
-                    },
-                    animation: {
-                        duration: 0,
-                    },
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true,
-                            },
-                        }],
-                    },
-                },
-            });
-        }
-
-        private created() {
-            if (this.$route.query.beta === 'true') {
-                this.refreshLivedata();
-            }
-            Axios.get('https://api.grosses-meer.surf/api/weather/windspeed/history')
-                .then((response) => {
-                    response.data.forEach((value: any) => {
-                        this.windspeedHistory.push(value.windMin);
-                        this.windgustHistory.push(value.windMax);
-                    });
-                });
         }
     }
 </script>
