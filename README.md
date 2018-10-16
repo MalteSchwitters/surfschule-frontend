@@ -3,9 +3,13 @@ Website of the windsurfing and sailing school Grosses Meer. Created using Vue.js
 
 # Project setup
 
-1. Prerequisities
+## Prerequisities
 In order to work on this project you need the following tools:
 - npm
-- Webstorm
+- Webstorm IDE (opional, but recommended)
 
-1. 
+## Setup
+1. Clone the repo
+2. Execute "npm install" in the project root
+3. To run the website on localhost execute "npm run serve" 
+
