@@ -24,7 +24,7 @@
                 <div class="py-6 flex flex-row justify-between sm:justify-around text-center">
                     <router-link to="/surfing"
                                  class="flex flex-col items-center w-1/4 no-underline rounded xl:hover:bg-grey-lightest py-6">
-                        <img class="bg-green-light rounded-full p-3 xl:p-6 mb-6"
+                        <img class="w-16 h-16 xl:w-24 xl:h-24 bg-green-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/windsurfing.png">
                         <div>
                             <p class="text-sm sm:text-base xl:text-lg">Windsurfkurse & Verleih</p>
@@ -32,7 +32,7 @@
                     </router-link>
                     <router-link to="/sup"
                                  class="flex flex-col items-center w-1/4 no-underline rounded xl:hover:bg-grey-lightest py-6">
-                        <img class="bg-green-light rounded-full p-3 xl:p-6 mb-6"
+                        <img class="w-16 h-16 xl:w-24 xl:h-24 bg-green-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/sup.png">
                         <div>
                             <p class="text-sm sm:text-base xl:text-lg">SUP Kurse & Verleih</p>
@@ -40,7 +40,7 @@
                     </router-link>
                     <router-link to="/sailing"
                                  class="flex flex-col items-center w-1/4 no-underline rounded hover:bg-grey-lightest py-6">
-                        <img class="bg-green-light rounded-full p-3 xl:p-6 mb-6"
+                        <img class="w-16 h-16 xl:w-24 xl:h-24 bg-green-light rounded-full p-3 xl:p-6 mb-6"
                              src="https://png.icons8.com/ios/50/fafafa/sail.png">
                         <div>
                             <p class="text-sm sm:text-base xl:text-lg">Segelkurse & Verleih</p>
