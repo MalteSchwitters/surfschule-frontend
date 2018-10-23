@@ -13,7 +13,7 @@
 
 <style>
     .bg-image {
-        background-image: url('./assets/backgrounds/sup.jpg');
+        background-image: url('./assets/backgrounds/surfer.jpg');
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;

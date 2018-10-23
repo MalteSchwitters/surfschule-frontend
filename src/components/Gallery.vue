@@ -3,7 +3,7 @@
 
         <section ref="overlay" class="overlay z-40 bg-white overflow-scroll scrolling-touch" aria-hidden="true"
                  tabindex="1"
-                 @keydown.esc="closeFullres()">
+                 @keydown.esc="closeFullres()" @keydown.right="nextImageFullres()" @keydown.left="previousImageFullres()">
             <div class="h-full w-full flex flex-col justify-end xl:justify-center items-center">
                 <div v-if="fullresIndex >= 0" class="relative">
                     <img ref="highresimg" class="" :src="images[fullresIndex].image">
