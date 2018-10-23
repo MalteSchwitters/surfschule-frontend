@@ -1,5 +1,5 @@
 <template>
-    <canvas ref="chart" width="3" height="1"></canvas>
+    <canvas ref="chart"></canvas>
 </template>
 
 <script lang="ts">
@@ -48,6 +48,7 @@
                         }],
                 },
                 options: {
+                    responsive: true,
                     legend: {
                         display: false,
                     },

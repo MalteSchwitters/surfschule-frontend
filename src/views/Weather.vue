@@ -33,12 +33,12 @@
                                 <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
                                 <p class="text-sm sm:text-sm sm:text-base">Windböen</p>
                             </button>
-                            <!--<div class="w-1/2 md:w-1/3 px-6 pb-6">-->
-                            <!--<p class="text-3xl xl:text-5xl text-green-light">-->
-                            <!--{{ (windspeed.windRpm / 3).toFixed(2) }}-->
-                            <!--</p>-->
-                            <!--<p class="text-sm sm:text-sm sm:text-base">Umdrehungen pro Minute</p>-->
-                            <!--</div>-->
+                            <div class="w-1/2 md:w-1/3 px-6 pb-6">
+                                <p class="text-3xl xl:text-5xl text-green-light">
+                                    {{ (windspeed.windRpm / 3).toFixed(2) }}
+                                </p>
+                                <p class="text-sm sm:text-sm sm:text-base">Umdrehungen pro Minute</p>
+                            </div>
                         </div>
                         <line-chart ref="chart"
                                     :dataset1="windHistory.map(value => convertToUnit(value.windAvg))"
