@@ -14,31 +14,28 @@
                         Hier seht ihr die aktuelle Windgeschwindigkeit, gemessen direkt bei uns an der Surfschule. Die
                         Daten werden einmal pro Minute automatisch aktualisiert. Genauigkeit der Daten ohne Gewähr.
                     </p>
-                    <p v-if="windspeed.time === 0">
-                        Leider haben wir keine aktuellen Daten der letzten 10 Minuten :-(
-                    </p>
                     <div>
                         <div class="flex flex-wrap text-center justify-around">
-                            <button class="w-1/2 md:w-1/3 px-6 pb-6 outline-none" @click="cycleUnits()">
+                            <button class="w-1/2 md:w-1/3 px-4 pb-6 outline-none" @click="cycleUnits()">
                                 <p class="text-3xl xl:text-5xl text-green-light inline">
                                     {{ formatToUnit(windspeed.windAvg) }}
                                 </p>
                                 <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
                                 <p class="text-sm sm:text-sm sm:text-base">Windgeschwindigkeit</p>
                             </button>
-                            <button class="w-1/2 md:w-1/3 px-6 pb-6 outline-none" @click="cycleUnits()">
+                            <button class="w-1/2 md:w-1/3 px-4 pb-6 outline-none" @click="cycleUnits()">
                                 <p class="text-3xl xl:text-5xl text-green-light inline">
                                     {{ formatToUnit(windspeed.windMax) }}
                                 </p>
                                 <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
                                 <p class="text-sm sm:text-sm sm:text-base">Windböen</p>
                             </button>
-                            <div class="w-1/2 md:w-1/3 px-6 pb-6">
-                                <p class="text-3xl xl:text-5xl text-green-light">
-                                    {{ (windspeed.windRpm / 3).toFixed(2) }}
-                                </p>
-                                <p class="text-sm sm:text-sm sm:text-base">Umdrehungen pro Minute</p>
-                            </div>
+                            <!--<div class="w-1/2 md:w-1/3 px-6 pb-6">-->
+                            <!--<p class="text-3xl xl:text-5xl text-green-light">-->
+                            <!--{{ (windspeed.windRpm / 3).toFixed(2) }}-->
+                            <!--</p>-->
+                            <!--<p class="text-sm sm:text-sm sm:text-base">Umdrehungen pro Minute</p>-->
+                            <!--</div>-->
                         </div>
                         <line-chart ref="chart"
                                     :dataset1="windHistory.map(value => convertToUnit(value.windAvg))"
@@ -251,7 +248,8 @@
         }
 
         private formatDateTime(date: any): string {
-            return Moment(date).format('HH:mm');
+            // convert to gmt
+            return Moment(date).add(2, 'hour').format('HH:mm');
         }
     }
 </script>
