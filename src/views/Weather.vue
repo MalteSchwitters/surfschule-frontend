@@ -144,9 +144,7 @@
         private windHistory: { windMin: number, windAvg: number, windMax: number }[] = [];
 
         private created() {
-            if (this.$route.query.beta === 'true') {
-                this.refreshLivedata();
-            }
+            this.refreshLivedata();
         }
 
         private refreshLivedata() {
