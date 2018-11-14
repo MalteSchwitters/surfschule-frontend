@@ -2,52 +2,39 @@
     <div class="">
         <img class="w-full h-64 md:h-96 object-fit-cover" src="../assets/weather/header.jpg"/>
 
-        <!--<nav class-->
-
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
                 <a id="wetter" class="anchor"></a>
                 <h1 class="pt-8 text-xl sm:text-3xl">Live Wetter - Coming Soon</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
-                <div v-if="$route.query.beta === 'true'">
-                    <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
-                        Hier seht ihr die aktuelle Windgeschwindigkeit, gemessen direkt bei uns an der Surfschule. Die
-                        Daten werden einmal pro Minute automatisch aktualisiert. Genauigkeit der Daten ohne Gewähr.
-                    </p>
-                    <div>
-                        <div class="flex flex-wrap text-center justify-around">
-                            <button class="w-1/2 md:w-1/3 px-4 pb-6 outline-none" @click="cycleUnits()">
-                                <p class="text-3xl xl:text-5xl text-green-light inline">
-                                    {{ formatToUnit(windspeed.windAvg) }}
-                                </p>
-                                <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
-                                <p class="text-sm sm:text-sm sm:text-base">Windgeschwindigkeit</p>
-                            </button>
-                            <button class="w-1/2 md:w-1/3 px-4 pb-6 outline-none" @click="cycleUnits()">
-                                <p class="text-3xl xl:text-5xl text-green-light inline">
-                                    {{ formatToUnit(windspeed.windMax) }}
-                                </p>
-                                <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
-                                <p class="text-sm sm:text-sm sm:text-base">Windböen</p>
-                            </button>
-                            <!--<div class="w-1/2 md:w-1/3 px-6 pb-6">-->
-                            <!--<p class="text-3xl xl:text-5xl text-green-light">-->
-                            <!--{{ (windspeed.windRpm / 3).toFixed(2) }}-->
-                            <!--</p>-->
-                            <!--<p class="text-sm sm:text-sm sm:text-base">Umdrehungen pro Minute</p>-->
-                            <!--</div>-->
-                        </div>
-                        <line-chart ref="chart"
-                                    :dataset1="windHistory.map(value => convertToUnit(value.windAvg))"
-                                    :dataset2="windHistory.map(value => convertToUnit(value.windMax))"></line-chart>
-                        <p class="py-6 text-sm sm:text-sm sm:text-base xl:text-lg">
-                            Zeitpunkt der letzte Messung: <b class="pl-2">{{ formatDateTime(windspeed.time) }}</b>
-                        </p>
-                    </div>
-                </div>
-                <p v-else class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
-                    Schon bald könnt ihr hier Live die aktuelle Windgeschwindigkeit bei uns an der Surfschule sehen.
+                <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
+                    Hier seht ihr die aktuelle Windgeschwindigkeit, gemessen direkt bei uns an der Surfschule. Die
+                    Daten werden einmal pro Minute automatisch aktualisiert. Genauigkeit der Daten ohne Gewähr.
                 </p>
+                <div>
+                    <div class="flex flex-wrap text-center justify-around">
+                        <button class="w-1/2 md:w-1/3 px-4 pb-6 outline-none" @click="cycleUnits()">
+                            <p class="text-3xl xl:text-5xl text-green-light inline">
+                                {{ formatToUnit(windspeed.windAvg) }}
+                            </p>
+                            <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
+                            <p class="text-sm sm:text-sm sm:text-base">Windgeschwindigkeit</p>
+                        </button>
+                        <button class="w-1/2 md:w-1/3 px-4 pb-6 outline-none" @click="cycleUnits()">
+                            <p class="text-3xl xl:text-5xl text-green-light inline">
+                                {{ formatToUnit(windspeed.windMax) }}
+                            </p>
+                            <p class="text-lg xl:text-2xl text-grey-dark inline">{{ unit }}</p>
+                            <p class="text-sm sm:text-sm sm:text-base">Windböen</p>
+                        </button>
+                    </div>
+                    <line-chart ref="chart"
+                                :dataset1="windHistory.map(value => convertToUnit(value.windAvg))"
+                                :dataset2="windHistory.map(value => convertToUnit(value.windMax))"></line-chart>
+                    <p class="py-6 text-sm sm:text-sm sm:text-base xl:text-lg">
+                        Zeitpunkt der letzte Messung: <b class="pl-2">{{ formatDateTime(windspeed.time) }}</b>
+                    </p>
+                </div>
             </div>
         </div>
 
@@ -77,11 +64,8 @@
                 <div class="w-24 my-4 border-grey-light border-b"></div>
                 <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
                     Keine Information ist wichtiger für einen Windsurfer, als die aktuelle Windvorhersage. Da jeder
-                    Wetterbericht
-                    sich auch mal irren kann, sollte man immer mehrere checken. Um euch langes suchen zu ersparen,
-                    haben
-                    wir
-                    euch hier Links zu den wichtigsten Wetterberichten zusammengestellt:
+                    Wetterbericht sich auch mal irren kann, sollte man immer mehrere checken. Um euch langes suchen zu
+                    ersparen, haben wir euch hier Links zu den wichtigsten Wetterberichten zusammengestellt:
                 </p>
 
                 <div class="flex">
