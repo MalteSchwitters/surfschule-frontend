@@ -1,14 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-import Surfing from './views/Surfing.vue';
-import StandUpPaddling from './views/StandUpPaddling.vue';
-import Sailing from './views/Sailing.vue';
-import Weather from './views/Weather.vue';
-import Contact from './views/Contact.vue';
-import Impressum from './views/Impressum.vue';
-import University from './views/University.vue';
-import AdminSpeedRanking from './views/AdminSpeedRanking.vue';
 Vue.use(Router);
 export default new Router({
     routes: [
@@ -21,46 +13,46 @@ export default new Router({
         {
             path: '/impressum',
             name: 'impressum',
-            component: Impressum,
+            component: () => import(/* webpackChunkName: "impressum" */ './views/Impressum.vue'),
         },
         {
             path: '/hochschulsport',
             name: 'hochschulsport',
-            component: University,
+            component: () => import(/* webpackChunkName: "university" */ './views/University.vue'),
         },
         {
             path: '/admin',
             name: 'admin',
-            component: AdminSpeedRanking,
+            component: () => import(/* webpackChunkName: "admin" */ './views/AdminSpeedRanking.vue'),
         },
         {
             path: '/surfing',
             name: 'surfing',
-            component: Surfing,
+            component: () => import(/* webpackChunkName: "surfing" */ './views/Surfing.vue'),
             alias: ['/surfen', '/surf', '/windsurfen'],
         },
         {
             path: '/sup',
             name: 'sup',
-            component: StandUpPaddling,
+            component: () => import(/* webpackChunkName: "sup" */ './views/StandUpPaddling.vue'),
             alias: ['/standuppaddling', '/stand-up-paddling'],
         },
         {
             path: '/sailing',
             name: 'sailing',
-            component: Sailing,
+            component: () => import(/* webpackChunkName: "sailing" */ './views/Sailing.vue'),
             alias: ['/segeln', '/sail'],
         },
         {
             path: '/weather',
             name: 'weather',
-            component: Weather,
+            component: () => import(/* webpackChunkName: "weather" */ './views/Weather.vue'),
             alias: ['/wetter'],
         },
         {
             path: '/contact',
             name: 'contact',
-            component: Contact,
+            component: () => import(/* webpackChunkName: "contact" */ './views/Contact.vue'),
             alias: ['/kontakt'],
         },
         {

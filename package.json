@@ -15,14 +15,12 @@
     "axios": "^0.18.0",
     "chart.js": "^2.7.2",
     "moment": "^2.22.1",
-    "register-service-worker": "^1.0.0",
     "typescript": "^3.0.1",
     "vue": "^2.5.13",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.0.0",
     "vue-router": "^3.0.1",
-    "vue-scroll": "^2.1.7",
-    "vuex": "^3.0.1"
+    "vue-scroll": "^2.1.7"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.0.0-rc.1",

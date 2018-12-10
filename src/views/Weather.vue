@@ -5,7 +5,7 @@
         <div class="p-2">
             <div class="px-6 md:px-16 lg:px-24 py-4 rounded mb-2 bg-white shadow xl:shadow-none">
                 <a id="wetter" class="anchor"></a>
-                <h1 class="pt-8 text-xl sm:text-3xl">Live Wetter - Coming Soon</h1>
+                <h1 class="pt-8 text-xl sm:text-3xl">Live Wetter</h1>
                 <div class="w-24 my-4 border-grey-light border-b"></div>
                 <p class="pb-6 text-sm sm:text-sm sm:text-base xl:text-lg">
                     Hier seht ihr die aktuelle Windgeschwindigkeit, gemessen direkt bei uns an der Surfschule. Die
