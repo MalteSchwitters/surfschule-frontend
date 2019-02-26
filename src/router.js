@@ -21,9 +21,14 @@ export default new Router({
             component: () => import(/* webpackChunkName: "university" */ './views/University.vue'),
         },
         {
-            path: '/admin',
-            name: 'admin',
+            path: '/admin/topspeed',
+            name: 'topspeedadmin',
             component: () => import(/* webpackChunkName: "admin" */ './views/AdminSpeedRanking.vue'),
+        },
+        {
+            path: '/admin/course',
+            name: 'courseadmin',
+            component: () => import(/* webpackChunkName: "weather" */ './views/AdminCourses.vue'),
         },
         {
             path: '/surfing',

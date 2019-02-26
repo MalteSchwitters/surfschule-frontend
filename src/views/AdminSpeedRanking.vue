@@ -59,7 +59,7 @@
     import Gallery from '../components/Gallery.vue';
 
     @Component({components: {Gallery}})
-    export default class Contact extends Vue {
+    export default class AdminSpeedRanking extends Vue {
 
         private auth = '';
         private success = false;
